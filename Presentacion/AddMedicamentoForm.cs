@@ -1,12 +1,13 @@
 ﻿using Negocio;
+using Presentacion;
 using System;
 using System.Windows.Forms;
 
 namespace Farmacia
 {
-    public partial class AddMedicamento : Form
+    public partial class AddMedicamentoForm : Form
     {
-        public AddMedicamento()
+        public AddMedicamentoForm()
         {
             InitializeComponent();
         }
@@ -34,7 +35,7 @@ namespace Farmacia
 
         private void imgCancelar_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -66,7 +67,7 @@ namespace Farmacia
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar las películas. Compruebe " +
+                MessageBox.Show("Error al cargar las medicamentos. Compruebe " +
                     "la cadena de conexión a la Base de datos " + ex.Message);
             }
             //Limpiamos formulario para que al iniciar no haya un Peli

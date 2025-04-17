@@ -2,7 +2,7 @@
 
 namespace Farmacia
 {
-    partial class AddMedicamento
+    partial class AddMedicamentoForm
     {
         /// <summary>
         /// Required designer variable.
