@@ -1,13 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
 using Entidades;
+using DotNetEnv;
 
 namespace Datos
 {
     static public class MedicamentoDao
     {
         private static readonly string cadenaConexion = Environment.GetEnvironmentVariable("DB_CONN_STRING");
-
         public static DataTable GetMedicamentos()
         {
             DataTable dataTable = new DataTable();

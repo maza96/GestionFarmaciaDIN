@@ -1,4 +1,4 @@
-﻿using MySql.Data.MySqlClient;
+﻿ using MySql.Data.MySqlClient;
 using System.Data;
 using Entidades;
 
@@ -6,7 +6,7 @@ namespace Datos
 {
     static public class EmpleadoDao
     {
-        private static string cadenaConexion = Environment.GetEnvironmentVariable("DB_CONN_STRING");
+        private static readonly string cadenaConexion = Environment.GetEnvironmentVariable("DB_CONN_STRING");
 
         public static DataTable GetEmpleados()
         {

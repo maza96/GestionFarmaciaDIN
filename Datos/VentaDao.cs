@@ -6,7 +6,7 @@ namespace Datos
 {
     static public class VentaDao
     {
-        private static string cadenaConexion = Environment.GetEnvironmentVariable("DB_CONN_STRING");
+        private static readonly string cadenaConexion = Environment.GetEnvironmentVariable("DB_CONN_STRING");
 
         public static DataTable GetVentas()
         {
