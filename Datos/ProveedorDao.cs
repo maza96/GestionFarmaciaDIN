@@ -28,11 +28,11 @@ namespace Datos
             {
                 conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand("""
-                        INSERT INTO proveedores (nombre, telefono, direccion)
-                        VALUES (@nombre, @telefono, @direccion);
+                        INSERT INTO proveedores (nombre_proveedor, telefono, direccion)
+                        VALUES (@nombre_proveedor, @telefono, @direccion);
                     """, conn))
                 {
-                    cmd.Parameters.AddWithValue("@nombre", proveedor.Nombre);
+                    cmd.Parameters.AddWithValue("@nombre_proveedor", proveedor.Nombre);
                     cmd.Parameters.AddWithValue("@telefono", proveedor.Telefono);
                     cmd.Parameters.AddWithValue("@direccion", proveedor.Direccion);
 
@@ -67,14 +67,14 @@ namespace Datos
                 conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand("""
                         UPDATE proveedores SET
-                            nombre = @nombre,
+                            nombre_proveedor = @nombre_proveedor,
                             telefono = @telefono,
                             direccion = @direccion
                         WHERE id = @id;
                     """, conn))
                 {
                     cmd.Parameters.AddWithValue("@id", proveedor.Id);
-                    cmd.Parameters.AddWithValue("@nombre", proveedor.Nombre);
+                    cmd.Parameters.AddWithValue("@nombre_proveedor", proveedor.Nombre);
                     cmd.Parameters.AddWithValue("@telefono", proveedor.Telefono);
                     cmd.Parameters.AddWithValue("@direccion", proveedor.Direccion);
 

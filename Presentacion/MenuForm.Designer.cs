@@ -58,11 +58,11 @@
             picbox1.CustomizableEdges = customizableEdges1;
             picbox1.Image = Properties.Resources.Richie_2;
             picbox1.ImageRotate = 0F;
-            picbox1.Location = new Point(50, 54);
+            picbox1.Location = new Point(44, 40);
             picbox1.Margin = new Padding(3, 2, 3, 2);
             picbox1.Name = "picbox1";
             picbox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            picbox1.Size = new Size(409, 605);
+            picbox1.Size = new Size(358, 454);
             picbox1.SizeMode = PictureBoxSizeMode.Zoom;
             picbox1.TabIndex = 0;
             picbox1.TabStop = false;
@@ -73,10 +73,10 @@
             lblLoginTitle.BackColor = Color.Transparent;
             lblLoginTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLoginTitle.ForeColor = Color.FromArgb(62, 62, 62);
-            lblLoginTitle.Location = new Point(251, 86);
+            lblLoginTitle.Location = new Point(220, 64);
             lblLoginTitle.Margin = new Padding(3, 2, 3, 2);
             lblLoginTitle.Name = "lblLoginTitle";
-            lblLoginTitle.Size = new Size(332, 36);
+            lblLoginTitle.Size = new Size(290, 27);
             lblLoginTitle.TabIndex = 1;
             lblLoginTitle.Text = "Menú Principal";
             lblLoginTitle.TextAlignment = ContentAlignment.MiddleCenter;
@@ -85,17 +85,17 @@
             // 
             btnReposrtes.Animated = true;
             btnReposrtes.AutoRoundedCorners = true;
-            btnReposrtes.BorderRadius = 23;
+            btnReposrtes.BorderRadius = 17;
             btnReposrtes.CustomizableEdges = customizableEdges3;
             btnReposrtes.FillColor = Color.FromArgb(255, 128, 0);
             btnReposrtes.FillColor2 = Color.FromArgb(128, 64, 0);
             btnReposrtes.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnReposrtes.ForeColor = Color.White;
-            btnReposrtes.Location = new Point(295, 150);
-            btnReposrtes.Margin = new Padding(4, 5, 4, 5);
+            btnReposrtes.Location = new Point(258, 112);
+            btnReposrtes.Margin = new Padding(4);
             btnReposrtes.Name = "btnReposrtes";
             btnReposrtes.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnReposrtes.Size = new Size(268, 49);
+            btnReposrtes.Size = new Size(234, 37);
             btnReposrtes.TabIndex = 4;
             btnReposrtes.Text = "Reportes";
             // 
@@ -103,17 +103,17 @@
             // 
             btnVenta.Animated = true;
             btnVenta.AutoRoundedCorners = true;
-            btnVenta.BorderRadius = 23;
+            btnVenta.BorderRadius = 17;
             btnVenta.CustomizableEdges = customizableEdges5;
             btnVenta.FillColor = Color.Green;
             btnVenta.FillColor2 = Color.FromArgb(0, 64, 0);
             btnVenta.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnVenta.ForeColor = Color.White;
-            btnVenta.Location = new Point(295, 222);
-            btnVenta.Margin = new Padding(4, 5, 4, 5);
+            btnVenta.Location = new Point(258, 166);
+            btnVenta.Margin = new Padding(4);
             btnVenta.Name = "btnVenta";
             btnVenta.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnVenta.Size = new Size(268, 49);
+            btnVenta.Size = new Size(234, 37);
             btnVenta.TabIndex = 5;
             btnVenta.Text = "Venta";
             // 
@@ -121,17 +121,17 @@
             // 
             btnMedicamentos.Animated = true;
             btnMedicamentos.AutoRoundedCorners = true;
-            btnMedicamentos.BorderRadius = 23;
+            btnMedicamentos.BorderRadius = 17;
             btnMedicamentos.CustomizableEdges = customizableEdges7;
             btnMedicamentos.FillColor = Color.FromArgb(192, 0, 0);
             btnMedicamentos.FillColor2 = Color.FromArgb(64, 0, 0);
             btnMedicamentos.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMedicamentos.ForeColor = Color.White;
-            btnMedicamentos.Location = new Point(295, 298);
-            btnMedicamentos.Margin = new Padding(4, 5, 4, 5);
+            btnMedicamentos.Location = new Point(258, 224);
+            btnMedicamentos.Margin = new Padding(4);
             btnMedicamentos.Name = "btnMedicamentos";
             btnMedicamentos.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnMedicamentos.Size = new Size(268, 49);
+            btnMedicamentos.Size = new Size(234, 37);
             btnMedicamentos.TabIndex = 6;
             btnMedicamentos.Text = "Medicamentos";
             btnMedicamentos.Click += btnMedicamentos_Click;
@@ -140,37 +140,39 @@
             // 
             btnProveedores.Animated = true;
             btnProveedores.AutoRoundedCorners = true;
-            btnProveedores.BorderRadius = 23;
+            btnProveedores.BorderRadius = 17;
             btnProveedores.CustomizableEdges = customizableEdges9;
             btnProveedores.FillColor = Color.Blue;
             btnProveedores.FillColor2 = Color.Navy;
             btnProveedores.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnProveedores.ForeColor = Color.White;
-            btnProveedores.Location = new Point(295, 374);
-            btnProveedores.Margin = new Padding(4, 5, 4, 5);
+            btnProveedores.Location = new Point(258, 280);
+            btnProveedores.Margin = new Padding(4);
             btnProveedores.Name = "btnProveedores";
             btnProveedores.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnProveedores.Size = new Size(268, 49);
+            btnProveedores.Size = new Size(234, 37);
             btnProveedores.TabIndex = 7;
             btnProveedores.Text = "Proveedores";
+            btnProveedores.Click += btnProveedores_Click;
             // 
             // btnEmpleados
             // 
             btnEmpleados.Animated = true;
             btnEmpleados.AutoRoundedCorners = true;
-            btnEmpleados.BorderRadius = 23;
+            btnEmpleados.BorderRadius = 17;
             btnEmpleados.CustomizableEdges = customizableEdges11;
             btnEmpleados.FillColor = Color.FromArgb(192, 192, 0);
             btnEmpleados.FillColor2 = Color.FromArgb(64, 64, 0);
             btnEmpleados.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEmpleados.ForeColor = Color.White;
-            btnEmpleados.Location = new Point(295, 447);
-            btnEmpleados.Margin = new Padding(4, 5, 4, 5);
+            btnEmpleados.Location = new Point(258, 335);
+            btnEmpleados.Margin = new Padding(4);
             btnEmpleados.Name = "btnEmpleados";
             btnEmpleados.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnEmpleados.Size = new Size(268, 49);
+            btnEmpleados.Size = new Size(234, 37);
             btnEmpleados.TabIndex = 8;
             btnEmpleados.Text = "Empleados";
+            btnEmpleados.Click += btnEmpleados_Click;
             // 
             // btnLogout
             // 
@@ -179,9 +181,10 @@
             btnLogout.FlatStyle = FlatStyle.Flat;
             btnLogout.ForeColor = Color.SkyBlue;
             btnLogout.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogout.Location = new Point(617, 12);
+            btnLogout.Location = new Point(540, 9);
+            btnLogout.Margin = new Padding(3, 2, 3, 2);
             btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(34, 35);
+            btnLogout.Size = new Size(30, 26);
             btnLogout.TabIndex = 9;
             btnLogout.TextAlign = ContentAlignment.MiddleRight;
             btnLogout.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -190,10 +193,10 @@
             // 
             // MenuForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(663, 632);
+            ClientSize = new Size(580, 474);
             Controls.Add(btnLogout);
             Controls.Add(btnEmpleados);
             Controls.Add(btnProveedores);

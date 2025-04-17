@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace Farmacia
 {
-    public partial class AddMedicamentoForm : Form
+    public partial class AddProveedorForm : Form
     {
-        public AddMedicamentoForm()
+        public AddProveedorForm()
         {
             InitializeComponent();
         }
@@ -53,37 +53,34 @@ namespace Farmacia
 
         }
 
-        private void AddMedicamento_Load(object sender, EventArgs e)
+        private void AddProveedores_Load(object sender, EventArgs e)
         {
-            MostrarMedicamentos();
+            MostrarProveedores();
         }
 
-        private void MostrarMedicamentos()
+        private void MostrarProveedores()
         {
             try
             {
-                dgMedicamentos.DataSource = MedicamentoService.GetMedicamentos();
+                dgProveedores.DataSource = ProveedorService.GetProveedores();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar las medicamentos. Compruebe " +
+                MessageBox.Show("Error al cargar las proveedores. Compruebe " +
                     "la cadena de conexión a la Base de datos " + ex.Message);
             }
-            //Limpiamos formulario para que al iniciar no haya un medicamento
+            //Limpiamos formulario para que al iniciar no haya un proveedor
             //seleccionada por defecto
             LimpiarFormulario();
         }
 
         private void LimpiarFormulario()
         {
-            dgMedicamentos.CurrentCell = null;
+            dgProveedores.CurrentCell = null;
             txtnombre.Clear();
-            txtDesc.Clear();
-            numCant.Value = 1;
-            dtVencimiento.ResetText();
-            rbControl.ResetText();
-            txtCosto.Clear();
+            txtDireccion.Clear();
+            txtTelefono.Clear();
         }
     }
 }

@@ -18,6 +18,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="AddEmpleadoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="AddProveedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="AddMedicamentoForm.cs">
       <SubType>Form</SubType>
     </Compile>

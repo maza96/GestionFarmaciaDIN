@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace Farmacia
 {
-    public partial class AddMedicamentoForm : Form
+    public partial class AddEmpleadoForm : Form
     {
-        public AddMedicamentoForm()
+        public AddEmpleadoForm()
         {
             InitializeComponent();
         }
@@ -33,12 +33,12 @@ namespace Farmacia
 
         }
 
-        private void imgCancelar_Click(object sender, EventArgs e)
+        private void imgEliminar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
 
         }
@@ -53,37 +53,41 @@ namespace Farmacia
 
         }
 
-        private void AddMedicamento_Load(object sender, EventArgs e)
+        private void AddEmpleados_Load(object sender, EventArgs e)
         {
-            MostrarMedicamentos();
+            MostrarEmpleados();
         }
 
-        private void MostrarMedicamentos()
+        private void MostrarEmpleados()
         {
             try
             {
-                dgMedicamentos.DataSource = MedicamentoService.GetMedicamentos();
+                dgEmpleados.DataSource = EmpleadoService.GetEmpleados();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al cargar las medicamentos. Compruebe " +
+                MessageBox.Show("Error al cargar las empleados. Compruebe " +
                     "la cadena de conexión a la Base de datos " + ex.Message);
             }
-            //Limpiamos formulario para que al iniciar no haya un medicamento
+            //Limpiamos formulario para que al iniciar no haya un empleados
             //seleccionada por defecto
             LimpiarFormulario();
         }
 
         private void LimpiarFormulario()
         {
-            dgMedicamentos.CurrentCell = null;
+            dgEmpleados.CurrentCell = null;
             txtnombre.Clear();
-            txtDesc.Clear();
-            numCant.Value = 1;
-            dtVencimiento.ResetText();
-            rbControl.ResetText();
-            txtCosto.Clear();
+            txtApellido.Clear();
+            txtUsuario.Clear();
+            txtContrasenya.Clear();
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
