@@ -41,10 +41,10 @@ namespace Farmacia
         private Button imgAgregar;
         private Button btnAgregar;
         private Button btnNuevo;
-        private Button btnCancelar;
+        private Button btnEliminar;
         private Button btnActualizar;
         private Button imgNuevo;
-        private Button imgCancelar;
+        private Button imgEliminar;
         private Button imgActualizar;
         private GroupBox gbMedicamentos;
         private DataGridView dgMedicamentos;
@@ -67,10 +67,10 @@ namespace Farmacia
             txtTitle = new TextBox();
             btnAgregar = new Button();
             btnNuevo = new Button();
-            btnCancelar = new Button();
+            btnEliminar = new Button();
             btnActualizar = new Button();
             imgActualizar = new Button();
-            imgCancelar = new Button();
+            imgEliminar = new Button();
             imgNuevo = new Button();
             imgAgregar = new Button();
             gbMedicamentos = new GroupBox();
@@ -106,7 +106,7 @@ namespace Farmacia
             // 
             txtCosto.Location = new Point(474, 247);
             txtCosto.Name = "txtCosto";
-            txtCosto.Size = new Size(179, 27);
+            txtCosto.Size = new Size(179, 23);
             txtCosto.TabIndex = 12;
             // 
             // lblCosto
@@ -115,7 +115,7 @@ namespace Farmacia
             lblCosto.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCosto.Location = new Point(408, 247);
             lblCosto.Name = "lblCosto";
-            lblCosto.Size = new Size(58, 20);
+            lblCosto.Size = new Size(48, 17);
             lblCosto.TabIndex = 11;
             lblCosto.Text = "Costo:";
             // 
@@ -125,7 +125,7 @@ namespace Farmacia
             dtVencimiento.Location = new Point(247, 247);
             dtVencimiento.MinDate = new DateTime(2025, 4, 17, 0, 0, 0, 0);
             dtVencimiento.Name = "dtVencimiento";
-            dtVencimiento.Size = new Size(131, 27);
+            dtVencimiento.Size = new Size(131, 23);
             dtVencimiento.TabIndex = 10;
             dtVencimiento.Value = new DateTime(2025, 4, 17, 11, 37, 27, 0);
             // 
@@ -135,7 +135,7 @@ namespace Farmacia
             lblVencimiento.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblVencimiento.Location = new Point(25, 250);
             lblVencimiento.Name = "lblVencimiento";
-            lblVencimiento.Size = new Size(180, 20);
+            lblVencimiento.Size = new Size(152, 17);
             lblVencimiento.TabIndex = 9;
             lblVencimiento.Text = "Fecha de Vencimiento:";
             // 
@@ -145,7 +145,7 @@ namespace Farmacia
             lblControl.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblControl.Location = new Point(408, 177);
             lblControl.Name = "lblControl";
-            lblControl.Size = new Size(68, 20);
+            lblControl.Size = new Size(57, 17);
             lblControl.TabIndex = 8;
             lblControl.Text = "Control:";
             // 
@@ -154,7 +154,7 @@ namespace Farmacia
             rbControl.AutoSize = true;
             rbControl.Location = new Point(499, 180);
             rbControl.Name = "rbControl";
-            rbControl.Size = new Size(17, 16);
+            rbControl.Size = new Size(14, 13);
             rbControl.TabIndex = 7;
             rbControl.TabStop = true;
             rbControl.UseVisualStyleBackColor = true;
@@ -164,7 +164,7 @@ namespace Farmacia
             numCant.Location = new Point(247, 175);
             numCant.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numCant.Name = "numCant";
-            numCant.Size = new Size(131, 27);
+            numCant.Size = new Size(131, 23);
             numCant.TabIndex = 6;
             numCant.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
@@ -174,7 +174,7 @@ namespace Farmacia
             lblCant.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCant.Location = new Point(25, 175);
             lblCant.Name = "lblCant";
-            lblCant.Size = new Size(80, 20);
+            lblCant.Size = new Size(68, 17);
             lblCant.TabIndex = 4;
             lblCant.Text = "Cantidad:";
             // 
@@ -182,7 +182,7 @@ namespace Farmacia
             // 
             txtDesc.Location = new Point(247, 108);
             txtDesc.Name = "txtDesc";
-            txtDesc.Size = new Size(284, 27);
+            txtDesc.Size = new Size(284, 23);
             txtDesc.TabIndex = 3;
             // 
             // lblDesc
@@ -191,7 +191,7 @@ namespace Farmacia
             lblDesc.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDesc.Location = new Point(25, 108);
             lblDesc.Name = "lblDesc";
-            lblDesc.Size = new Size(104, 20);
+            lblDesc.Size = new Size(86, 17);
             lblDesc.TabIndex = 2;
             lblDesc.Text = "Descripción:";
             // 
@@ -199,7 +199,7 @@ namespace Farmacia
             // 
             txtnombre.Location = new Point(247, 49);
             txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(284, 27);
+            txtnombre.Size = new Size(284, 23);
             txtnombre.TabIndex = 1;
             // 
             // lblNombre
@@ -208,7 +208,7 @@ namespace Farmacia
             lblNombre.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNombre.Location = new Point(25, 49);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(205, 20);
+            lblNombre.Size = new Size(173, 17);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre del Medicamento:";
             // 
@@ -257,19 +257,19 @@ namespace Farmacia
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.Click += btnNuevo_Click;
             // 
-            // btnCancelar
+            // btnEliminar
             // 
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.ForeColor = SystemColors.ButtonHighlight;
-            btnCancelar.Location = new Point(837, 330);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(163, 55);
-            btnCancelar.TabIndex = 5;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.ForeColor = SystemColors.ButtonHighlight;
+            btnEliminar.Location = new Point(837, 330);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(163, 55);
+            btnEliminar.TabIndex = 5;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.TextAlign = ContentAlignment.MiddleRight;
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnActualizar
             // 
@@ -301,21 +301,21 @@ namespace Farmacia
             imgActualizar.UseVisualStyleBackColor = true;
             imgActualizar.Click += imgActualizar_Click;
             // 
-            // imgCancelar
+            // imgEliminar
             // 
-            imgCancelar.BackgroundImage = Presentacion.Properties.Resources.ic_cancelar;
-            imgCancelar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgCancelar.FlatStyle = FlatStyle.Flat;
-            imgCancelar.ForeColor = Color.SkyBlue;
-            imgCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgCancelar.Location = new Point(854, 340);
-            imgCancelar.Name = "imgCancelar";
-            imgCancelar.Size = new Size(37, 36);
-            imgCancelar.TabIndex = 8;
-            imgCancelar.TextAlign = ContentAlignment.MiddleRight;
-            imgCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgCancelar.UseVisualStyleBackColor = true;
-            imgCancelar.Click += imgCancelar_Click;
+            imgEliminar.BackgroundImage = Presentacion.Properties.Resources.ic_cancelar;
+            imgEliminar.BackgroundImageLayout = ImageLayout.Zoom;
+            imgEliminar.FlatStyle = FlatStyle.Flat;
+            imgEliminar.ForeColor = Color.SkyBlue;
+            imgEliminar.ImageAlign = ContentAlignment.MiddleLeft;
+            imgEliminar.Location = new Point(854, 340);
+            imgEliminar.Name = "imgEliminar";
+            imgEliminar.Size = new Size(37, 36);
+            imgEliminar.TabIndex = 8;
+            imgEliminar.TextAlign = ContentAlignment.MiddleRight;
+            imgEliminar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            imgEliminar.UseVisualStyleBackColor = true;
+            imgEliminar.Click += imgEliminar_Click;
             // 
             // imgNuevo
             // 
@@ -363,23 +363,26 @@ namespace Farmacia
             // 
             dgMedicamentos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgMedicamentos.Dock = DockStyle.Fill;
-            dgMedicamentos.Location = new Point(3, 23);
+            dgMedicamentos.Location = new Point(3, 19);
             dgMedicamentos.Name = "dgMedicamentos";
+            dgMedicamentos.ReadOnly = true;
             dgMedicamentos.RowHeadersWidth = 51;
             dgMedicamentos.RowTemplate.Height = 24;
-            dgMedicamentos.Size = new Size(935, 262);
+            dgMedicamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgMedicamentos.Size = new Size(935, 266);
             dgMedicamentos.TabIndex = 0;
+            dgMedicamentos.SelectionChanged += dgMedicamentos_SelectionChanged;
             // 
-            // AddMedicamento
+            // AddMedicamentoForm
             // 
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1053, 828);
             Controls.Add(gbMedicamentos);
             Controls.Add(imgActualizar);
-            Controls.Add(imgCancelar);
+            Controls.Add(imgEliminar);
             Controls.Add(imgNuevo);
             Controls.Add(btnActualizar);
-            Controls.Add(btnCancelar);
+            Controls.Add(btnEliminar);
             Controls.Add(btnNuevo);
             Controls.Add(imgAgregar);
             Controls.Add(btnAgregar);
@@ -387,7 +390,7 @@ namespace Farmacia
             Controls.Add(gbDatosNuevoMedicamento);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "AddMedicamento";
+            Name = "AddMedicamentoForm";
             Load += AddMedicamento_Load;
             gbDatosNuevoMedicamento.ResumeLayout(false);
             gbDatosNuevoMedicamento.PerformLayout();

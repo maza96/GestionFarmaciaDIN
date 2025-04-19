@@ -1,3 +1,5 @@
+using Negocio;
+
 namespace Presentacion
 {
     public partial class LoginForm : Form
@@ -9,10 +11,36 @@ namespace Presentacion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MenuForm menuPrincipal = new MenuForm();
-            Hide();
-            menuPrincipal.ShowDialog();
-            Show();
+            string usuario = txtUsuario.Text.Trim();
+            string contrasena = txtPassword.Text;
+
+            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(contrasena))
+            {
+                MessageBox.Show("Por favor, rellena todos los campos.", "Campos obligatorios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var empleado = EmpleadoService.Autenticar(usuario, contrasena);
+
+            if (empleado != null)
+            {
+                MessageBox.Show($"¡Bienvenido, {empleado.Nombre}!");
+
+                MenuForm menu = new MenuForm();
+                this.Hide();
+                menu.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario o contraseña incorrectos.", "Error de autenticación", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            txtUsuario.Text = "lgomez";
+            txtPassword.Text = "lucia2025";
         }
     }
 }

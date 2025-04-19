@@ -50,7 +50,7 @@ namespace Datos
             using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
             {
                 conn.Open();
-                using (MySqlCommand cmd = new MySqlCommand("DELETE FROM empleados WHERE id = @id", conn))
+                using (MySqlCommand cmd = new MySqlCommand("DELETE FROM empleados WHERE id_empleado = @id", conn))
                 {
                     cmd.Parameters.AddWithValue("@id", id);
                     if (cmd.ExecuteNonQuery() <= 0)
@@ -87,6 +87,35 @@ namespace Datos
                     }
                 }
             }
+        }
+
+        public static Empleado? GetEmpleadoPorLogin(string usuario, string password)
+        {
+            Empleado? empleado = null;
+            using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM empleados WHERE usuario = @usuario AND password = @password", conn))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    cmd.Parameters.AddWithValue("@password", password);
+
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            empleado = new Empleado(
+                                reader.GetInt32("id_empleado"),
+                                reader.GetString("nombre"),
+                                reader.GetString("apellido"),
+                                reader.GetString("usuario"),
+                                reader.GetString("password")
+                            );
+                        }
+                    }
+                }
+            }
+            return empleado;
         }
     }
 }

@@ -116,6 +116,7 @@
             btnVenta.Size = new Size(234, 37);
             btnVenta.TabIndex = 5;
             btnVenta.Text = "Venta";
+            btnVenta.Click += btnVenta_Click;
             // 
             // btnMedicamentos
             // 

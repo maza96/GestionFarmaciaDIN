@@ -46,5 +46,13 @@ namespace Presentacion
             empleadosForm.ShowDialog();
             Show(); //Cuando empleados form se cierre
         }
+
+        private void btnVenta_Click(object sender, EventArgs e)
+        {
+            AddVentaForm ventaForm = new AddVentaForm();
+            Hide(); //Ocultar formulario
+            ventaForm.ShowDialog();
+            Show(); //Cuando venta form se cierre
+        }
     }
 }

@@ -33,12 +33,12 @@ namespace Farmacia
 
         }
 
-        private void imgCancelar_Click(object sender, EventArgs e)
+        private void imgEliminar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
 
         }
@@ -84,6 +84,11 @@ namespace Farmacia
             dtVencimiento.ResetText();
             rbControl.ResetText();
             txtCosto.Clear();
+        }
+
+        private void dgMedicamentos_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

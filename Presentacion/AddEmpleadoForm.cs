@@ -25,22 +25,37 @@ namespace Farmacia
 
         private void imgNuevo_Click(object sender, EventArgs e)
         {
-
+            LimpiarFormulario();
+            dgEmpleados.ClearSelection();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
+            LimpiarFormulario();
+            dgEmpleados.ClearSelection();
         }
 
         private void imgEliminar_Click(object sender, EventArgs e)
         {
-            Close();
+            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            if (dgEmpleados.CurrentRow != null)
+            {
+                int indiceFilaSeleccionada = dgEmpleados.CurrentRow.Index;
 
+                if (EmpleadoService.BorrarEmpleado(indiceFilaSeleccionada))
+                {
+                    MessageBox.Show("Empleado eliminado correctamente.");
+                    MostrarEmpleados();
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar el empleado.");
+                }
+            }
         }
 
         private void imgActualizar_Click(object sender, EventArgs e)
@@ -89,5 +104,34 @@ namespace Farmacia
         {
 
         }
+
+        private void dgEmpleados_SelectionChanged(object sender, EventArgs e)
+        {
+            bool hayFilaSeleccionada = dgEmpleados.SelectedRows.Count > 0;
+
+            btnAgregar.Enabled = !hayFilaSeleccionada;
+            btnActualizar.Enabled = hayFilaSeleccionada;
+            btnEliminar.Enabled = hayFilaSeleccionada;
+
+            // Habilitar o deshabilitar imágenes
+            imgAgregar.Enabled = !hayFilaSeleccionada;
+            imgActualizar.Enabled = hayFilaSeleccionada;
+            imgEliminar.Enabled = hayFilaSeleccionada;
+
+            if (hayFilaSeleccionada)
+            {
+                DataGridViewRow fila = dgEmpleados.SelectedRows[0];
+
+                txtnombre.Text = fila.Cells["nombre"].Value?.ToString() ?? "";
+                txtApellido.Text = fila.Cells["apellido"].Value?.ToString() ?? "";
+                txtUsuario.Text = fila.Cells["usuario"].Value?.ToString() ?? "";
+                txtContrasenya.Text = fila.Cells["password"].Value?.ToString() ?? "";
+            }
+            else
+            {
+                LimpiarFormulario();
+            }
+        }
+
     }
 }

@@ -34,10 +34,10 @@ namespace Farmacia
         private Button imgAgregar;
         private Button btnAgregar;
         private Button btnNuevo;
-        private Button btnCancelar;
+        private Button btnEliminar;
         private Button btnActualizar;
         private Button imgNuevo;
-        private Button imgCancelar;
+        private Button imgEliminar;
         private Button imgActualizar;
         private GroupBox gbProveedores;
         private DataGridView dgProveedores;
@@ -54,10 +54,10 @@ namespace Farmacia
             txtTitle = new TextBox();
             btnAgregar = new Button();
             btnNuevo = new Button();
-            btnCancelar = new Button();
+            btnEliminar = new Button();
             btnActualizar = new Button();
             imgActualizar = new Button();
-            imgCancelar = new Button();
+            imgEliminar = new Button();
             imgNuevo = new Button();
             imgAgregar = new Button();
             gbProveedores = new GroupBox();
@@ -178,19 +178,19 @@ namespace Farmacia
             btnNuevo.UseVisualStyleBackColor = true;
             btnNuevo.Click += btnNuevo_Click;
             // 
-            // btnCancelar
+            // btnEliminar
             // 
-            btnCancelar.FlatStyle = FlatStyle.Flat;
-            btnCancelar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCancelar.ForeColor = SystemColors.ButtonHighlight;
-            btnCancelar.Location = new Point(837, 330);
-            btnCancelar.Name = "btnCancelar";
-            btnCancelar.Size = new Size(163, 55);
-            btnCancelar.TabIndex = 5;
-            btnCancelar.Text = "Cancelar";
-            btnCancelar.TextAlign = ContentAlignment.MiddleRight;
-            btnCancelar.UseVisualStyleBackColor = true;
-            btnCancelar.Click += btnCancelar_Click;
+            btnEliminar.FlatStyle = FlatStyle.Flat;
+            btnEliminar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.ForeColor = SystemColors.ButtonHighlight;
+            btnEliminar.Location = new Point(837, 330);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(163, 55);
+            btnEliminar.TabIndex = 5;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.TextAlign = ContentAlignment.MiddleRight;
+            btnEliminar.UseVisualStyleBackColor = true;
+            btnEliminar.Click += btnEliminar_Click;
             // 
             // btnActualizar
             // 
@@ -222,21 +222,21 @@ namespace Farmacia
             imgActualizar.UseVisualStyleBackColor = true;
             imgActualizar.Click += imgActualizar_Click;
             // 
-            // imgCancelar
+            // imgEliminar
             // 
-            imgCancelar.BackgroundImage = Presentacion.Properties.Resources.ic_cancelar;
-            imgCancelar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgCancelar.FlatStyle = FlatStyle.Flat;
-            imgCancelar.ForeColor = Color.SkyBlue;
-            imgCancelar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgCancelar.Location = new Point(854, 340);
-            imgCancelar.Name = "imgCancelar";
-            imgCancelar.Size = new Size(37, 36);
-            imgCancelar.TabIndex = 8;
-            imgCancelar.TextAlign = ContentAlignment.MiddleRight;
-            imgCancelar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgCancelar.UseVisualStyleBackColor = true;
-            imgCancelar.Click += imgCancelar_Click;
+            imgEliminar.BackgroundImage = Presentacion.Properties.Resources.ic_cancelar;
+            imgEliminar.BackgroundImageLayout = ImageLayout.Zoom;
+            imgEliminar.FlatStyle = FlatStyle.Flat;
+            imgEliminar.ForeColor = Color.SkyBlue;
+            imgEliminar.ImageAlign = ContentAlignment.MiddleLeft;
+            imgEliminar.Location = new Point(854, 340);
+            imgEliminar.Name = "imgEliminar";
+            imgEliminar.Size = new Size(37, 36);
+            imgEliminar.TabIndex = 8;
+            imgEliminar.TextAlign = ContentAlignment.MiddleRight;
+            imgEliminar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            imgEliminar.UseVisualStyleBackColor = true;
+            imgEliminar.Click += imgEliminar_Click;
             // 
             // imgNuevo
             // 
@@ -286,10 +286,13 @@ namespace Farmacia
             dgProveedores.Dock = DockStyle.Fill;
             dgProveedores.Location = new Point(3, 19);
             dgProveedores.Name = "dgProveedores";
+            dgProveedores.ReadOnly = true;
             dgProveedores.RowHeadersWidth = 51;
             dgProveedores.RowTemplate.Height = 24;
+            dgProveedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgProveedores.Size = new Size(935, 264);
             dgProveedores.TabIndex = 0;
+            dgProveedores.SelectionChanged += dgProveedores_SelectionChanged;
             // 
             // AddProveedorForm
             // 
@@ -297,10 +300,10 @@ namespace Farmacia
             ClientSize = new Size(1053, 828);
             Controls.Add(gbProveedores);
             Controls.Add(imgActualizar);
-            Controls.Add(imgCancelar);
+            Controls.Add(imgEliminar);
             Controls.Add(imgNuevo);
             Controls.Add(btnActualizar);
-            Controls.Add(btnCancelar);
+            Controls.Add(btnEliminar);
             Controls.Add(btnNuevo);
             Controls.Add(imgAgregar);
             Controls.Add(btnAgregar);

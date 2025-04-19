@@ -62,5 +62,34 @@ namespace Negocio
 
             return borrado;
         }
+
+        public static bool ActualizarEmpleado(int indiceFilaSeleccionada, string nombre, string apellido, string usuario, string password)
+        {
+            bool actualizado = false;
+
+            if (!string.IsNullOrWhiteSpace(nombre) && !string.IsNullOrWhiteSpace(usuario))
+            {
+                int id = (int)dataTable.Rows[indiceFilaSeleccionada]["id_empleado"];
+
+                Empleado empleadoActualizado = new Empleado(id, nombre, apellido, usuario, password);
+
+                EmpleadoDao.UpdateEmpleado(empleadoActualizado);
+
+                DataRow fila = dataTable.Rows[indiceFilaSeleccionada];
+                fila["nombre"] = nombre;
+                fila["apellido"] = apellido;
+                fila["usuario"] = usuario;
+                fila["password"] = password;
+
+                actualizado = true;
+            }
+
+            return actualizado;
+        }
+
+        public static Empleado? Autenticar(string usuario, string password)
+        {
+            return EmpleadoDao.GetEmpleadoPorLogin(usuario, password);
+        }
     }
 }

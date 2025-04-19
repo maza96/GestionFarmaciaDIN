@@ -33,12 +33,12 @@ namespace Farmacia
 
         }
 
-        private void imgCancelar_Click(object sender, EventArgs e)
+        private void imgEliminar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
 
         }
@@ -81,6 +81,11 @@ namespace Farmacia
             txtnombre.Clear();
             txtDireccion.Clear();
             txtTelefono.Clear();
+        }
+
+        private void dgProveedores_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -308,10 +308,13 @@ namespace Farmacia
             dgEmpleados.Dock = DockStyle.Fill;
             dgEmpleados.Location = new Point(3, 19);
             dgEmpleados.Name = "dgEmpleados";
+            dgEmpleados.ReadOnly = true;
             dgEmpleados.RowHeadersWidth = 51;
             dgEmpleados.RowTemplate.Height = 24;
+            dgEmpleados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgEmpleados.Size = new Size(935, 252);
             dgEmpleados.TabIndex = 0;
+            dgEmpleados.SelectionChanged += dgEmpleados_SelectionChanged;
             // 
             // AddEmpleadoForm
             // 
