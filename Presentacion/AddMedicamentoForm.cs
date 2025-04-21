@@ -1,4 +1,6 @@
-﻿using Negocio;
+﻿using Datos;
+using Entidades;
+using Negocio;
 using Presentacion;
 using System;
 using System.Windows.Forms;
@@ -7,6 +9,7 @@ namespace Farmacia
 {
     public partial class AddMedicamentoForm : Form
     {
+        private List<Proveedor> proveedores = ProveedorDao.GetProveedoresList();
         public AddMedicamentoForm()
         {
             InitializeComponent();
@@ -15,12 +18,35 @@ namespace Farmacia
 
         private void imgAgregar_Click(object sender, EventArgs e)
         {
+            InsertarMedicamento();
+        }
 
+        private void InsertarMedicamento()
+        {
+            try
+            {
+                /*MedicamentoService.InsertarMedicamento(txtNombre.Text, 
+                    txtDesc.Text, numCant.Value, rbControl.Checked, 
+                    dtVencimiento.Value, txtCosto.Text, );*/
+                /*private int idMedicamento;
+                private string nombre;
+                private string descripcion;
+                private int cantidad;
+                private bool control;
+                private DateTime fechaVencimiento;
+                private decimal costo;
+                private int idProveedor;*/
+
+
+    }catch (Exception ex)
+            {
+
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            InsertarMedicamento();
         }
 
         private void imgNuevo_Click(object sender, EventArgs e)
@@ -78,7 +104,7 @@ namespace Farmacia
         private void LimpiarFormulario()
         {
             dgMedicamentos.CurrentCell = null;
-            txtnombre.Clear();
+            txtNombre.Clear();
             txtDesc.Clear();
             numCant.Value = 1;
             dtVencimiento.ResetText();

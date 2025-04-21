@@ -22,6 +22,33 @@ namespace Datos
             return dataTable;
         }
 
+        public static List<Proveedor> GetProveedoresList()
+        {
+            List<Proveedor> proveedores = new List<Proveedor> ();
+            using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
+            {
+                conn.Open();
+
+                string query = "SELECT * FROM proveedores";
+
+                using (var comando = new MySqlCommand(query, conn))
+                using (var reader = comando.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Proveedor proveedor = new Proveedor(
+                                reader.GetInt32("id_proveedor"),
+                                reader.GetString("nombre"),
+                                reader.GetString("telefono"),
+                                reader.GetString("direccion")
+                        );
+                        proveedores.Add(proveedor);
+                    }
+                }
+            }
+            return proveedores;
+        }
+
         public static void InsertarProveedor(Proveedor proveedor)
         {
             using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
