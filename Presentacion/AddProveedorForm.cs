@@ -63,6 +63,7 @@ namespace Farmacia
             try
             {
                 dgProveedores.DataSource = ProveedorService.GetProveedores();
+                dgProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             }
             catch (Exception ex)
