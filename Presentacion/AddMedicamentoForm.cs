@@ -25,6 +25,49 @@ namespace Farmacia
             MostrarMedicamentos();
         }
 
+        //                 ----------- AÑADIR -----------
+        private void imgAgregar_Click(object sender, EventArgs e)
+        {
+            InsertarMedicamento();
+        }
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            InsertarMedicamento();
+        }
+
+        //                  ----------- LIMPIAR -----------
+        private void imgNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+        }
+
+        //                  ----------- ELIMINAR -----------
+        private void imgEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarMedicamentoSeleccionado();
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarMedicamentoSeleccionado();
+        }
+
+        //               ----------- ACTUALIZAR -----------
+        private void imgActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarMedicamento();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            ActualizarMedicamento();
+        }
+
         // Muestra los medicamentos en el DataGridView.
         private void MostrarMedicamentos()
         {
@@ -38,20 +81,6 @@ namespace Farmacia
                     "la cadena de conexión a la Base de datos " + ex.Message);
             }
             LimpiarFormulario();
-        }
-
-        //                 ----------- AÑADIR -----------
-
-        // Maneja el click del botón o imagen de agregar un medicamento.
-        private void imgAgregar_Click(object sender, EventArgs e)
-        {
-            InsertarMedicamento();
-        }
-
-        // Maneja el click del botón de agregar un medicamento.
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            InsertarMedicamento();
         }
 
         // Inserta un medicamento en la base de datos con los datos del formulario.
@@ -78,31 +107,31 @@ namespace Farmacia
             }
         }
 
-
-        //                  ----------- LIMPIAR -----------
-        // Maneja el click del botón o imagen de nuevo, limpiando el formulario.
-        private void imgNuevo_Click(object sender, EventArgs e)
+        // Actualiza el medicamento seleccionado en la base de datos.
+        private void ActualizarMedicamento()
         {
-            LimpiarFormulario();
-        }
+            try
+            {
+                string id = dgMedicamentos.SelectedRows[0].Cells["id_medicamento"].Value?.ToString() ?? "";
 
-        // Maneja el click del botón de nuevo, limpiando el formulario.
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            LimpiarFormulario();
-        }
+                MedicamentoService.ActualizarMedicamento(
+                    id,
+                    txtNombre.Text,
+                    txtDesc.Text,
+                    numCant.Value.ToString(),
+                    rbControl.Checked,
+                    dtVencimiento.Value,
+                    txtCosto.Text,
+                    cbProveedores.SelectedValue?.ToString()
+                );
 
-        //                  ----------- ELIMINAR -----------
-        // Maneja el click del botón o imagen de eliminar un medicamento seleccionado.
-        private void imgEliminar_Click(object sender, EventArgs e)
-        {
-            EliminarMedicamentoSeleccionado();
-        }
-
-        // Maneja el click del botón de eliminar un medicamento seleccionado.
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            EliminarMedicamentoSeleccionado();
+                MessageBox.Show("Medicamento actualizado correctamente.", "Actualización Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MostrarMedicamentos();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error actualizando medicamento!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         // Elimina el medicamento seleccionado de la base de datos después de confirmación.
@@ -130,47 +159,6 @@ namespace Farmacia
             else
             {
                 MessageBox.Show("Seleccione un medicamento para eliminar.");
-            }
-        }
-
-        //               ----------- ACTUALIZAR -----------
-
-        // Maneja el click del botón o imagen de actualizar un medicamento.
-        private void imgActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarMedicamento();
-        }
-
-        // Maneja el click del botón de actualizar un medicamento.
-        private void btnActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarMedicamento();
-        }
-
-        // Actualiza el medicamento seleccionado en la base de datos.
-        private void ActualizarMedicamento()
-        {
-            try
-            {
-                string id = dgMedicamentos.SelectedRows[0].Cells["id_medicamento"].Value?.ToString() ?? "";
-
-                MedicamentoService.ActualizarMedicamento(
-                    id,
-                    txtNombre.Text,
-                    txtDesc.Text,
-                    numCant.Value.ToString(),
-                    rbControl.Checked,
-                    dtVencimiento.Value,
-                    txtCosto.Text,
-                    cbProveedores.SelectedValue?.ToString()
-                );
-
-                MessageBox.Show("Medicamento actualizado correctamente.", "Actualización Exitosa!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MostrarMedicamentos();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error: " + ex.Message, "Error actualizando medicament0!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -223,6 +211,11 @@ namespace Farmacia
             {
                 LimpiarFormulario();
             }
+        }
+
+        private void rbControl_Click(object sender, EventArgs e)
+        {
+            rbControl.Checked = !rbControl.Checked;
         }
     }
 }

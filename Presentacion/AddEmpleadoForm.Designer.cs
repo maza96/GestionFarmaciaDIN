@@ -104,7 +104,6 @@ namespace Farmacia
             label1.Size = new Size(100, 20);
             label1.TabIndex = 6;
             label1.Text = "Contraseña:";
-            label1.Click += label1_Click;
             // 
             // txtUsuario
             // 
@@ -339,6 +338,7 @@ namespace Farmacia
             dgEmpleados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgEmpleados.Size = new Size(935, 248);
             dgEmpleados.TabIndex = 1;
+            dgEmpleados.SelectionChanged += dgEmpleados_SelectionChanged_1;
             // 
             // AddEmpleadoForm
             // 

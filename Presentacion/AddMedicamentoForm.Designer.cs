@@ -173,6 +173,7 @@ namespace Farmacia
             // 
             // rbControl
             // 
+            rbControl.AutoCheck = false;
             rbControl.AutoSize = true;
             rbControl.Location = new Point(499, 180);
             rbControl.Name = "rbControl";
@@ -180,6 +181,7 @@ namespace Farmacia
             rbControl.TabIndex = 7;
             rbControl.TabStop = true;
             rbControl.UseVisualStyleBackColor = true;
+            rbControl.Click += rbControl_Click;
             // 
             // numCant
             // 

@@ -1,22 +1,17 @@
 ﻿using System.Data;
+using System.Text;
 using Datos;
 using Entidades;
 
 namespace Negocio
 {
-    /// <summary>
-    /// Clase de lógica de negocio para gestionar empleados.
-    /// Encapsula la interacción entre la capa de presentación y la base de datos.
-    /// </summary>
     public static class EmpleadoService
     {
         private static DataTable dataTable;
 
-        // Se ejecuta una vez la primera vez que se accede a cualquier miembro estático de la clase
         static EmpleadoService()
         {
             dataTable = EmpleadoDao.GetEmpleados();
-            dataTable.PrimaryKey = [dataTable.Columns[0]]; // Asumiendo que la primera columna es el ID
         }
 
         public static DataTable GetEmpleados()
@@ -24,67 +19,82 @@ namespace Negocio
             return dataTable;
         }
 
-        public static bool InsertarEmpleado(string nombre, string apellido, string usuario, string password)
+        public static void InsertarEmpleado(string nombre, string apellido, string usuario, string password)
         {
-            bool insertado = false;
+            StringBuilder errores = new StringBuilder();
 
-            // Validación simple
-            if (!string.IsNullOrWhiteSpace(nombre) && !string.IsNullOrWhiteSpace(usuario))
+            if (string.IsNullOrWhiteSpace(nombre))
+                errores.AppendLine("El nombre del empleado no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(apellido))
+                errores.AppendLine("El apellido del empleado no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(usuario))
+                errores.AppendLine("El nombre de usuario no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(password))
+                errores.AppendLine("La contraseña no puede estar vacía.");
+
+            if (errores.Length > 0)
+                throw new Exception(errores.ToString());
+
+            try
             {
                 Empleado nuevo = new Empleado(0, nombre, apellido, usuario, password);
-
                 EmpleadoDao.InsertarEmpleado(nuevo);
-
-                // Crear nueva fila en la DataTable
-                DataRow fila = dataTable.NewRow();
-                fila["nombre"] = nombre;
-                fila["apellido"] = apellido;
-                fila["usuario"] = usuario;
-                fila["password"] = password;
-
-                dataTable.Rows.Add(fila);
-                insertado = true;
+                dataTable = EmpleadoDao.GetEmpleados();
             }
-
-            return insertado;
-        }
-
-        public static bool BorrarEmpleado(int indiceFilaSeleccionada)
-        {
-            bool borrado = false;
-
-            int id = (int)dataTable.Rows[indiceFilaSeleccionada]["id_empleado"];
-
-            EmpleadoDao.BorrarEmpleado(id);
-
-            dataTable.Rows.RemoveAt(indiceFilaSeleccionada);
-            borrado = true;
-
-            return borrado;
-        }
-
-        public static bool ActualizarEmpleado(int indiceFilaSeleccionada, string nombre, string apellido, string usuario, string password)
-        {
-            bool actualizado = false;
-
-            if (!string.IsNullOrWhiteSpace(nombre) && !string.IsNullOrWhiteSpace(usuario))
+            catch (Exception ex)
             {
-                int id = (int)dataTable.Rows[indiceFilaSeleccionada]["id_empleado"];
-
-                Empleado empleadoActualizado = new Empleado(id, nombre, apellido, usuario, password);
-
-                EmpleadoDao.UpdateEmpleado(empleadoActualizado);
-
-                DataRow fila = dataTable.Rows[indiceFilaSeleccionada];
-                fila["nombre"] = nombre;
-                fila["apellido"] = apellido;
-                fila["usuario"] = usuario;
-                fila["password"] = password;
-
-                actualizado = true;
+                throw new Exception("Error insertando empleado: " + ex.Message);
             }
+        }
 
-            return actualizado;
+        public static void BorrarEmpleado(int id)
+        {
+            try
+            {
+                EmpleadoDao.BorrarEmpleado(id);
+                dataTable = EmpleadoDao.GetEmpleados();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error borrando empleado: " + ex.Message);
+            }
+        }
+
+        public static void ActualizarEmpleado(string idStr, string nombre, string apellido, string usuario, string password)
+        {
+            StringBuilder errores = new StringBuilder();
+
+            if (!int.TryParse(idStr, out int id) || id <= 0)
+                errores.AppendLine("ID del empleado inválido.");
+
+            if (string.IsNullOrWhiteSpace(nombre))
+                errores.AppendLine("El nombre del empleado no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(apellido))
+                errores.AppendLine("El apellido del empleado no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(usuario))
+                errores.AppendLine("El nombre de usuario no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(password))
+                errores.AppendLine("La contraseña no puede estar vacía.");
+
+            if (errores.Length > 0)
+                throw new Exception(errores.ToString());
+
+            try
+            {
+                Empleado empleadoActualizado = new Empleado(id, nombre, apellido, usuario, password);
+                EmpleadoDao.UpdateEmpleado(empleadoActualizado);
+                dataTable = EmpleadoDao.GetEmpleados();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error actualizando empleado: " + ex.Message);
+            }
         }
 
         public static Empleado? Autenticar(string usuario, string password)

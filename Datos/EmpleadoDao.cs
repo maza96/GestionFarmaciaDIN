@@ -50,9 +50,9 @@ namespace Datos
             using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
             {
                 conn.Open();
-                using (MySqlCommand cmd = new MySqlCommand("DELETE FROM empleados WHERE id_empleado = @id", conn))
+                using (MySqlCommand cmd = new MySqlCommand("DELETE FROM empleados WHERE id_empleado = @id_empleado", conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id_empleado", id);
                     if (cmd.ExecuteNonQuery() <= 0)
                     {
                         throw new Exception("No se ha podido borrar el empleado.");
@@ -72,10 +72,10 @@ namespace Datos
                             apellido = @apellido,
                             usuario = @usuario,
                             password = @password
-                        WHERE id = @id;
+                        WHERE id_empleado = @id_empleado;
                     """, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", empleado.Id);
+                    cmd.Parameters.AddWithValue("@id_empleado", empleado.Id);
                     cmd.Parameters.AddWithValue("@nombre", empleado.Nombre);
                     cmd.Parameters.AddWithValue("@apellido", empleado.Apellido);
                     cmd.Parameters.AddWithValue("@usuario", empleado.Usuario);
