@@ -205,10 +205,10 @@ namespace Farmacia
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(284, 27);
             txtNombre.TabIndex = 1;
-            txtnombre.Location = new Point(247, 49);
-            txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(284, 23);
-            txtnombre.TabIndex = 1;
+            txtNombre.Location = new Point(247, 49);
+            txtNombre.Name = "txtnombre";
+            txtNombre.Size = new Size(284, 23);
+            txtNombre.TabIndex = 1;
             // 
             // lblNombre
             // 
