@@ -24,7 +24,7 @@ namespace Presentacion
 
             if (empleado != null)
             {
-                MessageBox.Show($"¡Bienvenido, {empleado.Nombre}!");
+                MessageBox.Show($"¡Bienvenid@, {empleado.Nombre}!", "Inicio de sesión exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 MenuForm menu = new MenuForm();
                 this.Hide();

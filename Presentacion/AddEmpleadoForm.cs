@@ -78,7 +78,7 @@ namespace Farmacia
             try
             {
                 dgEmpleados.DataSource = EmpleadoService.GetEmpleados();
-
+                dgEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
             catch (Exception ex)
             {
