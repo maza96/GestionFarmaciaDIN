@@ -59,12 +59,12 @@ namespace Farmacia
 
         }
 
-        private void imgCancelar_Click(object sender, EventArgs e)
+        private void imgEliminar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
 
         }
@@ -96,7 +96,7 @@ namespace Farmacia
                 MessageBox.Show("Error al cargar las medicamentos. Compruebe " +
                     "la cadena de conexión a la Base de datos " + ex.Message);
             }
-            //Limpiamos formulario para que al iniciar no haya un Peli
+            //Limpiamos formulario para que al iniciar no haya un medicamento
             //seleccionada por defecto
             LimpiarFormulario();
         }
@@ -110,6 +110,11 @@ namespace Farmacia
             dtVencimiento.ResetText();
             rbControl.ResetText();
             txtCosto.Clear();
+        }
+
+        private void dgMedicamentos_SelectionChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

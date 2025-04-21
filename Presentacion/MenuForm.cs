@@ -30,5 +30,29 @@ namespace Presentacion
         {
             Close();
         }
+
+        private void btnProveedores_Click(object sender, EventArgs e)
+        {
+            AddProveedorForm proveedoresForm = new AddProveedorForm();
+            Hide(); //Ocultar formulario
+            proveedoresForm.ShowDialog();
+            Show(); //Cuando proveedores form se cierre
+        }
+
+        private void btnEmpleados_Click(object sender, EventArgs e)
+        {
+            AddEmpleadoForm empleadosForm = new AddEmpleadoForm();
+            Hide(); //Ocultar formulario
+            empleadosForm.ShowDialog();
+            Show(); //Cuando empleados form se cierre
+        }
+
+        private void btnVenta_Click(object sender, EventArgs e)
+        {
+            AddVentaForm ventaForm = new AddVentaForm();
+            Hide(); //Ocultar formulario
+            ventaForm.ShowDialog();
+            Show(); //Cuando venta form se cierre
+        }
     }
 }
