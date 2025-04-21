@@ -10,12 +10,12 @@ namespace Entidades
         private int cantidad;
         private bool control;
         private DateTime fechaVencimiento;
-        private decimal costo;
+        private float costo;
         private int idProveedor;
 
         public Medicamento(int idMedicamento, string nombre, string descripcion,
             int cantidad, bool control, DateTime fechaVencimiento,
-            decimal costo, int idProveedor)
+            float costo, int idProveedor)
         {
             this.idMedicamento = idMedicamento;
             this.nombre = nombre;
@@ -63,7 +63,7 @@ namespace Entidades
             set { fechaVencimiento = value; }
         }
 
-        public decimal Costo
+        public float Costo
         {
             get { return costo; }
             set { costo = value; }

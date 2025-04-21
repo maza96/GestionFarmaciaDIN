@@ -50,23 +50,7 @@ namespace Datos
             }
         }
 
-        public static void BorrarMedicamento(int id_medicamento)
-        {
-            using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
-            {
-                conn.Open();
-                using (MySqlCommand cmd = new MySqlCommand("DELETE FROM medicamentos WHERE id = @id_medicamento", conn))
-                {
-                    cmd.Parameters.AddWithValue("@id_medicamento", id_medicamento);
-                    if (cmd.ExecuteNonQuery() <= 0)
-                    {
-                        throw new Exception("No se ha podido borrar el medicamento!");
-                    }
-                }
-            }
-        }
-
-        public static void UpdateMedicamento(Medicamento medicamento)
+        public static void ModificarMedicamento(Medicamento medicamento)
         {
             using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
             {
@@ -80,10 +64,10 @@ namespace Datos
                             fecha_vencimiento = @fecha_vencimiento,
                             costo = @costo,
                             id_proveedor = @id_proveedor
-                        WHERE id = @id;
+                        WHERE id_medicamento = @id_medicamento;
                     """, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", medicamento.Id);
+                    cmd.Parameters.AddWithValue("@id_medicamento", medicamento.Id);
                     cmd.Parameters.AddWithValue("@nombre", medicamento.Nombre);
                     cmd.Parameters.AddWithValue("@descripcion", medicamento.Descripcion);
                     cmd.Parameters.AddWithValue("@cantidad", medicamento.Cantidad);
@@ -95,6 +79,21 @@ namespace Datos
                     if (cmd.ExecuteNonQuery() <= 0)
                     {
                         throw new Exception("No se ha podido actualizar el medicamento!");
+                    }
+                }
+            }
+        }
+        public static void BorrarMedicamento(int id_medicamento)
+        {
+            using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand("DELETE FROM medicamentos WHERE id_medicamento = @id_medicamento", conn))
+                {
+                    cmd.Parameters.AddWithValue("@id_medicamento", id_medicamento);
+                    if (cmd.ExecuteNonQuery() <= 0)
+                    {
+                        throw new Exception("No se ha podido borrar el medicamento!");
                     }
                 }
             }

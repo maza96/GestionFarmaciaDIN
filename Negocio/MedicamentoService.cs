@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using System.Text;
 using Datos;
 using Entidades;
 
@@ -25,48 +26,103 @@ namespace Negocio
             return dataTable;
         }
 
-        public static bool InsertarMedicamento(string nombre, string descripcion, int cantidad,
-            bool control, DateTime fechaVencimiento, decimal costo, int idProveedor)
+        public static void InsertarMedicamento(string nombre, string descripcion, int cantidad,
+            bool control, DateTime fechaVencimiento, string costoStr, string proveedorIdStr)
         {
-            bool insertado = false;
+            StringBuilder errores = new StringBuilder();
 
-            // Validación simple
-            if (!string.IsNullOrWhiteSpace(nombre) && cantidad > 0 && costo > 0)
+            // Validación de campos vacíos
+            if (string.IsNullOrWhiteSpace(nombre))
+                errores.AppendLine("El nombre del medicamento no puede estar vacío.");
+
+            if (string.IsNullOrWhiteSpace(descripcion))
+                errores.AppendLine("La descripción del medicamento no puede estar vacía.");
+
+            // Parseo con validación
+           
+            if (cantidad <= 0)
+                errores.AppendLine("La cantidad debe ser un número entero mayor que 0.");
+
+            if (!float.TryParse(costoStr, out float costo) || costo <= 0)
+                errores.AppendLine("El costo debe ser un número mayor que 0.");
+
+            if (!int.TryParse(proveedorIdStr, out int idProveedor) || idProveedor <= 0)
+                errores.AppendLine("Debe seleccionar un proveedor válido.");
+
+            if (fechaVencimiento <= DateTime.Now)
+                errores.AppendLine("La fecha de vencimiento debe ser posterior a hoy.");
+
+            if (errores.Length > 0)
+                throw new Exception(errores.ToString());
+
+            try
             {
-                Medicamento nuevo = new Medicamento(0, nombre, descripcion, cantidad,
-                    control, fechaVencimiento, costo, idProveedor);
+                Medicamento medicamento = new Medicamento(0, nombre, descripcion, cantidad, control, fechaVencimiento, costo, idProveedor);
+                MedicamentoDao.InsertarMedicamento(medicamento);
 
-                MedicamentoDao.InsertarMedicamento(nuevo);
+                dataTable = MedicamentoDao.GetMedicamentos();
 
-                // Crear nueva fila en la DataTable
-                DataRow fila = dataTable.NewRow();
-                fila["nombre"] = nombre;
-                fila["descripcion"] = descripcion;
-                fila["cantidad"] = cantidad;
-                fila["control"] = control;
-                fila["fecha_vencimiento"] = fechaVencimiento;
-                fila["costo"] = costo;
-                fila["id_proveedor"] = idProveedor;
-
-                dataTable.Rows.Add(fila);
-                insertado = true;
             }
-
-            return insertado;
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
 
-        public static bool BorrarMedicamento(int indiceFilaSeleccionada)
+
+        public static void ActualizarMedicamento(string idStr, string nombre, string descripcion, string cantidadStr,
+            bool control, DateTime fechaVencimiento, string costoStr, string proveedorIdStr)
         {
-            bool borrado = false;
+            StringBuilder errores = new StringBuilder();
 
-            int id = (int)dataTable.Rows[indiceFilaSeleccionada]["id_medicamento"];
+            if (!int.TryParse(idStr, out int id) || id <= 0)
+                errores.AppendLine("ID del medicamento inválido.");
 
-            MedicamentoDao.BorrarMedicamento(id);
+            if (string.IsNullOrWhiteSpace(nombre))
+                errores.AppendLine("El nombre del medicamento no puede estar vacío.");
 
-            dataTable.Rows.RemoveAt(indiceFilaSeleccionada);
-            borrado = true;
+            if (string.IsNullOrWhiteSpace(descripcion))
+                errores.AppendLine("La descripción del medicamento no puede estar vacía.");
 
-            return borrado;
+            if (!int.TryParse(cantidadStr, out int cantidad) || cantidad <= 0)
+                errores.AppendLine("La cantidad debe ser un número entero mayor que 0.");
+
+            if (!float.TryParse(costoStr, out float costo) || costo <= 0)
+                errores.AppendLine("El costo debe ser un número mayor que 0.");
+
+            if (!int.TryParse(proveedorIdStr, out int idProveedor) || idProveedor <= 0)
+                errores.AppendLine("Debe seleccionar un proveedor válido.");
+
+            if (fechaVencimiento <= DateTime.Now)
+                errores.AppendLine("La fecha de vencimiento debe ser posterior a hoy.");
+
+            if (errores.Length > 0)
+                throw new Exception(errores.ToString());
+
+            try
+            {
+                Medicamento medicamento = new Medicamento(id, nombre, descripcion, cantidad, control, fechaVencimiento, costo, idProveedor);
+                MedicamentoDao.ModificarMedicamento(medicamento);
+                dataTable = MedicamentoDao.GetMedicamentos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public static void BorrarMedicamento(int id)
+        {
+            try
+            {
+                // Realizar la eliminación en la base de datos usando el DAO
+                MedicamentoDao.BorrarMedicamento(id);
+                dataTable = MedicamentoDao.GetMedicamentos();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

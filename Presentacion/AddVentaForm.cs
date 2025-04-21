@@ -25,7 +25,7 @@ namespace Farmacia
 
         private void imgAnyadir_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void imgSalir_Click(object sender, EventArgs e)
@@ -35,7 +35,7 @@ namespace Farmacia
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void imgActualizar_Click(object sender, EventArgs e)
@@ -75,13 +75,6 @@ namespace Farmacia
         private void LimpiarFormulario()
         {
             dgProductosIngresados.CurrentCell = null;
-            
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void dgEmpleados_SelectionChanged(object sender, EventArgs e)
@@ -116,5 +109,6 @@ namespace Farmacia
         {
 
         }
+
     }
 }

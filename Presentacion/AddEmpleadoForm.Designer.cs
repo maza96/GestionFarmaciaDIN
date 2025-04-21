@@ -40,10 +40,12 @@ namespace Farmacia
         private Button imgEliminar;
         private Button imgActualizar;
         private GroupBox gbEmpleados;
-        private DataGridView dgEmpleados;
 
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             gbDatosNuevoMedicamento = new GroupBox();
             txtContrasenya = new TextBox();
             label1 = new Label();
@@ -90,7 +92,7 @@ namespace Farmacia
             // 
             txtContrasenya.Location = new Point(247, 241);
             txtContrasenya.Name = "txtContrasenya";
-            txtContrasenya.Size = new Size(284, 23);
+            txtContrasenya.Size = new Size(284, 27);
             txtContrasenya.TabIndex = 7;
             // 
             // label1
@@ -99,7 +101,7 @@ namespace Farmacia
             label1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(25, 242);
             label1.Name = "label1";
-            label1.Size = new Size(85, 17);
+            label1.Size = new Size(100, 20);
             label1.TabIndex = 6;
             label1.Text = "Contraseña:";
             label1.Click += label1_Click;
@@ -108,7 +110,7 @@ namespace Farmacia
             // 
             txtUsuario.Location = new Point(247, 174);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(284, 23);
+            txtUsuario.Size = new Size(284, 27);
             txtUsuario.TabIndex = 5;
             // 
             // lblUsuario
@@ -117,7 +119,7 @@ namespace Farmacia
             lblUsuario.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblUsuario.Location = new Point(25, 175);
             lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(61, 17);
+            lblUsuario.Size = new Size(72, 20);
             lblUsuario.TabIndex = 4;
             lblUsuario.Text = "Usuario:";
             // 
@@ -125,7 +127,7 @@ namespace Farmacia
             // 
             txtApellido.Location = new Point(247, 108);
             txtApellido.Name = "txtApellido";
-            txtApellido.Size = new Size(284, 23);
+            txtApellido.Size = new Size(284, 27);
             txtApellido.TabIndex = 3;
             // 
             // lblApellido
@@ -134,7 +136,7 @@ namespace Farmacia
             lblApellido.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblApellido.Location = new Point(25, 108);
             lblApellido.Name = "lblApellido";
-            lblApellido.Size = new Size(62, 17);
+            lblApellido.Size = new Size(73, 20);
             lblApellido.TabIndex = 2;
             lblApellido.Text = "Apellido:";
             // 
@@ -142,7 +144,7 @@ namespace Farmacia
             // 
             txtnombre.Location = new Point(247, 49);
             txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(284, 23);
+            txtnombre.Size = new Size(284, 27);
             txtnombre.TabIndex = 1;
             // 
             // lblNombre
@@ -151,7 +153,7 @@ namespace Farmacia
             lblNombre.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNombre.Location = new Point(25, 49);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(62, 17);
+            lblNombre.Size = new Size(73, 20);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre:";
             // 
@@ -304,17 +306,39 @@ namespace Farmacia
             // 
             // dgEmpleados
             // 
+            dgEmpleados.AllowUserToAddRows = false;
+            dgEmpleados.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopLeft;
+            dgEmpleados.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgEmpleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgEmpleados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgEmpleados.DefaultCellStyle = dataGridViewCellStyle3;
             dgEmpleados.Dock = DockStyle.Fill;
-            dgEmpleados.Location = new Point(3, 19);
+            dgEmpleados.Location = new Point(3, 23);
+            dgEmpleados.MultiSelect = false;
             dgEmpleados.Name = "dgEmpleados";
             dgEmpleados.ReadOnly = true;
+            dgEmpleados.RowHeadersVisible = false;
             dgEmpleados.RowHeadersWidth = 51;
             dgEmpleados.RowTemplate.Height = 24;
             dgEmpleados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgEmpleados.Size = new Size(935, 252);
-            dgEmpleados.TabIndex = 0;
-            dgEmpleados.SelectionChanged += dgEmpleados_SelectionChanged;
+            dgEmpleados.Size = new Size(935, 248);
+            dgEmpleados.TabIndex = 1;
             // 
             // AddEmpleadoForm
             // 
@@ -346,5 +370,6 @@ namespace Farmacia
         private TextBox txtUsuario;
         private TextBox txtContrasenya;
         private Label label1;
+        private DataGridView dgEmpleados;
     }
 }

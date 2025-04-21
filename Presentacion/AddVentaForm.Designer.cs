@@ -89,6 +89,7 @@ namespace Farmacia
             dgProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgProductos.Location = new Point(6, 80);
             dgProductos.Name = "dgProductos";
+            dgProductos.RowHeadersWidth = 51;
             dgProductos.Size = new Size(622, 244);
             dgProductos.TabIndex = 8;
             // 
@@ -99,7 +100,7 @@ namespace Farmacia
             imgAñadir.FlatStyle = FlatStyle.Flat;
             imgAñadir.ForeColor = Color.SkyBlue;
             imgAñadir.ImageAlign = ContentAlignment.MiddleLeft;
-            imgAñadir.Location = new Point(562, 14);
+            imgAñadir.Location = new Point(558, 27);
             imgAñadir.Name = "imgAñadir";
             imgAñadir.Size = new Size(33, 36);
             imgAñadir.TabIndex = 7;
@@ -110,18 +111,18 @@ namespace Farmacia
             // 
             // txtProducto
             // 
-            txtProducto.Location = new Point(162, 22);
+            txtProducto.Location = new Point(162, 32);
             txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(394, 23);
+            txtProducto.Size = new Size(371, 27);
             txtProducto.TabIndex = 1;
             // 
             // lblNombre
             // 
             lblNombre.AutoSize = true;
             lblNombre.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(78, 23);
+            lblNombre.Location = new Point(66, 35);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(78, 17);
+            lblNombre.Size = new Size(90, 20);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Producto:";
             // 
@@ -243,13 +244,13 @@ namespace Farmacia
             // 
             dgProductosIngresados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgProductosIngresados.Dock = DockStyle.Fill;
-            dgProductosIngresados.Location = new Point(3, 19);
+            dgProductosIngresados.Location = new Point(3, 23);
             dgProductosIngresados.Name = "dgProductosIngresados";
             dgProductosIngresados.ReadOnly = true;
             dgProductosIngresados.RowHeadersWidth = 51;
             dgProductosIngresados.RowTemplate.Height = 24;
             dgProductosIngresados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgProductosIngresados.Size = new Size(807, 252);
+            dgProductosIngresados.Size = new Size(807, 248);
             dgProductosIngresados.TabIndex = 0;
             dgProductosIngresados.SelectionChanged += dgEmpleados_SelectionChanged;
             // 
@@ -272,16 +273,16 @@ namespace Farmacia
             // 
             txtCambio.Location = new Point(149, 181);
             txtCambio.Name = "txtCambio";
-            txtCambio.Size = new Size(138, 23);
+            txtCambio.Size = new Size(138, 27);
             txtCambio.TabIndex = 7;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(77, 182);
+            label2.Location = new Point(6, 181);
             label2.Name = "label2";
-            label2.Size = new Size(66, 17);
+            label2.Size = new Size(78, 20);
             label2.TabIndex = 6;
             label2.Text = "Cambio:";
             // 
@@ -289,16 +290,16 @@ namespace Farmacia
             // 
             txtRecibo.Location = new Point(149, 113);
             txtRecibo.Name = "txtRecibo";
-            txtRecibo.Size = new Size(138, 23);
+            txtRecibo.Size = new Size(138, 27);
             txtRecibo.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(77, 114);
+            label3.Location = new Point(6, 113);
             label3.Name = "label3";
-            label3.Size = new Size(63, 17);
+            label3.Size = new Size(73, 20);
             label3.TabIndex = 4;
             label3.Text = "Recibo:";
             // 
@@ -306,16 +307,16 @@ namespace Farmacia
             // 
             txtTotal.Location = new Point(149, 40);
             txtTotal.Name = "txtTotal";
-            txtTotal.Size = new Size(138, 23);
+            txtTotal.Size = new Size(138, 27);
             txtTotal.TabIndex = 3;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(32, 41);
+            label4.Location = new Point(6, 40);
             label4.Name = "label4";
-            label4.Size = new Size(111, 17);
+            label4.Size = new Size(126, 20);
             label4.TabIndex = 2;
             label4.Text = "Total a pagar:";
             // 
@@ -323,7 +324,7 @@ namespace Farmacia
             // 
             txtCantidad.Location = new Point(855, 149);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(138, 23);
+            txtCantidad.Size = new Size(138, 27);
             txtCantidad.TabIndex = 9;
             // 
             // label1
@@ -332,9 +333,9 @@ namespace Farmacia
             label1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(738, 150);
             label1.Name = "label1";
-            label1.Size = new Size(72, 17);
+            label1.Size = new Size(89, 20);
             label1.TabIndex = 8;
-            label1.Text = "Cantidad";
+            label1.Text = "Cantidad:";
             // 
             // AddVentaForm
             // 
