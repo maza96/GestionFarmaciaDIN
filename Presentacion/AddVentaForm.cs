@@ -158,5 +158,9 @@ namespace Farmacia
             txtTotal.Text = total.ToString("C2", CultureInfo.CurrentCulture);
         }
 
+        private void imgVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

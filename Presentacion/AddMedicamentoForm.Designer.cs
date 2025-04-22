@@ -77,10 +77,12 @@ namespace Farmacia
             imgAgregar = new Button();
             gbMedicamentos = new GroupBox();
             dgMedicamentos = new DataGridView();
+            imgVolver = new PictureBox();
             gbDatosNuevoMedicamento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numCant).BeginInit();
             gbMedicamentos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgMedicamentos).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgVolver).BeginInit();
             SuspendLayout();
             // 
             // gbDatosNuevoMedicamento
@@ -401,10 +403,22 @@ namespace Farmacia
             dgMedicamentos.TabIndex = 0;
             dgMedicamentos.SelectionChanged += dgMedicamentos_SelectionChanged;
             // 
+            // imgVolver
+            // 
+            imgVolver.Image = Presentacion.Properties.Resources.ic_volver;
+            imgVolver.Location = new Point(6, 106);
+            imgVolver.Name = "imgVolver";
+            imgVolver.Size = new Size(47, 39);
+            imgVolver.SizeMode = PictureBoxSizeMode.Zoom;
+            imgVolver.TabIndex = 13;
+            imgVolver.TabStop = false;
+            imgVolver.Click += imgVolver_Click;
+            // 
             // AddMedicamentoForm
             // 
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1053, 828);
+            Controls.Add(imgVolver);
             Controls.Add(gbMedicamentos);
             Controls.Add(imgActualizar);
             Controls.Add(imgEliminar);
@@ -426,11 +440,13 @@ namespace Farmacia
             ((System.ComponentModel.ISupportInitialize)numCant).EndInit();
             gbMedicamentos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgMedicamentos).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgVolver).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         private ComboBox cbProveedores;
         private Label lblProveedor;
+        private PictureBox imgVolver;
     }
 }

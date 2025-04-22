@@ -98,32 +98,25 @@ namespace Farmacia
         // Eliminar un empleado seleccionado.
         private void EliminarEmpleadoSeleccionado()
         {
-            if (dgEmpleados.SelectedRows.Count != 0)
-            {
-                var resultado = MessageBox.Show("¿Está seguro que desea eliminar este empleado?",
-                    "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este empleado?",
+                "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if (resultado == DialogResult.Yes)
+            if (resultado == DialogResult.Yes)
+            {
+                try
                 {
-                    try
-                    {
-                        int id = Convert.ToInt32(dgEmpleados.SelectedRows[0].Cells["id_empleado"].Value);
+                    int id = Convert.ToInt32(dgEmpleados.SelectedRows[0].Cells["id_empleado"].Value);
 
-                        // No se espera un valor booleano, solo capturamos la excepción si ocurre.
-                        EmpleadoService.BorrarEmpleado(id);
+                    // No se espera un valor booleano, solo capturamos la excepción si ocurre.
+                    EmpleadoService.BorrarEmpleado(id);
 
-                        MessageBox.Show("Empleado eliminado correctamente.");
-                        MostrarEmpleados();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message, "Error eliminando empleado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    MessageBox.Show("Empleado eliminado correctamente.");
+                    MostrarEmpleados();
                 }
-            }
-            else
-            {
-                MessageBox.Show("Seleccione un empleado para eliminar.");
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error eliminando empleado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -185,6 +178,11 @@ namespace Farmacia
             {
                 LimpiarFormulario();
             }
+        }
+
+        private void imgVolver_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

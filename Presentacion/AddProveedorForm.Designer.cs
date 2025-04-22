@@ -29,7 +29,7 @@ namespace Farmacia
         private Label lblNombre;
         private TextBox txtDireccion;
         private Label lblDireccion;
-        private TextBox txtnombre;
+        private TextBox txtNombre;
         private Label lblTelefono;
         private Button imgAgregar;
         private Button btnAgregar;
@@ -40,16 +40,18 @@ namespace Farmacia
         private Button imgEliminar;
         private Button imgActualizar;
         private GroupBox gbProveedores;
-        private DataGridView dgProveedores;
 
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             gbDatosNuevoMedicamento = new GroupBox();
             txtTelefono = new TextBox();
             lblTelefono = new Label();
             txtDireccion = new TextBox();
             lblDireccion = new Label();
-            txtnombre = new TextBox();
+            txtNombre = new TextBox();
             lblNombre = new Label();
             txtTitle = new TextBox();
             btnAgregar = new Button();
@@ -62,9 +64,11 @@ namespace Farmacia
             imgAgregar = new Button();
             gbProveedores = new GroupBox();
             dgProveedores = new DataGridView();
+            imgVolver = new PictureBox();
             gbDatosNuevoMedicamento.SuspendLayout();
             gbProveedores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgProveedores).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgVolver).BeginInit();
             SuspendLayout();
             // 
             // gbDatosNuevoMedicamento
@@ -73,11 +77,11 @@ namespace Farmacia
             gbDatosNuevoMedicamento.Controls.Add(lblTelefono);
             gbDatosNuevoMedicamento.Controls.Add(txtDireccion);
             gbDatosNuevoMedicamento.Controls.Add(lblDireccion);
-            gbDatosNuevoMedicamento.Controls.Add(txtnombre);
+            gbDatosNuevoMedicamento.Controls.Add(txtNombre);
             gbDatosNuevoMedicamento.Controls.Add(lblNombre);
             gbDatosNuevoMedicamento.Location = new Point(59, 143);
             gbDatosNuevoMedicamento.Name = "gbDatosNuevoMedicamento";
-            gbDatosNuevoMedicamento.Size = new Size(729, 301);
+            gbDatosNuevoMedicamento.Size = new Size(729, 330);
             gbDatosNuevoMedicamento.TabIndex = 0;
             gbDatosNuevoMedicamento.TabStop = false;
             gbDatosNuevoMedicamento.Text = "Datos";
@@ -86,7 +90,7 @@ namespace Farmacia
             // 
             txtTelefono.Location = new Point(247, 174);
             txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(284, 23);
+            txtTelefono.Size = new Size(284, 27);
             txtTelefono.TabIndex = 5;
             // 
             // lblTelefono
@@ -95,7 +99,7 @@ namespace Farmacia
             lblTelefono.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblTelefono.Location = new Point(25, 175);
             lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(68, 17);
+            lblTelefono.Size = new Size(78, 20);
             lblTelefono.TabIndex = 4;
             lblTelefono.Text = "Teléfono:";
             // 
@@ -103,7 +107,7 @@ namespace Farmacia
             // 
             txtDireccion.Location = new Point(247, 108);
             txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(284, 23);
+            txtDireccion.Size = new Size(284, 27);
             txtDireccion.TabIndex = 3;
             // 
             // lblDireccion
@@ -112,16 +116,16 @@ namespace Farmacia
             lblDireccion.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblDireccion.Location = new Point(25, 108);
             lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(75, 17);
+            lblDireccion.Size = new Size(91, 20);
             lblDireccion.TabIndex = 2;
             lblDireccion.Text = "Dirección: ";
             // 
-            // txtnombre
+            // txtNombre
             // 
-            txtnombre.Location = new Point(247, 49);
-            txtnombre.Name = "txtnombre";
-            txtnombre.Size = new Size(284, 23);
-            txtnombre.TabIndex = 1;
+            txtNombre.Location = new Point(247, 49);
+            txtNombre.Name = "txtNombre";
+            txtNombre.Size = new Size(284, 27);
+            txtNombre.TabIndex = 1;
             // 
             // lblNombre
             // 
@@ -129,7 +133,7 @@ namespace Farmacia
             lblNombre.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblNombre.Location = new Point(25, 49);
             lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(155, 17);
+            lblNombre.Size = new Size(181, 20);
             lblNombre.TabIndex = 0;
             lblNombre.Text = "Nombre del Proveedor:";
             // 
@@ -155,7 +159,7 @@ namespace Farmacia
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = SystemColors.ButtonHighlight;
-            btnAgregar.Location = new Point(837, 143);
+            btnAgregar.Location = new Point(837, 154);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(163, 55);
             btnAgregar.TabIndex = 3;
@@ -261,7 +265,7 @@ namespace Farmacia
             imgAgregar.FlatStyle = FlatStyle.Flat;
             imgAgregar.ForeColor = Color.SkyBlue;
             imgAgregar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgAgregar.Location = new Point(854, 154);
+            imgAgregar.Location = new Point(853, 164);
             imgAgregar.Name = "imgAgregar";
             imgAgregar.Size = new Size(34, 35);
             imgAgregar.TabIndex = 2;
@@ -282,22 +286,57 @@ namespace Farmacia
             // 
             // dgProveedores
             // 
+            dgProveedores.AllowUserToAddRows = false;
+            dgProveedores.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopLeft;
+            dgProveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dgProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.BackColor = SystemColors.Window;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
+            dgProveedores.DefaultCellStyle = dataGridViewCellStyle3;
             dgProveedores.Dock = DockStyle.Fill;
-            dgProveedores.Location = new Point(3, 19);
+            dgProveedores.Location = new Point(3, 23);
+            dgProveedores.MultiSelect = false;
             dgProveedores.Name = "dgProveedores";
             dgProveedores.ReadOnly = true;
+            dgProveedores.RowHeadersVisible = false;
             dgProveedores.RowHeadersWidth = 51;
             dgProveedores.RowTemplate.Height = 24;
             dgProveedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgProveedores.Size = new Size(935, 264);
-            dgProveedores.TabIndex = 0;
+            dgProveedores.Size = new Size(935, 260);
+            dgProveedores.TabIndex = 2;
             dgProveedores.SelectionChanged += dgProveedores_SelectionChanged;
+            // 
+            // imgVolver
+            // 
+            imgVolver.Image = Presentacion.Properties.Resources.ic_volver;
+            imgVolver.Location = new Point(6, 106);
+            imgVolver.Name = "imgVolver";
+            imgVolver.Size = new Size(47, 39);
+            imgVolver.SizeMode = PictureBoxSizeMode.Zoom;
+            imgVolver.TabIndex = 13;
+            imgVolver.TabStop = false;
+            imgVolver.Click += imgVolver_Click;
             // 
             // AddProveedorForm
             // 
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1053, 828);
+            Controls.Add(imgVolver);
             Controls.Add(gbProveedores);
             Controls.Add(imgActualizar);
             Controls.Add(imgEliminar);
@@ -317,10 +356,13 @@ namespace Farmacia
             gbDatosNuevoMedicamento.PerformLayout();
             gbProveedores.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgProveedores).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgVolver).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         private TextBox txtTelefono;
+        private DataGridView dgProveedores;
+        private PictureBox imgVolver;
     }
 }

@@ -1,6 +1,10 @@
 ﻿using System.Data;
+using System.Text;
+using System.Text.RegularExpressions;
 using Datos;
 using Entidades;
+using Org.BouncyCastle.Crypto;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Negocio
 {
@@ -17,7 +21,7 @@ namespace Negocio
         static ProveedorService()
         {
             dataTable = ProveedorDao.GetProveedores();
-            dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["id_proveedor"] };
+            //dataTable.PrimaryKey = new DataColumn[] { dataTable.Columns["id_proveedor"] };
         }
 
         public static DataTable GetProveedores()
@@ -25,42 +29,71 @@ namespace Negocio
             return dataTable;
         }
 
-        public static bool InsertarProveedor(string nombreProveedor, string telefono, string direccion)
+        public static void InsertarProveedor(string nombre, string telefono, string direccion)
         {
-            bool insertado = false;
+            StringBuilder errores = new StringBuilder();
 
-            // Validación simple
-            if (!string.IsNullOrWhiteSpace(nombreProveedor) && !string.IsNullOrWhiteSpace(telefono))
+            if (string.IsNullOrWhiteSpace(nombre))
+                errores.AppendLine("El nombre no puede estar vacío.");
+            if (string.IsNullOrWhiteSpace(telefono) || !Regex.IsMatch(telefono, @"^\d{9}$"))
+                errores.AppendLine("El teléfono debe contener 9 dígitos.");
+            if (string.IsNullOrWhiteSpace(direccion))
+                errores.AppendLine("La direccion no puede estar vacía.");
+
+            if (errores.Length > 0)
+                throw new Exception(errores.ToString());
+
+            try
             {
-                Proveedor nuevo = new Proveedor(0, nombreProveedor, telefono, direccion);
-
+                Proveedor nuevo = new Proveedor(0, nombre, telefono, direccion);
                 ProveedorDao.InsertarProveedor(nuevo);
-
-                // Crear nueva fila en la DataTable
-                DataRow fila = dataTable.NewRow();
-                fila["nombre_proveedor"] = nombreProveedor;
-                fila["telefono"] = telefono;
-                fila["direccion"] = direccion;
-
-                dataTable.Rows.Add(fila);
-                insertado = true;
+                dataTable = ProveedorDao.GetProveedores();
             }
-
-            return insertado;
+            catch (Exception ex)
+            {
+                throw new Exception("Error insertando proveedor: " + ex.Message);
+            }
         }
 
-        public static bool BorrarProveedor(int indiceFilaSeleccionada)
+        public static void ActualizarProveedor(string idStr, string nombre, string telefono, string direccion)
         {
-            bool borrado = false;
+            StringBuilder errores = new StringBuilder();
 
-            int id = (int)dataTable.Rows[indiceFilaSeleccionada]["id_proveedor"];
+            if (!int.TryParse(idStr, out int id) || id <= 0)
+                errores.AppendLine("ID del proveedor inválido.");
+            if (string.IsNullOrWhiteSpace(nombre))
+                errores.AppendLine("El nombre no puede estar vacío.");
+            if (string.IsNullOrWhiteSpace(telefono) || !Regex.IsMatch(telefono, @"^\d{9}$"))
+                errores.AppendLine("El teléfono debe contener 9 dígitos.");
+            if (string.IsNullOrWhiteSpace(direccion))
+                errores.AppendLine("La direccion no puede estar vacía.");
 
-            ProveedorDao.BorrarProveedor(id);
+            if (errores.Length > 0)
+                throw new Exception(errores.ToString());
 
-            dataTable.Rows.RemoveAt(indiceFilaSeleccionada);
-            borrado = true;
+            try
+            {
+                Proveedor nuevo = new Proveedor(id, nombre, telefono, direccion);
+                ProveedorDao.ActualizarProveedor(nuevo);
+                dataTable = ProveedorDao.GetProveedores();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error actualizando proveedor: " + ex.Message);
+            }
+        }
 
-            return borrado;
+        public static void BorrarProveedor(int id)
+        {
+            try
+            {
+                ProveedorDao.BorrarProveedor(id);
+                dataTable = ProveedorDao.GetProveedores();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error borrando proveedor: " + ex.Message);
+            }
         }
     }
 }

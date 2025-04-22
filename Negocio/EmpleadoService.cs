@@ -24,10 +24,10 @@ namespace Negocio
             StringBuilder errores = new StringBuilder();
 
             if (string.IsNullOrWhiteSpace(nombre))
-                errores.AppendLine("El nombre del empleado no puede estar vacío.");
+                errores.AppendLine("El nombre no puede estar vacío.");
 
             if (string.IsNullOrWhiteSpace(apellido))
-                errores.AppendLine("El apellido del empleado no puede estar vacío.");
+                errores.AppendLine("El apellido no puede estar vacío.");
 
             if (string.IsNullOrWhiteSpace(usuario))
                 errores.AppendLine("El nombre de usuario no puede estar vacío.");

@@ -1,7 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
 using Entidades;
-
 namespace Datos
 {
     static public class ProveedorDao
@@ -55,11 +54,11 @@ namespace Datos
             {
                 conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand("""
-                        INSERT INTO proveedores (nombre_proveedor, telefono, direccion)
-                        VALUES (@nombre_proveedor, @telefono, @direccion);
+                        INSERT INTO proveedores (nombre, telefono, direccion)
+                        VALUES (@nombre, @telefono, @direccion);
                     """, conn))
                 {
-                    cmd.Parameters.AddWithValue("@nombre_proveedor", proveedor.Nombre);
+                    cmd.Parameters.AddWithValue("@nombre", proveedor.Nombre);
                     cmd.Parameters.AddWithValue("@telefono", proveedor.Telefono);
                     cmd.Parameters.AddWithValue("@direccion", proveedor.Direccion);
 
@@ -76,9 +75,9 @@ namespace Datos
             using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
             {
                 conn.Open();
-                using (MySqlCommand cmd = new MySqlCommand("DELETE FROM proveedores WHERE id = @id", conn))
+                using (MySqlCommand cmd = new MySqlCommand("DELETE FROM proveedores WHERE id_proveedor = @id_proveedor", conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", id);
+                    cmd.Parameters.AddWithValue("@id_proveedor", id);
                     if (cmd.ExecuteNonQuery() <= 0)
                     {
                         throw new Exception("No se ha podido borrar el proveedor.");
@@ -87,21 +86,21 @@ namespace Datos
             }
         }
 
-        public static void UpdateProveedor(Proveedor proveedor)
+        public static void ActualizarProveedor(Proveedor proveedor)
         {
             using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
             {
                 conn.Open();
                 using (MySqlCommand cmd = new MySqlCommand("""
                         UPDATE proveedores SET
-                            nombre_proveedor = @nombre_proveedor,
+                            nombre = @nombre,
                             telefono = @telefono,
                             direccion = @direccion
-                        WHERE id = @id;
+                        WHERE id_proveedor = @id_proveedor;
                     """, conn))
                 {
-                    cmd.Parameters.AddWithValue("@id", proveedor.Id);
-                    cmd.Parameters.AddWithValue("@nombre_proveedor", proveedor.Nombre);
+                    cmd.Parameters.AddWithValue("@id_proveedor", proveedor.Id);
+                    cmd.Parameters.AddWithValue("@nombre", proveedor.Nombre);
                     cmd.Parameters.AddWithValue("@telefono", proveedor.Telefono);
                     cmd.Parameters.AddWithValue("@direccion", proveedor.Direccion);
 

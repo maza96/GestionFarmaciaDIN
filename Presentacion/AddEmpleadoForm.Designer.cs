@@ -66,9 +66,11 @@ namespace Farmacia
             imgAgregar = new Button();
             gbEmpleados = new GroupBox();
             dgEmpleados = new DataGridView();
+            imgVolver = new PictureBox();
             gbDatosNuevoMedicamento.SuspendLayout();
             gbEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgEmpleados).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgVolver).BeginInit();
             SuspendLayout();
             // 
             // gbDatosNuevoMedicamento
@@ -178,7 +180,7 @@ namespace Farmacia
             btnAgregar.FlatStyle = FlatStyle.Flat;
             btnAgregar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAgregar.ForeColor = SystemColors.ButtonHighlight;
-            btnAgregar.Location = new Point(837, 143);
+            btnAgregar.Location = new Point(837, 154);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(163, 55);
             btnAgregar.TabIndex = 3;
@@ -192,7 +194,7 @@ namespace Farmacia
             btnNuevo.FlatStyle = FlatStyle.Flat;
             btnNuevo.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNuevo.ForeColor = SystemColors.ButtonHighlight;
-            btnNuevo.Location = new Point(837, 237);
+            btnNuevo.Location = new Point(837, 238);
             btnNuevo.Name = "btnNuevo";
             btnNuevo.Size = new Size(163, 55);
             btnNuevo.TabIndex = 4;
@@ -284,7 +286,7 @@ namespace Farmacia
             imgAgregar.FlatStyle = FlatStyle.Flat;
             imgAgregar.ForeColor = Color.SkyBlue;
             imgAgregar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgAgregar.Location = new Point(854, 154);
+            imgAgregar.Location = new Point(854, 164);
             imgAgregar.Name = "imgAgregar";
             imgAgregar.Size = new Size(34, 35);
             imgAgregar.TabIndex = 2;
@@ -340,10 +342,22 @@ namespace Farmacia
             dgEmpleados.TabIndex = 1;
             dgEmpleados.SelectionChanged += dgEmpleados_SelectionChanged_1;
             // 
+            // imgVolver
+            // 
+            imgVolver.Image = Presentacion.Properties.Resources.ic_volver;
+            imgVolver.Location = new Point(6, 106);
+            imgVolver.Name = "imgVolver";
+            imgVolver.Size = new Size(36, 30);
+            imgVolver.SizeMode = PictureBoxSizeMode.Zoom;
+            imgVolver.TabIndex = 12;
+            imgVolver.TabStop = false;
+            imgVolver.Click += imgVolver_Click;
+            // 
             // AddEmpleadoForm
             // 
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1053, 828);
+            Controls.Add(imgVolver);
             Controls.Add(gbEmpleados);
             Controls.Add(imgActualizar);
             Controls.Add(imgEliminar);
@@ -363,6 +377,7 @@ namespace Farmacia
             gbDatosNuevoMedicamento.PerformLayout();
             gbEmpleados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgEmpleados).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgVolver).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -371,5 +386,6 @@ namespace Farmacia
         private TextBox txtContrasenya;
         private Label label1;
         private DataGridView dgEmpleados;
+        private PictureBox imgVolver;
     }
 }

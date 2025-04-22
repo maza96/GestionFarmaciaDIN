@@ -12,7 +12,6 @@
     <PackageReference Include="DotNetEnv" Version="3.1.1" />
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
     <PackageReference Include="MySql.Data" Version="9.3.0" />
-    <PackageReference Include="MySqlBackup.NET.MySqlConnector" Version="2.3.9" />
     <PackageReference Include="MySqlConnector" Version="2.4.0" />
   </ItemGroup>
 
@@ -37,6 +36,9 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="ReportesForm.cs">
+      <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
 

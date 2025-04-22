@@ -137,28 +137,21 @@ namespace Farmacia
         // Elimina el medicamento seleccionado de la base de datos después de confirmación.
         private void EliminarMedicamentoSeleccionado()
         {
-            if (dgMedicamentos.SelectedRows.Count != 0)
-            {
-                var resultado = MessageBox.Show("¿Está seguro que desea eliminar este medicamento?",
-                "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult resultado = MessageBox.Show("¿Está seguro que desea eliminar este medicamento?",
+            "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if (resultado == DialogResult.Yes)
-                {
-                    try
-                    {
-                        int id = Convert.ToInt32(dgMedicamentos.SelectedRows[0].Cells["id_medicamento"].Value);
-                        MedicamentoService.BorrarMedicamento(id);
-                        MostrarMedicamentos(); // Refresh
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error: " + ex.Message, "Error eliminando Medicamento!");
-                    }
-                }
-            }
-            else
+            if (resultado == DialogResult.Yes)
             {
-                MessageBox.Show("Seleccione un medicamento para eliminar.");
+                try
+                {
+                    int id = Convert.ToInt32(dgMedicamentos.SelectedRows[0].Cells["id_medicamento"].Value);
+                    MedicamentoService.BorrarMedicamento(id);
+                    MostrarMedicamentos(); // Refresh
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message, "Error eliminando Medicamento!");
+                }
             }
         }
 
@@ -216,6 +209,11 @@ namespace Farmacia
         private void rbControl_Click(object sender, EventArgs e)
         {
             rbControl.Checked = !rbControl.Checked;
+        }
+
+        private void imgVolver_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

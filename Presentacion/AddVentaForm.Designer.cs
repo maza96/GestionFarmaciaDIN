@@ -54,6 +54,10 @@ namespace Farmacia
             imgAgregar = new Button();
             gbEmpleados = new GroupBox();
             dgProductosIngresados = new DataGridView();
+            Nombre = new DataGridViewTextBoxColumn();
+            PrecioUnitario = new DataGridViewTextBoxColumn();
+            Cantidad = new DataGridViewTextBoxColumn();
+            Subtotal = new DataGridViewTextBoxColumn();
             groupBox1 = new GroupBox();
             txtCambio = new TextBox();
             label2 = new Label();
@@ -63,16 +67,14 @@ namespace Farmacia
             label4 = new Label();
             label1 = new Label();
             numCantidad = new NumericUpDown();
-            Nombre = new DataGridViewTextBoxColumn();
-            PrecioUnitario = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            Subtotal = new DataGridViewTextBoxColumn();
+            imgVolver = new PictureBox();
             gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgProductos).BeginInit();
             gbEmpleados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgProductosIngresados).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)imgVolver).BeginInit();
             SuspendLayout();
             // 
             // gbBusqueda
@@ -94,6 +96,7 @@ namespace Farmacia
             dgProductos.Location = new Point(6, 80);
             dgProductos.Name = "dgProductos";
             dgProductos.ReadOnly = true;
+            dgProductos.RowHeadersWidth = 51;
             dgProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgProductos.Size = new Size(622, 244);
             dgProductos.TabIndex = 8;
@@ -260,6 +263,38 @@ namespace Farmacia
             dgProductosIngresados.Size = new Size(807, 248);
             dgProductosIngresados.TabIndex = 0;
             // 
+            // Nombre
+            // 
+            Nombre.HeaderText = "Nombre";
+            Nombre.MinimumWidth = 6;
+            Nombre.Name = "Nombre";
+            Nombre.ReadOnly = true;
+            Nombre.Width = 125;
+            // 
+            // PrecioUnitario
+            // 
+            PrecioUnitario.HeaderText = "Precio Unitario";
+            PrecioUnitario.MinimumWidth = 6;
+            PrecioUnitario.Name = "PrecioUnitario";
+            PrecioUnitario.ReadOnly = true;
+            PrecioUnitario.Width = 125;
+            // 
+            // Cantidad
+            // 
+            Cantidad.HeaderText = "Cantidad";
+            Cantidad.MinimumWidth = 6;
+            Cantidad.Name = "Cantidad";
+            Cantidad.ReadOnly = true;
+            Cantidad.Width = 125;
+            // 
+            // Subtotal
+            // 
+            Subtotal.HeaderText = "Subtotal";
+            Subtotal.MinimumWidth = 6;
+            Subtotal.Name = "Subtotal";
+            Subtotal.ReadOnly = true;
+            Subtotal.Width = 125;
+            // 
             // groupBox1
             // 
             groupBox1.Controls.Add(txtCambio);
@@ -280,7 +315,7 @@ namespace Farmacia
             txtCambio.Location = new Point(149, 181);
             txtCambio.Name = "txtCambio";
             txtCambio.ReadOnly = true;
-            txtCambio.Size = new Size(138, 23);
+            txtCambio.Size = new Size(138, 27);
             txtCambio.TabIndex = 7;
             // 
             // label2
@@ -315,7 +350,7 @@ namespace Farmacia
             txtTotal.Location = new Point(149, 40);
             txtTotal.Name = "txtTotal";
             txtTotal.ReadOnly = true;
-            txtTotal.Size = new Size(138, 23);
+            txtTotal.Size = new Size(138, 27);
             txtTotal.TabIndex = 3;
             // 
             // label4
@@ -343,38 +378,26 @@ namespace Farmacia
             numCantidad.Location = new Point(855, 150);
             numCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numCantidad.Name = "numCantidad";
-            numCantidad.Size = new Size(138, 23);
+            numCantidad.Size = new Size(138, 27);
             numCantidad.TabIndex = 13;
             numCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
-            // Nombre
+            // imgVolver
             // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.Name = "Nombre";
-            Nombre.ReadOnly = true;
-            // 
-            // PrecioUnitario
-            // 
-            PrecioUnitario.HeaderText = "Precio Unitario";
-            PrecioUnitario.Name = "PrecioUnitario";
-            PrecioUnitario.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.Name = "Cantidad";
-            Cantidad.ReadOnly = true;
-            // 
-            // Subtotal
-            // 
-            Subtotal.HeaderText = "Subtotal";
-            Subtotal.Name = "Subtotal";
-            Subtotal.ReadOnly = true;
+            imgVolver.Image = Presentacion.Properties.Resources.ic_volver;
+            imgVolver.Location = new Point(-3, 106);
+            imgVolver.Name = "imgVolver";
+            imgVolver.Size = new Size(47, 39);
+            imgVolver.SizeMode = PictureBoxSizeMode.Zoom;
+            imgVolver.TabIndex = 14;
+            imgVolver.TabStop = false;
+            imgVolver.Click += imgVolver_Click;
             // 
             // AddVentaForm
             // 
             BackColor = Color.SkyBlue;
             ClientSize = new Size(1053, 828);
+            Controls.Add(imgVolver);
             Controls.Add(numCantidad);
             Controls.Add(gbEmpleados);
             Controls.Add(label1);
@@ -399,6 +422,7 @@ namespace Farmacia
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numCantidad).EndInit();
+            ((System.ComponentModel.ISupportInitialize)imgVolver).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -417,5 +441,6 @@ namespace Farmacia
         private DataGridViewTextBoxColumn PrecioUnitario;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn Subtotal;
+        private PictureBox imgVolver;
     }
 }

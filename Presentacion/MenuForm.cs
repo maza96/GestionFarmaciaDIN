@@ -54,5 +54,13 @@ namespace Presentacion
             ventaForm.ShowDialog();
             Show(); //Cuando venta form se cierre
         }
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            ReportesForm reportesForm = new ReportesForm();
+            Hide();
+            reportesForm.ShowDialog();
+            Show();
+        }
     }
 }
