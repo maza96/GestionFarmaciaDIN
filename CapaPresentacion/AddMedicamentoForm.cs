@@ -31,20 +31,12 @@ namespace Farmacia
         }
 
         //                 ----------- AÑADIR -----------
-        private void imgAgregar_Click(object sender, EventArgs e)
-        {
-            InsertarMedicamento();
-        }
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             InsertarMedicamento();
         }
 
         //                  ----------- LIMPIAR -----------
-        private void imgNuevo_Click(object sender, EventArgs e)
-        {
-            LimpiarFormulario();
-        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
@@ -52,10 +44,6 @@ namespace Farmacia
         }
 
         //                  ----------- ELIMINAR -----------
-        private void imgEliminar_Click(object sender, EventArgs e)
-        {
-            EliminarMedicamentoSeleccionado();
-        }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -63,10 +51,6 @@ namespace Farmacia
         }
 
         //               ----------- ACTUALIZAR -----------
-        private void imgActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarMedicamento();
-        }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {

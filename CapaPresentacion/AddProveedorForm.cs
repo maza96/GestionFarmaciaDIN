@@ -12,29 +12,15 @@ namespace Farmacia
         }
 
 
-        private void imgAgregar_Click(object sender, EventArgs e)
-        {
-            InsertarProveedor();
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             InsertarProveedor();
         }
 
-        private void imgNuevo_Click(object sender, EventArgs e)
-        {
-            LimpiarFormulario();
-        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             LimpiarFormulario();
-        }
-
-        private void imgEliminar_Click(object sender, EventArgs e)
-        {
-            EliminarProveedorSeleccionado();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -42,10 +28,6 @@ namespace Farmacia
             EliminarProveedorSeleccionado();
         }
 
-        private void imgActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarProveedor();
-        }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {

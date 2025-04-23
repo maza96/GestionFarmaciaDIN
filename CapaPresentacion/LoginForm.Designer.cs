@@ -31,147 +31,135 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            picbox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            lblLoginTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
-            txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
-            btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
-            ((System.ComponentModel.ISupportInitialize)picbox1).BeginInit();
-            SuspendLayout();
+            this.picbox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblLoginTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtUsuario = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // picbox1
             // 
-            picbox1.CustomizableEdges = customizableEdges9;
-            picbox1.Image = Properties.Resources.Richie_2;
-            picbox1.ImageRotate = 0F;
-            picbox1.Location = new Point(50, 53);
-            picbox1.Name = "picbox1";
-            picbox1.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            picbox1.Size = new Size(409, 605);
-            picbox1.SizeMode = PictureBoxSizeMode.Zoom;
-            picbox1.TabIndex = 0;
-            picbox1.TabStop = false;
+            this.picbox1.Image = global::CapaPresentacion.Properties.Resources.Richie_2;
+            this.picbox1.ImageRotate = 0F;
+            this.picbox1.Location = new System.Drawing.Point(50, 42);
+            this.picbox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picbox1.Name = "picbox1";
+            this.picbox1.Size = new System.Drawing.Size(409, 484);
+            this.picbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbox1.TabIndex = 0;
+            this.picbox1.TabStop = false;
             // 
             // lblLoginTitle
             // 
-            lblLoginTitle.AutoSize = false;
-            lblLoginTitle.BackColor = Color.Transparent;
-            lblLoginTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblLoginTitle.ForeColor = Color.FromArgb(62, 62, 62);
-            lblLoginTitle.Location = new Point(251, 85);
-            lblLoginTitle.Name = "lblLoginTitle";
-            lblLoginTitle.Size = new Size(331, 36);
-            lblLoginTitle.TabIndex = 1;
-            lblLoginTitle.Text = "Bienvenid@ de Nuevo!";
-            lblLoginTitle.TextAlignment = ContentAlignment.MiddleCenter;
+            this.lblLoginTitle.AutoSize = false;
+            this.lblLoginTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblLoginTitle.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoginTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.lblLoginTitle.Location = new System.Drawing.Point(122, 42);
+            this.lblLoginTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblLoginTitle.Name = "lblLoginTitle";
+            this.lblLoginTitle.Size = new System.Drawing.Size(460, 55);
+            this.lblLoginTitle.TabIndex = 1;
+            this.lblLoginTitle.Text = "Bienvenid@ de Nuevo!";
+            this.lblLoginTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtUsuario
             // 
-            txtUsuario.Animated = true;
-            txtUsuario.AutoRoundedCorners = true;
-            txtUsuario.BorderColor = SystemColors.ControlDark;
-            txtUsuario.BorderRadius = 35;
-            txtUsuario.BorderThickness = 2;
-            txtUsuario.Cursor = Cursors.IBeam;
-            txtUsuario.CustomizableEdges = customizableEdges11;
-            txtUsuario.DefaultText = "";
-            txtUsuario.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtUsuario.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtUsuario.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtUsuario.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtUsuario.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsuario.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtUsuario.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtUsuario.IconLeftOffset = new Point(5, 0);
-            txtUsuario.Location = new Point(251, 163);
-            txtUsuario.Margin = new Padding(8, 9, 8, 9);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.PlaceholderForeColor = SystemColors.ControlDarkDark;
-            txtUsuario.PlaceholderText = "Usuario";
-            txtUsuario.SelectedText = "";
-            txtUsuario.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtUsuario.Size = new Size(331, 72);
-            txtUsuario.TabIndex = 2;
+            this.txtUsuario.Animated = true;
+            this.txtUsuario.AutoRoundedCorners = true;
+            this.txtUsuario.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.txtUsuario.BorderRadius = 28;
+            this.txtUsuario.BorderThickness = 2;
+            this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUsuario.DefaultText = "";
+            this.txtUsuario.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUsuario.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUsuario.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUsuario.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUsuario.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtUsuario.Location = new System.Drawing.Point(251, 130);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.PlaceholderForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtUsuario.PlaceholderText = "Usuario";
+            this.txtUsuario.SelectedText = "";
+            this.txtUsuario.Size = new System.Drawing.Size(331, 58);
+            this.txtUsuario.TabIndex = 2;
             // 
             // txtPassword
             // 
-            txtPassword.Animated = true;
-            txtPassword.AutoRoundedCorners = true;
-            txtPassword.BorderColor = SystemColors.ControlDark;
-            txtPassword.BorderRadius = 35;
-            txtPassword.BorderThickness = 2;
-            txtPassword.Cursor = Cursors.IBeam;
-            txtPassword.CustomizableEdges = customizableEdges13;
-            txtPassword.DefaultText = "";
-            txtPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtPassword.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Font = new Font("Century Gothic", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.IconLeftOffset = new Point(5, 0);
-            txtPassword.Location = new Point(251, 252);
-            txtPassword.Margin = new Padding(8, 9, 8, 9);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PlaceholderForeColor = SystemColors.ControlDarkDark;
-            txtPassword.PlaceholderText = "Contraseña";
-            txtPassword.SelectedText = "";
-            txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtPassword.Size = new Size(331, 72);
-            txtPassword.TabIndex = 2;
-            txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.Animated = true;
+            this.txtPassword.AutoRoundedCorners = true;
+            this.txtPassword.BorderColor = System.Drawing.SystemColors.ControlDark;
+            this.txtPassword.BorderRadius = 28;
+            this.txtPassword.BorderThickness = 2;
+            this.txtPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtPassword.Location = new System.Drawing.Point(251, 202);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PlaceholderForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txtPassword.PlaceholderText = "Contraseña";
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.Size = new System.Drawing.Size(331, 58);
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
-            btnLogin.Animated = true;
-            btnLogin.AutoRoundedCorners = true;
-            btnLogin.BorderRadius = 35;
-            btnLogin.CustomizableEdges = customizableEdges15;
-            btnLogin.FillColor = Color.FromArgb(243, 60, 40);
-            btnLogin.FillColor2 = Color.FromArgb(255, 188, 44);
-            btnLogin.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(322, 381);
-            btnLogin.Margin = new Padding(5, 5, 5, 5);
-            btnLogin.Name = "btnLogin";
-            btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            btnLogin.Size = new Size(191, 72);
-            btnLogin.TabIndex = 4;
-            btnLogin.Text = "Login";
-            btnLogin.Click += btnLogin_Click;
+            this.btnLogin.Animated = true;
+            this.btnLogin.AutoRoundedCorners = true;
+            this.btnLogin.BorderRadius = 28;
+            this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(60)))), ((int)(((byte)(40)))));
+            this.btnLogin.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(188)))), ((int)(((byte)(44)))));
+            this.btnLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(322, 305);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(191, 58);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // LoginForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(663, 632);
-            Controls.Add(btnLogin);
-            Controls.Add(txtPassword);
-            Controls.Add(txtUsuario);
-            Controls.Add(lblLoginTitle);
-            Controls.Add(picbox1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            MaximizeBox = false;
-            MaximumSize = new Size(681, 679);
-            MinimizeBox = false;
-            MinimumSize = new Size(681, 679);
-            Name = "LoginForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Log In";
-            TopMost = true;
-            Load += LoginForm_Load;
-            ((System.ComponentModel.ISupportInitialize)picbox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(663, 506);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.lblLoginTitle);
+            this.Controls.Add(this.picbox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(681, 553);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(681, 553);
+            this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Log In";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.LoginForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picbox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

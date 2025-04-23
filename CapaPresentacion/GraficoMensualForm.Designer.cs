@@ -30,12 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetVentas = new CapaPresentacion.DataSetVentas();
             this.dataSetVentasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetVentas)).BeginInit();
+            this.dataSetVentas = new CapaPresentacion.DataSetVentas();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVentasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVentas)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dataSetVentasBindingSource
+            // 
+            this.dataSetVentasBindingSource.DataSource = this.dataSetVentas;
+            this.dataSetVentasBindingSource.Position = 0;
+            // 
+            // dataSetVentas
+            // 
+            this.dataSetVentas.DataSetName = "DataSetVentas";
+            this.dataSetVentas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -45,32 +55,28 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.VentasMensual.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(644, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(840, 430);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // dataSetVentas
-            // 
-            this.dataSetVentas.DataSetName = "DataSetVentas";
-            this.dataSetVentas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataSetVentasBindingSource
-            // 
-            this.dataSetVentasBindingSource.DataSource = this.dataSetVentas;
-            this.dataSetVentasBindingSource.Position = 0;
             // 
             // GraficoMensualForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(644, 450);
+            this.ClientSize = new System.Drawing.Size(672, 344);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(858, 478);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(858, 478);
             this.Name = "GraficoMensualForm";
             this.Text = "GraficoMensualForm";
             this.Load += new System.EventHandler(this.GraficoMensualForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetVentasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetVentas)).EndInit();
             this.ResumeLayout(false);
 
         }

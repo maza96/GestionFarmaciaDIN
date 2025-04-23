@@ -97,8 +97,6 @@ namespace Farmacia
             EliminarProducto();
         }
 
-        
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             EliminarProducto();
@@ -181,10 +179,6 @@ namespace Farmacia
             }
         }
 
-        private void imgVolver_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
 
         private void txtRecibo_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -269,7 +263,9 @@ namespace Farmacia
                 int idVenta = VentaService.InsertarVenta(DateTime.Now, float.Parse(txtTotal.Text), detalleVentas, float.Parse(txtCambio.Text));
 
                 FacturaForm facturaForm = new FacturaForm(idVenta);
+                Hide();
                 facturaForm.ShowDialog();
+                Show();
                 LimpiarFormulario();
             }
             catch (Exception ex)
@@ -355,8 +351,11 @@ namespace Farmacia
                 // Actualizar el cambio al cambiar el total
                 ActualizarCambio();
             }
-        }    
-
+        }
+        private void imgVolver_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 
 }

@@ -44,322 +44,325 @@ namespace Farmacia
 
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            gbDatosNuevoMedicamento = new GroupBox();
-            txtTelefono = new TextBox();
-            lblTelefono = new Label();
-            txtDireccion = new TextBox();
-            lblDireccion = new Label();
-            txtNombre = new TextBox();
-            lblNombre = new Label();
-            txtTitle = new TextBox();
-            btnAgregar = new Button();
-            btnNuevo = new Button();
-            btnEliminar = new Button();
-            btnActualizar = new Button();
-            imgActualizar = new Button();
-            imgEliminar = new Button();
-            imgNuevo = new Button();
-            imgAgregar = new Button();
-            gbProveedores = new GroupBox();
-            dgProveedores = new DataGridView();
-            imgVolver = new PictureBox();
-            gbDatosNuevoMedicamento.SuspendLayout();
-            gbProveedores.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgProveedores).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)imgVolver).BeginInit();
-            SuspendLayout();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.gbDatosNuevoMedicamento = new System.Windows.Forms.GroupBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.imgActualizar = new System.Windows.Forms.Button();
+            this.imgEliminar = new System.Windows.Forms.Button();
+            this.imgNuevo = new System.Windows.Forms.Button();
+            this.imgAgregar = new System.Windows.Forms.Button();
+            this.gbProveedores = new System.Windows.Forms.GroupBox();
+            this.dgProveedores = new System.Windows.Forms.DataGridView();
+            this.imgVolver = new System.Windows.Forms.PictureBox();
+            this.gbDatosNuevoMedicamento.SuspendLayout();
+            this.gbProveedores.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProveedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVolver)).BeginInit();
+            this.SuspendLayout();
             // 
             // gbDatosNuevoMedicamento
             // 
-            gbDatosNuevoMedicamento.Controls.Add(txtTelefono);
-            gbDatosNuevoMedicamento.Controls.Add(lblTelefono);
-            gbDatosNuevoMedicamento.Controls.Add(txtDireccion);
-            gbDatosNuevoMedicamento.Controls.Add(lblDireccion);
-            gbDatosNuevoMedicamento.Controls.Add(txtNombre);
-            gbDatosNuevoMedicamento.Controls.Add(lblNombre);
-            gbDatosNuevoMedicamento.Location = new Point(59, 143);
-            gbDatosNuevoMedicamento.Name = "gbDatosNuevoMedicamento";
-            gbDatosNuevoMedicamento.Size = new Size(729, 330);
-            gbDatosNuevoMedicamento.TabIndex = 0;
-            gbDatosNuevoMedicamento.TabStop = false;
-            gbDatosNuevoMedicamento.Text = "Datos";
+            this.gbDatosNuevoMedicamento.Controls.Add(this.txtTelefono);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblTelefono);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.txtDireccion);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblDireccion);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.txtNombre);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblNombre);
+            this.gbDatosNuevoMedicamento.Location = new System.Drawing.Point(59, 143);
+            this.gbDatosNuevoMedicamento.Name = "gbDatosNuevoMedicamento";
+            this.gbDatosNuevoMedicamento.Size = new System.Drawing.Size(777, 214);
+            this.gbDatosNuevoMedicamento.TabIndex = 0;
+            this.gbDatosNuevoMedicamento.TabStop = false;
+            this.gbDatosNuevoMedicamento.Text = "Datos";
             // 
             // txtTelefono
             // 
-            txtTelefono.Location = new Point(247, 174);
-            txtTelefono.Name = "txtTelefono";
-            txtTelefono.Size = new Size(284, 27);
-            txtTelefono.TabIndex = 5;
+            this.txtTelefono.Location = new System.Drawing.Point(247, 174);
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(284, 22);
+            this.txtTelefono.TabIndex = 5;
             // 
             // lblTelefono
             // 
-            lblTelefono.AutoSize = true;
-            lblTelefono.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTelefono.Location = new Point(25, 175);
-            lblTelefono.Name = "lblTelefono";
-            lblTelefono.Size = new Size(78, 20);
-            lblTelefono.TabIndex = 4;
-            lblTelefono.Text = "Teléfono:";
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefono.Location = new System.Drawing.Point(25, 175);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(78, 20);
+            this.lblTelefono.TabIndex = 4;
+            this.lblTelefono.Text = "Teléfono:";
             // 
             // txtDireccion
             // 
-            txtDireccion.Location = new Point(247, 108);
-            txtDireccion.Name = "txtDireccion";
-            txtDireccion.Size = new Size(284, 27);
-            txtDireccion.TabIndex = 3;
+            this.txtDireccion.Location = new System.Drawing.Point(247, 108);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(284, 22);
+            this.txtDireccion.TabIndex = 3;
             // 
             // lblDireccion
             // 
-            lblDireccion.AutoSize = true;
-            lblDireccion.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDireccion.Location = new Point(25, 108);
-            lblDireccion.Name = "lblDireccion";
-            lblDireccion.Size = new Size(91, 20);
-            lblDireccion.TabIndex = 2;
-            lblDireccion.Text = "Dirección: ";
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(25, 108);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(91, 20);
+            this.lblDireccion.TabIndex = 2;
+            this.lblDireccion.Text = "Dirección: ";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(247, 49);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(284, 27);
-            txtNombre.TabIndex = 1;
+            this.txtNombre.Location = new System.Drawing.Point(247, 49);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(284, 22);
+            this.txtNombre.TabIndex = 1;
             // 
             // lblNombre
             // 
-            lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(25, 49);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(181, 20);
-            lblNombre.TabIndex = 0;
-            lblNombre.Text = "Nombre del Proveedor:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(25, 49);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(181, 20);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre del Proveedor:";
             // 
             // txtTitle
             // 
-            txtTitle.BackColor = Color.DarkBlue;
-            txtTitle.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTitle.ForeColor = SystemColors.Window;
-            txtTitle.Location = new Point(-3, 0);
-            txtTitle.MaximumSize = new Size(1062, 100);
-            txtTitle.MinimumSize = new Size(1062, 100);
-            txtTitle.Multiline = true;
-            txtTitle.Name = "txtTitle";
-            txtTitle.ReadOnly = true;
-            txtTitle.RightToLeft = RightToLeft.Yes;
-            txtTitle.Size = new Size(1062, 100);
-            txtTitle.TabIndex = 1;
-            txtTitle.Text = "\r\nAgregar Proveedor";
-            txtTitle.TextAlign = HorizontalAlignment.Center;
+            this.txtTitle.BackColor = System.Drawing.Color.DarkBlue;
+            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtTitle.Location = new System.Drawing.Point(-6, 0);
+            this.txtTitle.MaximumSize = new System.Drawing.Size(906, 82);
+            this.txtTitle.MinimumSize = new System.Drawing.Size(906, 82);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.ReadOnly = true;
+            this.txtTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTitle.Size = new System.Drawing.Size(906, 82);
+            this.txtTitle.TabIndex = 1;
+            this.txtTitle.Text = "\r\nAgregar Proveedor";
+            this.txtTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAgregar
             // 
-            btnAgregar.FlatStyle = FlatStyle.Flat;
-            btnAgregar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgregar.ForeColor = SystemColors.ButtonHighlight;
-            btnAgregar.Location = new Point(837, 154);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(163, 55);
-            btnAgregar.TabIndex = 3;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.TextAlign = ContentAlignment.MiddleRight;
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAgregar.Location = new System.Drawing.Point(263, 383);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(163, 55);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnNuevo
             // 
-            btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNuevo.ForeColor = SystemColors.ButtonHighlight;
-            btnNuevo.Location = new Point(837, 237);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(163, 55);
-            btnNuevo.TabIndex = 4;
-            btnNuevo.Text = "Nuevo";
-            btnNuevo.TextAlign = ContentAlignment.MiddleRight;
-            btnNuevo.UseVisualStyleBackColor = true;
-            btnNuevo.Click += btnNuevo_Click;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevo.Location = new System.Drawing.Point(62, 382);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(163, 55);
+            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEliminar
             // 
-            btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEliminar.ForeColor = SystemColors.ButtonHighlight;
-            btnEliminar.Location = new Point(837, 330);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(163, 55);
-            btnEliminar.TabIndex = 5;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.TextAlign = ContentAlignment.MiddleRight;
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminar.Location = new System.Drawing.Point(465, 383);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(163, 55);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
-            btnActualizar.FlatStyle = FlatStyle.Flat;
-            btnActualizar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnActualizar.ForeColor = SystemColors.ButtonHighlight;
-            btnActualizar.Location = new Point(837, 418);
-            btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(163, 55);
-            btnActualizar.TabIndex = 6;
-            btnActualizar.Text = "Actualizar";
-            btnActualizar.TextAlign = ContentAlignment.MiddleRight;
-            btnActualizar.UseVisualStyleBackColor = true;
-            btnActualizar.Click += btnActualizar_Click;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnActualizar.Location = new System.Drawing.Point(673, 382);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(163, 55);
+            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // imgActualizar
             // 
-            imgActualizar.BackgroundImage = CapaPresentacion.Properties.Resources.ic_actualizar;
-            imgActualizar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgActualizar.FlatStyle = FlatStyle.Flat;
-            imgActualizar.ForeColor = Color.SkyBlue;
-            imgActualizar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgActualizar.Location = new Point(854, 429);
-            imgActualizar.Name = "imgActualizar";
-            imgActualizar.Size = new Size(33, 34);
-            imgActualizar.TabIndex = 9;
-            imgActualizar.TextAlign = ContentAlignment.MiddleRight;
-            imgActualizar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgActualizar.UseVisualStyleBackColor = true;
-            imgActualizar.Click += imgActualizar_Click;
+            this.imgActualizar.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_actualizar;
+            this.imgActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgActualizar.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgActualizar.Location = new System.Drawing.Point(690, 393);
+            this.imgActualizar.Name = "imgActualizar";
+            this.imgActualizar.Size = new System.Drawing.Size(33, 34);
+            this.imgActualizar.TabIndex = 9;
+            this.imgActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgActualizar.UseVisualStyleBackColor = true;
+            this.imgActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // imgEliminar
             // 
-            imgEliminar.BackgroundImage = CapaPresentacion.Properties.Resources.ic_cancelar;
-            imgEliminar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgEliminar.FlatStyle = FlatStyle.Flat;
-            imgEliminar.ForeColor = Color.SkyBlue;
-            imgEliminar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgEliminar.Location = new Point(854, 340);
-            imgEliminar.Name = "imgEliminar";
-            imgEliminar.Size = new Size(37, 36);
-            imgEliminar.TabIndex = 8;
-            imgEliminar.TextAlign = ContentAlignment.MiddleRight;
-            imgEliminar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgEliminar.UseVisualStyleBackColor = true;
-            imgEliminar.Click += imgEliminar_Click;
+            this.imgEliminar.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_cancelar;
+            this.imgEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgEliminar.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgEliminar.Location = new System.Drawing.Point(482, 393);
+            this.imgEliminar.Name = "imgEliminar";
+            this.imgEliminar.Size = new System.Drawing.Size(37, 36);
+            this.imgEliminar.TabIndex = 8;
+            this.imgEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgEliminar.UseVisualStyleBackColor = true;
+            this.imgEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // imgNuevo
             // 
-            imgNuevo.BackgroundImage = CapaPresentacion.Properties.Resources.ic_guardar;
-            imgNuevo.BackgroundImageLayout = ImageLayout.Zoom;
-            imgNuevo.FlatStyle = FlatStyle.Flat;
-            imgNuevo.ForeColor = Color.SkyBlue;
-            imgNuevo.ImageAlign = ContentAlignment.MiddleLeft;
-            imgNuevo.Location = new Point(854, 247);
-            imgNuevo.Name = "imgNuevo";
-            imgNuevo.Size = new Size(37, 36);
-            imgNuevo.TabIndex = 7;
-            imgNuevo.TextAlign = ContentAlignment.MiddleRight;
-            imgNuevo.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgNuevo.UseVisualStyleBackColor = true;
-            imgNuevo.Click += imgNuevo_Click;
+            this.imgNuevo.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_guardar;
+            this.imgNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgNuevo.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgNuevo.Location = new System.Drawing.Point(79, 392);
+            this.imgNuevo.Name = "imgNuevo";
+            this.imgNuevo.Size = new System.Drawing.Size(37, 36);
+            this.imgNuevo.TabIndex = 7;
+            this.imgNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgNuevo.UseVisualStyleBackColor = true;
+            this.imgNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // imgAgregar
             // 
-            imgAgregar.BackgroundImage = CapaPresentacion.Properties.Resources.ic_agregar;
-            imgAgregar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgAgregar.FlatStyle = FlatStyle.Flat;
-            imgAgregar.ForeColor = Color.SkyBlue;
-            imgAgregar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgAgregar.Location = new Point(853, 164);
-            imgAgregar.Name = "imgAgregar";
-            imgAgregar.Size = new Size(34, 35);
-            imgAgregar.TabIndex = 2;
-            imgAgregar.TextAlign = ContentAlignment.MiddleRight;
-            imgAgregar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgAgregar.UseVisualStyleBackColor = true;
-            imgAgregar.Click += imgAgregar_Click;
+            this.imgAgregar.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_agregar;
+            this.imgAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgAgregar.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgAgregar.Location = new System.Drawing.Point(279, 393);
+            this.imgAgregar.Name = "imgAgregar";
+            this.imgAgregar.Size = new System.Drawing.Size(34, 35);
+            this.imgAgregar.TabIndex = 2;
+            this.imgAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgAgregar.UseVisualStyleBackColor = true;
+            this.imgAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // gbProveedores
             // 
-            gbProveedores.Controls.Add(dgProveedores);
-            gbProveedores.Location = new Point(59, 502);
-            gbProveedores.Name = "gbProveedores";
-            gbProveedores.Size = new Size(941, 286);
-            gbProveedores.TabIndex = 11;
-            gbProveedores.TabStop = false;
-            gbProveedores.Text = "Proveedores";
+            this.gbProveedores.Controls.Add(this.dgProveedores);
+            this.gbProveedores.Location = new System.Drawing.Point(59, 453);
+            this.gbProveedores.Name = "gbProveedores";
+            this.gbProveedores.Size = new System.Drawing.Size(777, 283);
+            this.gbProveedores.TabIndex = 11;
+            this.gbProveedores.TabStop = false;
+            this.gbProveedores.Text = "Proveedores";
             // 
             // dgProveedores
             // 
-            dgProveedores.AllowUserToAddRows = false;
-            dgProveedores.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.TopLeft;
-            dgProveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dgProveedores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgProveedores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle3.BackColor = SystemColors.Window;
-            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle3.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
-            dgProveedores.DefaultCellStyle = dataGridViewCellStyle3;
-            dgProveedores.Dock = DockStyle.Fill;
-            dgProveedores.Location = new Point(3, 23);
-            dgProveedores.MultiSelect = false;
-            dgProveedores.Name = "dgProveedores";
-            dgProveedores.ReadOnly = true;
-            dgProveedores.RowHeadersVisible = false;
-            dgProveedores.RowHeadersWidth = 51;
-            dgProveedores.RowTemplate.Height = 24;
-            dgProveedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgProveedores.Size = new Size(935, 260);
-            dgProveedores.TabIndex = 2;
-            dgProveedores.SelectionChanged += dgProveedores_SelectionChanged;
+            this.dgProveedores.AllowUserToAddRows = false;
+            this.dgProveedores.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.dgProveedores.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgProveedores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProveedores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgProveedores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgProveedores.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgProveedores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgProveedores.Location = new System.Drawing.Point(3, 18);
+            this.dgProveedores.MultiSelect = false;
+            this.dgProveedores.Name = "dgProveedores";
+            this.dgProveedores.ReadOnly = true;
+            this.dgProveedores.RowHeadersVisible = false;
+            this.dgProveedores.RowHeadersWidth = 51;
+            this.dgProveedores.RowTemplate.Height = 24;
+            this.dgProveedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgProveedores.Size = new System.Drawing.Size(771, 262);
+            this.dgProveedores.TabIndex = 2;
+            this.dgProveedores.SelectionChanged += new System.EventHandler(this.dgProveedores_SelectionChanged);
             // 
             // imgVolver
             // 
-            imgVolver.Image = CapaPresentacion.Properties.Resources.ic_volver;
-            imgVolver.Location = new Point(6, 106);
-            imgVolver.Name = "imgVolver";
-            imgVolver.Size = new Size(47, 39);
-            imgVolver.SizeMode = PictureBoxSizeMode.Zoom;
-            imgVolver.TabIndex = 13;
-            imgVolver.TabStop = false;
-            imgVolver.Click += imgVolver_Click;
+            this.imgVolver.Image = global::CapaPresentacion.Properties.Resources.ic_volver;
+            this.imgVolver.Location = new System.Drawing.Point(12, 88);
+            this.imgVolver.Name = "imgVolver";
+            this.imgVolver.Size = new System.Drawing.Size(27, 27);
+            this.imgVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgVolver.TabIndex = 13;
+            this.imgVolver.TabStop = false;
+            this.imgVolver.Click += new System.EventHandler(this.imgVolver_Click);
             // 
             // AddProveedorForm
             // 
-            BackColor = Color.SkyBlue;
-            ClientSize = new Size(1053, 828);
-            Controls.Add(imgVolver);
-            Controls.Add(gbProveedores);
-            Controls.Add(imgActualizar);
-            Controls.Add(imgEliminar);
-            Controls.Add(imgNuevo);
-            Controls.Add(btnActualizar);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnNuevo);
-            Controls.Add(imgAgregar);
-            Controls.Add(btnAgregar);
-            Controls.Add(txtTitle);
-            Controls.Add(gbDatosNuevoMedicamento);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "AddProveedorForm";
-            Load += AddProveedores_Load;
-            gbDatosNuevoMedicamento.ResumeLayout(false);
-            gbDatosNuevoMedicamento.PerformLayout();
-            gbProveedores.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgProveedores).EndInit();
-            ((System.ComponentModel.ISupportInitialize)imgVolver).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(893, 748);
+            this.Controls.Add(this.imgVolver);
+            this.Controls.Add(this.gbProveedores);
+            this.Controls.Add(this.imgActualizar);
+            this.Controls.Add(this.imgEliminar);
+            this.Controls.Add(this.imgNuevo);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.imgAgregar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.gbDatosNuevoMedicamento);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(911, 795);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(911, 795);
+            this.Name = "AddProveedorForm";
+            this.Load += new System.EventHandler(this.AddProveedores_Load);
+            this.gbDatosNuevoMedicamento.ResumeLayout(false);
+            this.gbDatosNuevoMedicamento.PerformLayout();
+            this.gbProveedores.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgProveedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVolver)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         private TextBox txtTelefono;

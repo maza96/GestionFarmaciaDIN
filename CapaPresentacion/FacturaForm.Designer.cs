@@ -55,21 +55,21 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "CapaPresentacion.Factura.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(4);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(691, 450);
+            this.reportViewer1.Size = new System.Drawing.Size(858, 778);
             this.reportViewer1.TabIndex = 0;
             // 
             // FacturaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 450);
+            this.ClientSize = new System.Drawing.Size(858, 778);
             this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(707, 489);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(707, 489);
             this.Name = "FacturaForm";
             this.Text = "FacturaForm";
             this.Load += new System.EventHandler(this.FacturaForm_Load);

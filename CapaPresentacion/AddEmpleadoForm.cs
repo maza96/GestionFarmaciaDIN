@@ -11,19 +11,9 @@ namespace Farmacia
             InitializeComponent();
         }
 
-        private void imgAgregar_Click(object sender, EventArgs e)
-        {
-            InsertarEmpleado();
-        }
-
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             InsertarEmpleado();
-        }
-
-        private void imgNuevo_Click(object sender, EventArgs e)
-        {
-            LimpiarFormulario();
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
@@ -31,19 +21,9 @@ namespace Farmacia
             LimpiarFormulario();
         }
 
-        private void imgEliminar_Click(object sender, EventArgs e)
-        {
-            EliminarEmpleadoSeleccionado();
-        }
-
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             EliminarEmpleadoSeleccionado();
-        }
-
-        private void imgActualizar_Click(object sender, EventArgs e)
-        {
-            ActualizarEmpleado();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
@@ -151,7 +131,7 @@ namespace Farmacia
 
         // Cambiar la selección del DataGridView.
 
-        private void dgEmpleados_SelectionChanged_1(object sender, EventArgs e)
+        private void dgEmpleados_SelectionChanged(object sender, EventArgs e)
         {
             bool hayFilaSeleccionada = dgEmpleados.SelectedRows.Count > 0;
 

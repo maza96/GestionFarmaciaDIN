@@ -1,4 +1,5 @@
 ﻿using CapaDatos;
+using CapaEntidades;
 using CapaNegocio;
 using Microsoft.Reporting.WinForms;
 using System;
@@ -33,17 +34,26 @@ namespace CapaPresentacion
         {
             // Obtener los datos de los medicamentos más vendidos
             DataTable dt = VentaDao.ObtenerMedicamentosMasVendidos(year, month);
+            if (dt.Rows.Count > 0)
+            {
+                // Ahora pasar el DataSet al ReportViewer
+                reportViewer1.LocalReport.ReportPath = "VentasMensual.rdlc"; // Ruta del informe RDLC
 
-            // Ahora pasar el DataSet al ReportViewer
-            reportViewer1.LocalReport.ReportPath = "VentasMensual.rdlc"; // Ruta del informe RDLC
+                // Limpiar cualquier DataSource previo
+                reportViewer1.LocalReport.DataSources.Clear();
 
-            // Limpiar cualquier DataSource previo
-            reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("GraficoDataSet", dt));
 
-            reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("GraficoDataSet", dt));
+                // Refrescar el informe
+                reportViewer1.RefreshReport();
+            }
+            else
+            {
+                MessageBox.Show("No se han encontrado ventas para el mes seleccionado", "Información: ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
 
-            // Refrescar el informe
-            reportViewer1.RefreshReport();
+            
         }
 
     }

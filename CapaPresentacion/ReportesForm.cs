@@ -49,7 +49,9 @@ namespace CapaPresentacion
                 int mes = cbMeses.SelectedIndex + 1;
                 int anyo = 2025;
                 GraficoMensualForm graficoMensualForm = new GraficoMensualForm(mes, anyo);
+                Hide();
                 graficoMensualForm.ShowDialog();
+                Show();
             }
             catch (Exception ex)
             {

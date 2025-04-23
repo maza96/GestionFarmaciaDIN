@@ -49,10 +49,12 @@ namespace Farmacia
         private Button imgEliminar;
         private Button imgActualizar;
         private GroupBox gbMedicamentos;
-        private DataGridView dgMedicamentos;
 
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbDatosNuevoMedicamento = new System.Windows.Forms.GroupBox();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.cbProveedores = new System.Windows.Forms.ComboBox();
@@ -116,7 +118,7 @@ namespace Farmacia
             this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProveedor.Location = new System.Drawing.Point(25, 321);
             this.lblProveedor.Name = "lblProveedor";
-            this.lblProveedor.Size = new System.Drawing.Size(78, 17);
+            this.lblProveedor.Size = new System.Drawing.Size(90, 20);
             this.lblProveedor.TabIndex = 13;
             this.lblProveedor.Text = "Proveedor:";
             // 
@@ -125,14 +127,14 @@ namespace Farmacia
             this.cbProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProveedores.Location = new System.Drawing.Point(247, 311);
             this.cbProveedores.Name = "cbProveedores";
-            this.cbProveedores.Size = new System.Drawing.Size(229, 21);
+            this.cbProveedores.Size = new System.Drawing.Size(229, 24);
             this.cbProveedores.TabIndex = 1;
             // 
             // txtCosto
             // 
             this.txtCosto.Location = new System.Drawing.Point(474, 247);
             this.txtCosto.Name = "txtCosto";
-            this.txtCosto.Size = new System.Drawing.Size(179, 20);
+            this.txtCosto.Size = new System.Drawing.Size(179, 22);
             this.txtCosto.TabIndex = 12;
             // 
             // lblCosto
@@ -141,7 +143,7 @@ namespace Farmacia
             this.lblCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCosto.Location = new System.Drawing.Point(408, 247);
             this.lblCosto.Name = "lblCosto";
-            this.lblCosto.Size = new System.Drawing.Size(48, 17);
+            this.lblCosto.Size = new System.Drawing.Size(58, 20);
             this.lblCosto.TabIndex = 11;
             this.lblCosto.Text = "Costo:";
             // 
@@ -151,7 +153,7 @@ namespace Farmacia
             this.dtVencimiento.Location = new System.Drawing.Point(247, 247);
             this.dtVencimiento.MinDate = new System.DateTime(2025, 4, 17, 0, 0, 0, 0);
             this.dtVencimiento.Name = "dtVencimiento";
-            this.dtVencimiento.Size = new System.Drawing.Size(131, 20);
+            this.dtVencimiento.Size = new System.Drawing.Size(131, 22);
             this.dtVencimiento.TabIndex = 10;
             this.dtVencimiento.Value = new System.DateTime(2025, 4, 17, 11, 37, 27, 0);
             // 
@@ -161,7 +163,7 @@ namespace Farmacia
             this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVencimiento.Location = new System.Drawing.Point(25, 250);
             this.lblVencimiento.Name = "lblVencimiento";
-            this.lblVencimiento.Size = new System.Drawing.Size(152, 17);
+            this.lblVencimiento.Size = new System.Drawing.Size(180, 20);
             this.lblVencimiento.TabIndex = 9;
             this.lblVencimiento.Text = "Fecha de Vencimiento:";
             // 
@@ -171,7 +173,7 @@ namespace Farmacia
             this.lblControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblControl.Location = new System.Drawing.Point(408, 177);
             this.lblControl.Name = "lblControl";
-            this.lblControl.Size = new System.Drawing.Size(57, 17);
+            this.lblControl.Size = new System.Drawing.Size(68, 20);
             this.lblControl.TabIndex = 8;
             this.lblControl.Text = "Control:";
             // 
@@ -181,10 +183,11 @@ namespace Farmacia
             this.rbControl.AutoSize = true;
             this.rbControl.Location = new System.Drawing.Point(499, 180);
             this.rbControl.Name = "rbControl";
-            this.rbControl.Size = new System.Drawing.Size(14, 13);
+            this.rbControl.Size = new System.Drawing.Size(17, 16);
             this.rbControl.TabIndex = 7;
             this.rbControl.TabStop = true;
             this.rbControl.UseVisualStyleBackColor = true;
+            this.rbControl.Click += new System.EventHandler(this.rbControl_Click);
             // 
             // numCant
             // 
@@ -200,7 +203,7 @@ namespace Farmacia
             0,
             0});
             this.numCant.Name = "numCant";
-            this.numCant.Size = new System.Drawing.Size(131, 20);
+            this.numCant.Size = new System.Drawing.Size(131, 22);
             this.numCant.TabIndex = 6;
             this.numCant.Value = new decimal(new int[] {
             1,
@@ -214,7 +217,7 @@ namespace Farmacia
             this.lblCant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCant.Location = new System.Drawing.Point(25, 175);
             this.lblCant.Name = "lblCant";
-            this.lblCant.Size = new System.Drawing.Size(68, 17);
+            this.lblCant.Size = new System.Drawing.Size(80, 20);
             this.lblCant.TabIndex = 4;
             this.lblCant.Text = "Cantidad:";
             // 
@@ -222,7 +225,7 @@ namespace Farmacia
             // 
             this.txtDesc.Location = new System.Drawing.Point(247, 108);
             this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(284, 20);
+            this.txtDesc.Size = new System.Drawing.Size(284, 22);
             this.txtDesc.TabIndex = 3;
             // 
             // lblDesc
@@ -231,7 +234,7 @@ namespace Farmacia
             this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesc.Location = new System.Drawing.Point(25, 108);
             this.lblDesc.Name = "lblDesc";
-            this.lblDesc.Size = new System.Drawing.Size(86, 17);
+            this.lblDesc.Size = new System.Drawing.Size(104, 20);
             this.lblDesc.TabIndex = 2;
             this.lblDesc.Text = "Descripción:";
             // 
@@ -239,7 +242,7 @@ namespace Farmacia
             // 
             this.txtNombre.Location = new System.Drawing.Point(247, 49);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(284, 20);
+            this.txtNombre.Size = new System.Drawing.Size(284, 22);
             this.txtNombre.TabIndex = 1;
             // 
             // lblNombre
@@ -248,7 +251,7 @@ namespace Farmacia
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(25, 49);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(173, 17);
+            this.lblNombre.Size = new System.Drawing.Size(205, 20);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre del Medicamento:";
             // 
@@ -258,13 +261,13 @@ namespace Farmacia
             this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTitle.ForeColor = System.Drawing.SystemColors.Window;
             this.txtTitle.Location = new System.Drawing.Point(-3, 0);
-            this.txtTitle.MaximumSize = new System.Drawing.Size(1062, 100);
-            this.txtTitle.MinimumSize = new System.Drawing.Size(1062, 100);
+            this.txtTitle.MaximumSize = new System.Drawing.Size(1062, 84);
+            this.txtTitle.MinimumSize = new System.Drawing.Size(1062, 84);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.ReadOnly = true;
             this.txtTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtTitle.Size = new System.Drawing.Size(1062, 100);
+            this.txtTitle.Size = new System.Drawing.Size(1062, 84);
             this.txtTitle.TabIndex = 1;
             this.txtTitle.Text = "\r\nAgregar Medicamento\r\n";
             this.txtTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -281,6 +284,7 @@ namespace Farmacia
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnNuevo
             // 
@@ -294,6 +298,7 @@ namespace Farmacia
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnEliminar
             // 
@@ -307,6 +312,7 @@ namespace Farmacia
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
@@ -320,6 +326,7 @@ namespace Farmacia
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // imgActualizar
             // 
@@ -335,6 +342,7 @@ namespace Farmacia
             this.imgActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.imgActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.imgActualizar.UseVisualStyleBackColor = true;
+            this.imgActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // imgEliminar
             // 
@@ -350,6 +358,7 @@ namespace Farmacia
             this.imgEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.imgEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.imgEliminar.UseVisualStyleBackColor = true;
+            this.imgEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // imgNuevo
             // 
@@ -365,6 +374,7 @@ namespace Farmacia
             this.imgNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.imgNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.imgNuevo.UseVisualStyleBackColor = true;
+            this.imgNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // imgAgregar
             // 
@@ -380,13 +390,14 @@ namespace Farmacia
             this.imgAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.imgAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.imgAgregar.UseVisualStyleBackColor = true;
+            this.imgAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // gbMedicamentos
             // 
             this.gbMedicamentos.Controls.Add(this.dgMedicamentos);
             this.gbMedicamentos.Location = new System.Drawing.Point(59, 528);
             this.gbMedicamentos.Name = "gbMedicamentos";
-            this.gbMedicamentos.Size = new System.Drawing.Size(941, 288);
+            this.gbMedicamentos.Size = new System.Drawing.Size(924, 288);
             this.gbMedicamentos.TabIndex = 11;
             this.gbMedicamentos.TabStop = false;
             this.gbMedicamentos.Text = "Medicamentos";
@@ -395,24 +406,45 @@ namespace Farmacia
             // 
             this.dgMedicamentos.AllowUserToAddRows = false;
             this.dgMedicamentos.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.dgMedicamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgMedicamentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgMedicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgMedicamentos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgMedicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgMedicamentos.Location = new System.Drawing.Point(3, 16);
+            this.dgMedicamentos.Location = new System.Drawing.Point(3, 18);
+            this.dgMedicamentos.MultiSelect = false;
             this.dgMedicamentos.Name = "dgMedicamentos";
             this.dgMedicamentos.ReadOnly = true;
             this.dgMedicamentos.RowHeadersVisible = false;
             this.dgMedicamentos.RowHeadersWidth = 51;
             this.dgMedicamentos.RowTemplate.Height = 24;
             this.dgMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgMedicamentos.Size = new System.Drawing.Size(935, 269);
-            this.dgMedicamentos.TabIndex = 0;
+            this.dgMedicamentos.Size = new System.Drawing.Size(918, 267);
+            this.dgMedicamentos.TabIndex = 3;
+            this.dgMedicamentos.SelectionChanged += new System.EventHandler(this.dgMedicamentos_SelectionChanged);
             // 
             // imgVolver
             // 
             this.imgVolver.Image = global::CapaPresentacion.Properties.Resources.ic_volver;
-            this.imgVolver.Location = new System.Drawing.Point(6, 106);
+            this.imgVolver.Location = new System.Drawing.Point(12, 90);
             this.imgVolver.Name = "imgVolver";
-            this.imgVolver.Size = new System.Drawing.Size(47, 39);
+            this.imgVolver.Size = new System.Drawing.Size(31, 27);
             this.imgVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.imgVolver.TabIndex = 13;
             this.imgVolver.TabStop = false;
@@ -437,7 +469,9 @@ namespace Farmacia
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1071, 875);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1071, 875);
             this.Name = "AddMedicamentoForm";
+            this.Load += new System.EventHandler(this.AddMedicamento_Load);
             this.gbDatosNuevoMedicamento.ResumeLayout(false);
             this.gbDatosNuevoMedicamento.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numCant)).EndInit();
@@ -452,5 +486,6 @@ namespace Farmacia
         private ComboBox cbProveedores;
         private Label lblProveedor;
         private PictureBox imgVolver;
+        private DataGridView dgMedicamentos;
     }
 }
