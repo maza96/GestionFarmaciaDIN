@@ -41,391 +41,412 @@ namespace Farmacia
 
         private void InitializeComponent()
         {
-            gbBusqueda = new GroupBox();
-            dgProductos = new DataGridView();
-            imgAñadir = new Button();
-            txtProducto = new TextBox();
-            lblNombre = new Label();
-            txtTitle = new TextBox();
-            btnAgregar = new Button();
-            btnSalir = new Button();
-            btnActualizar = new Button();
-            imgActualizar = new Button();
-            imgSalir = new Button();
-            imgAgregar = new Button();
-            gbEmpleados = new GroupBox();
-            dgProductosIngresados = new DataGridView();
-            Nombre = new DataGridViewTextBoxColumn();
-            PrecioUnitario = new DataGridViewTextBoxColumn();
-            Cantidad = new DataGridViewTextBoxColumn();
-            Subtotal = new DataGridViewTextBoxColumn();
-            groupBox1 = new GroupBox();
-            txtCambio = new TextBox();
-            label2 = new Label();
-            txtRecibo = new TextBox();
-            label3 = new Label();
-            txtTotal = new TextBox();
-            label4 = new Label();
-            label1 = new Label();
-            numCantidad = new NumericUpDown();
-            imgVolver = new PictureBox();
-            gbBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgProductos).BeginInit();
-            gbEmpleados.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgProductosIngresados).BeginInit();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)imgVolver).BeginInit();
-            SuspendLayout();
+            this.gbBusqueda = new System.Windows.Forms.GroupBox();
+            this.dgProductos = new System.Windows.Forms.DataGridView();
+            this.imgAñadir = new System.Windows.Forms.Button();
+            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.imgActualizar = new System.Windows.Forms.Button();
+            this.imgSalir = new System.Windows.Forms.Button();
+            this.imgAgregar = new System.Windows.Forms.Button();
+            this.gbEmpleados = new System.Windows.Forms.GroupBox();
+            this.dgProductosIngresados = new System.Windows.Forms.DataGridView();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_medicamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCambio = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtRecibo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.numCantidad = new System.Windows.Forms.NumericUpDown();
+            this.imgVolver = new System.Windows.Forms.PictureBox();
+            this.gbBusqueda.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).BeginInit();
+            this.gbEmpleados.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProductosIngresados)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVolver)).BeginInit();
+            this.SuspendLayout();
             // 
             // gbBusqueda
             // 
-            gbBusqueda.Controls.Add(dgProductos);
-            gbBusqueda.Controls.Add(imgAñadir);
-            gbBusqueda.Controls.Add(txtProducto);
-            gbBusqueda.Controls.Add(lblNombre);
-            gbBusqueda.Location = new Point(49, 117);
-            gbBusqueda.Name = "gbBusqueda";
-            gbBusqueda.Size = new Size(634, 330);
-            gbBusqueda.TabIndex = 0;
-            gbBusqueda.TabStop = false;
-            gbBusqueda.Text = "Busqueda";
+            this.gbBusqueda.Controls.Add(this.dgProductos);
+            this.gbBusqueda.Controls.Add(this.imgAñadir);
+            this.gbBusqueda.Controls.Add(this.txtProducto);
+            this.gbBusqueda.Controls.Add(this.lblNombre);
+            this.gbBusqueda.Location = new System.Drawing.Point(49, 117);
+            this.gbBusqueda.Name = "gbBusqueda";
+            this.gbBusqueda.Size = new System.Drawing.Size(634, 330);
+            this.gbBusqueda.TabIndex = 0;
+            this.gbBusqueda.TabStop = false;
+            this.gbBusqueda.Text = "Busqueda";
             // 
             // dgProductos
             // 
-            dgProductos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgProductos.Location = new Point(6, 80);
-            dgProductos.Name = "dgProductos";
-            dgProductos.ReadOnly = true;
-            dgProductos.RowHeadersWidth = 51;
-            dgProductos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgProductos.Size = new Size(622, 244);
-            dgProductos.TabIndex = 8;
+            this.dgProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProductos.Location = new System.Drawing.Point(6, 80);
+            this.dgProductos.Name = "dgProductos";
+            this.dgProductos.ReadOnly = true;
+            this.dgProductos.RowHeadersWidth = 51;
+            this.dgProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgProductos.Size = new System.Drawing.Size(622, 244);
+            this.dgProductos.TabIndex = 8;
             // 
             // imgAñadir
             // 
-            imgAñadir.BackgroundImage = CapaPresentacion.Properties.Resources.ic_guardar;
-            imgAñadir.BackgroundImageLayout = ImageLayout.Zoom;
-            imgAñadir.FlatStyle = FlatStyle.Flat;
-            imgAñadir.ForeColor = Color.SkyBlue;
-            imgAñadir.ImageAlign = ContentAlignment.MiddleLeft;
-            imgAñadir.Location = new Point(558, 27);
-            imgAñadir.Name = "imgAñadir";
-            imgAñadir.Size = new Size(33, 36);
-            imgAñadir.TabIndex = 7;
-            imgAñadir.TextAlign = ContentAlignment.MiddleRight;
-            imgAñadir.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgAñadir.UseVisualStyleBackColor = true;
-            imgAñadir.Click += imgAnyadirProductoIngresado_Click;
+            this.imgAñadir.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_guardar;
+            this.imgAñadir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgAñadir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgAñadir.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgAñadir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgAñadir.Location = new System.Drawing.Point(558, 27);
+            this.imgAñadir.Name = "imgAñadir";
+            this.imgAñadir.Size = new System.Drawing.Size(33, 36);
+            this.imgAñadir.TabIndex = 7;
+            this.imgAñadir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgAñadir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgAñadir.UseVisualStyleBackColor = true;
+            this.imgAñadir.Click += new System.EventHandler(this.imgAñadir_Click);
             // 
             // txtProducto
             // 
-            txtProducto.Location = new Point(162, 32);
-            txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(371, 27);
-            txtProducto.TabIndex = 1;
-            txtProducto.KeyDown += txtProducto_KeyDown;
+            this.txtProducto.Location = new System.Drawing.Point(162, 32);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(371, 20);
+            this.txtProducto.TabIndex = 1;
+            this.txtProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProducto_KeyDown);
             // 
             // lblNombre
             // 
-            lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(66, 35);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(90, 20);
-            lblNombre.TabIndex = 0;
-            lblNombre.Text = "Producto:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(66, 35);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(78, 17);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Producto:";
             // 
             // txtTitle
             // 
-            txtTitle.BackColor = Color.DarkBlue;
-            txtTitle.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTitle.ForeColor = SystemColors.Window;
-            txtTitle.Location = new Point(-3, 0);
-            txtTitle.MaximumSize = new Size(1062, 100);
-            txtTitle.MinimumSize = new Size(1062, 100);
-            txtTitle.Multiline = true;
-            txtTitle.Name = "txtTitle";
-            txtTitle.ReadOnly = true;
-            txtTitle.RightToLeft = RightToLeft.Yes;
-            txtTitle.Size = new Size(1062, 100);
-            txtTitle.TabIndex = 1;
-            txtTitle.Text = "\r\nAgregar Venta";
-            txtTitle.TextAlign = HorizontalAlignment.Center;
+            this.txtTitle.BackColor = System.Drawing.Color.DarkBlue;
+            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtTitle.Location = new System.Drawing.Point(-3, 0);
+            this.txtTitle.MaximumSize = new System.Drawing.Size(1062, 85);
+            this.txtTitle.MinimumSize = new System.Drawing.Size(1062, 85);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.ReadOnly = true;
+            this.txtTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTitle.Size = new System.Drawing.Size(1062, 85);
+            this.txtTitle.TabIndex = 1;
+            this.txtTitle.Text = "\r\nAgregar Venta";
+            this.txtTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAgregar
             // 
-            btnAgregar.FlatStyle = FlatStyle.Flat;
-            btnAgregar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgregar.ForeColor = SystemColors.ButtonHighlight;
-            btnAgregar.Location = new Point(905, 531);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(122, 55);
-            btnAgregar.TabIndex = 3;
-            btnAgregar.TextAlign = ContentAlignment.MiddleRight;
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAgregar.Location = new System.Drawing.Point(901, 489);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(122, 55);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnSalir
             // 
-            btnSalir.FlatStyle = FlatStyle.Flat;
-            btnSalir.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSalir.ForeColor = SystemColors.ButtonHighlight;
-            btnSalir.Location = new Point(905, 722);
-            btnSalir.Name = "btnSalir";
-            btnSalir.Size = new Size(122, 55);
-            btnSalir.TabIndex = 5;
-            btnSalir.TextAlign = ContentAlignment.MiddleRight;
-            btnSalir.UseVisualStyleBackColor = true;
-            btnSalir.Click += btnSalir_Click;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSalir.Location = new System.Drawing.Point(901, 680);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(122, 55);
+            this.btnSalir.TabIndex = 5;
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnActualizar
             // 
-            btnActualizar.FlatStyle = FlatStyle.Flat;
-            btnActualizar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnActualizar.ForeColor = SystemColors.ButtonHighlight;
-            btnActualizar.Location = new Point(905, 626);
-            btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(122, 55);
-            btnActualizar.TabIndex = 6;
-            btnActualizar.TextAlign = ContentAlignment.MiddleRight;
-            btnActualizar.UseVisualStyleBackColor = true;
-            btnActualizar.Click += btnActualizar_Click;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnActualizar.Location = new System.Drawing.Point(901, 584);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(122, 55);
+            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // imgActualizar
             // 
-            imgActualizar.BackgroundImage = CapaPresentacion.Properties.Resources.ic_actualizar;
-            imgActualizar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgActualizar.FlatStyle = FlatStyle.Flat;
-            imgActualizar.ForeColor = Color.SkyBlue;
-            imgActualizar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgActualizar.Location = new Point(947, 637);
-            imgActualizar.Name = "imgActualizar";
-            imgActualizar.Size = new Size(33, 34);
-            imgActualizar.TabIndex = 9;
-            imgActualizar.TextAlign = ContentAlignment.MiddleRight;
-            imgActualizar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgActualizar.UseVisualStyleBackColor = true;
-            imgActualizar.Click += imgActualizar_Click;
+            this.imgActualizar.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_actualizar;
+            this.imgActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgActualizar.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgActualizar.Location = new System.Drawing.Point(943, 595);
+            this.imgActualizar.Name = "imgActualizar";
+            this.imgActualizar.Size = new System.Drawing.Size(33, 34);
+            this.imgActualizar.TabIndex = 9;
+            this.imgActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgActualizar.UseVisualStyleBackColor = true;
+            this.imgActualizar.Click += new System.EventHandler(this.imgActualizar_Click);
             // 
             // imgSalir
             // 
-            imgSalir.BackgroundImage = CapaPresentacion.Properties.Resources.ic_cancelar;
-            imgSalir.BackgroundImageLayout = ImageLayout.Zoom;
-            imgSalir.FlatStyle = FlatStyle.Flat;
-            imgSalir.ForeColor = Color.SkyBlue;
-            imgSalir.ImageAlign = ContentAlignment.MiddleLeft;
-            imgSalir.Location = new Point(946, 732);
-            imgSalir.Name = "imgSalir";
-            imgSalir.Size = new Size(37, 36);
-            imgSalir.TabIndex = 8;
-            imgSalir.TextAlign = ContentAlignment.MiddleRight;
-            imgSalir.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgSalir.UseVisualStyleBackColor = true;
-            imgSalir.Click += imgSalir_Click;
+            this.imgSalir.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_cancelar;
+            this.imgSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgSalir.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgSalir.Location = new System.Drawing.Point(942, 690);
+            this.imgSalir.Name = "imgSalir";
+            this.imgSalir.Size = new System.Drawing.Size(37, 36);
+            this.imgSalir.TabIndex = 8;
+            this.imgSalir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgSalir.UseVisualStyleBackColor = true;
+            this.imgSalir.Click += new System.EventHandler(this.imgEliminar_Click);
             // 
             // imgAgregar
             // 
-            imgAgregar.BackgroundImage = CapaPresentacion.Properties.Resources.ic_agregar;
-            imgAgregar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgAgregar.FlatStyle = FlatStyle.Flat;
-            imgAgregar.ForeColor = Color.SkyBlue;
-            imgAgregar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgAgregar.Location = new Point(948, 542);
-            imgAgregar.Name = "imgAgregar";
-            imgAgregar.Size = new Size(34, 35);
-            imgAgregar.TabIndex = 2;
-            imgAgregar.TextAlign = ContentAlignment.MiddleRight;
-            imgAgregar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgAgregar.UseVisualStyleBackColor = true;
-            imgAgregar.Click += imgAgregar_Click;
+            this.imgAgregar.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_agregar;
+            this.imgAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgAgregar.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgAgregar.Location = new System.Drawing.Point(944, 500);
+            this.imgAgregar.Name = "imgAgregar";
+            this.imgAgregar.Size = new System.Drawing.Size(34, 35);
+            this.imgAgregar.TabIndex = 2;
+            this.imgAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgAgregar.UseVisualStyleBackColor = true;
+            this.imgAgregar.Click += new System.EventHandler(this.imgAgregar_Click);
             // 
             // gbEmpleados
             // 
-            gbEmpleados.Controls.Add(dgProductosIngresados);
-            gbEmpleados.Location = new Point(59, 514);
-            gbEmpleados.Name = "gbEmpleados";
-            gbEmpleados.Size = new Size(813, 274);
-            gbEmpleados.TabIndex = 11;
-            gbEmpleados.TabStop = false;
-            gbEmpleados.Text = "Productos Ingresados";
+            this.gbEmpleados.Controls.Add(this.dgProductosIngresados);
+            this.gbEmpleados.Location = new System.Drawing.Point(55, 472);
+            this.gbEmpleados.Name = "gbEmpleados";
+            this.gbEmpleados.Size = new System.Drawing.Size(813, 274);
+            this.gbEmpleados.TabIndex = 11;
+            this.gbEmpleados.TabStop = false;
+            this.gbEmpleados.Text = "Productos Ingresados";
             // 
             // dgProductosIngresados
             // 
-            dgProductosIngresados.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgProductosIngresados.Columns.AddRange(new DataGridViewColumn[] { Nombre, PrecioUnitario, Cantidad, Subtotal });
-            dgProductosIngresados.Dock = DockStyle.Fill;
-            dgProductosIngresados.Location = new Point(3, 23);
-            dgProductosIngresados.Name = "dgProductosIngresados";
-            dgProductosIngresados.ReadOnly = true;
-            dgProductosIngresados.RowHeadersWidth = 51;
-            dgProductosIngresados.RowTemplate.Height = 24;
-            dgProductosIngresados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgProductosIngresados.Size = new Size(807, 248);
-            dgProductosIngresados.TabIndex = 0;
+            this.dgProductosIngresados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgProductosIngresados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProductosIngresados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.PrecioUnitario,
+            this.Cantidad,
+            this.Subtotal,
+            this.id_medicamento});
+            this.dgProductosIngresados.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgProductosIngresados.Location = new System.Drawing.Point(3, 16);
+            this.dgProductosIngresados.Name = "dgProductosIngresados";
+            this.dgProductosIngresados.ReadOnly = true;
+            this.dgProductosIngresados.RowHeadersWidth = 51;
+            this.dgProductosIngresados.RowTemplate.Height = 24;
+            this.dgProductosIngresados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgProductosIngresados.Size = new System.Drawing.Size(807, 255);
+            this.dgProductosIngresados.TabIndex = 0;
             // 
             // Nombre
             // 
-            Nombre.HeaderText = "Nombre";
-            Nombre.MinimumWidth = 6;
-            Nombre.Name = "Nombre";
-            Nombre.ReadOnly = true;
-            Nombre.Width = 125;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.MinimumWidth = 6;
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
             // 
             // PrecioUnitario
             // 
-            PrecioUnitario.HeaderText = "Precio Unitario";
-            PrecioUnitario.MinimumWidth = 6;
-            PrecioUnitario.Name = "PrecioUnitario";
-            PrecioUnitario.ReadOnly = true;
-            PrecioUnitario.Width = 125;
+            this.PrecioUnitario.HeaderText = "Precio Unitario";
+            this.PrecioUnitario.MinimumWidth = 6;
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
             // 
             // Cantidad
             // 
-            Cantidad.HeaderText = "Cantidad";
-            Cantidad.MinimumWidth = 6;
-            Cantidad.Name = "Cantidad";
-            Cantidad.ReadOnly = true;
-            Cantidad.Width = 125;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
             // 
             // Subtotal
             // 
-            Subtotal.HeaderText = "Subtotal";
-            Subtotal.MinimumWidth = 6;
-            Subtotal.Name = "Subtotal";
-            Subtotal.ReadOnly = true;
-            Subtotal.Width = 125;
+            this.Subtotal.HeaderText = "Subtotal";
+            this.Subtotal.MinimumWidth = 6;
+            this.Subtotal.Name = "Subtotal";
+            this.Subtotal.ReadOnly = true;
+            // 
+            // id_medicamento
+            // 
+            this.id_medicamento.HeaderText = "id";
+            this.id_medicamento.Name = "id_medicamento";
+            this.id_medicamento.ReadOnly = true;
+            this.id_medicamento.Visible = false;
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(txtCambio);
-            groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txtRecibo);
-            groupBox1.Controls.Add(label3);
-            groupBox1.Controls.Add(txtTotal);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Location = new Point(706, 197);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(335, 250);
-            groupBox1.TabIndex = 12;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Cobro";
+            this.groupBox1.Controls.Add(this.txtCambio);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.txtRecibo);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtTotal);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(706, 197);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(335, 250);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cobro";
             // 
             // txtCambio
             // 
-            txtCambio.Location = new Point(149, 181);
-            txtCambio.Name = "txtCambio";
-            txtCambio.ReadOnly = true;
-            txtCambio.Size = new Size(138, 27);
-            txtCambio.TabIndex = 7;
+            this.txtCambio.Location = new System.Drawing.Point(149, 181);
+            this.txtCambio.Name = "txtCambio";
+            this.txtCambio.ReadOnly = true;
+            this.txtCambio.Size = new System.Drawing.Size(138, 20);
+            this.txtCambio.TabIndex = 7;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(6, 181);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 20);
-            label2.TabIndex = 6;
-            label2.Text = "Cambio:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 181);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Cambio:";
             // 
             // txtRecibo
             // 
-            txtRecibo.Location = new Point(149, 113);
-            txtRecibo.Name = "txtRecibo";
-            txtRecibo.Size = new Size(138, 27);
-            txtRecibo.TabIndex = 5;
+            this.txtRecibo.Location = new System.Drawing.Point(149, 113);
+            this.txtRecibo.Name = "txtRecibo";
+            this.txtRecibo.Size = new System.Drawing.Size(138, 20);
+            this.txtRecibo.TabIndex = 5;
+            this.txtRecibo.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtRecibo_KeyDown);
+            this.txtRecibo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRecibo_KeyPress);
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(6, 113);
-            label3.Name = "label3";
-            label3.Size = new Size(73, 20);
-            label3.TabIndex = 4;
-            label3.Text = "Recibe:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 113);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Recibe:";
             // 
             // txtTotal
             // 
-            txtTotal.Location = new Point(149, 40);
-            txtTotal.Name = "txtTotal";
-            txtTotal.ReadOnly = true;
-            txtTotal.Size = new Size(138, 27);
-            txtTotal.TabIndex = 3;
+            this.txtTotal.Location = new System.Drawing.Point(149, 40);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
+            this.txtTotal.Size = new System.Drawing.Size(138, 20);
+            this.txtTotal.TabIndex = 3;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(6, 40);
-            label4.Name = "label4";
-            label4.Size = new Size(126, 20);
-            label4.TabIndex = 2;
-            label4.Text = "Total a pagar:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(111, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Total a pagar:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(738, 150);
-            label1.Name = "label1";
-            label1.Size = new Size(89, 20);
-            label1.TabIndex = 8;
-            label1.Text = "Cantidad:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(738, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 17);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Cantidad:";
             // 
             // numCantidad
             // 
-            numCantidad.Location = new Point(855, 150);
-            numCantidad.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numCantidad.Name = "numCantidad";
-            numCantidad.Size = new Size(138, 27);
-            numCantidad.TabIndex = 13;
-            numCantidad.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            this.numCantidad.Location = new System.Drawing.Point(855, 150);
+            this.numCantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numCantidad.Name = "numCantidad";
+            this.numCantidad.Size = new System.Drawing.Size(138, 20);
+            this.numCantidad.TabIndex = 13;
+            this.numCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // imgVolver
             // 
-            imgVolver.Image = CapaPresentacion.Properties.Resources.ic_volver;
-            imgVolver.Location = new Point(-3, 106);
-            imgVolver.Name = "imgVolver";
-            imgVolver.Size = new Size(47, 39);
-            imgVolver.SizeMode = PictureBoxSizeMode.Zoom;
-            imgVolver.TabIndex = 14;
-            imgVolver.TabStop = false;
-            imgVolver.Click += imgVolver_Click;
+            this.imgVolver.Image = global::CapaPresentacion.Properties.Resources.ic_volver;
+            this.imgVolver.Location = new System.Drawing.Point(6, 107);
+            this.imgVolver.Name = "imgVolver";
+            this.imgVolver.Size = new System.Drawing.Size(33, 32);
+            this.imgVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgVolver.TabIndex = 14;
+            this.imgVolver.TabStop = false;
             // 
             // AddVentaForm
             // 
-            BackColor = Color.SkyBlue;
-            ClientSize = new Size(1053, 828);
-            Controls.Add(imgVolver);
-            Controls.Add(numCantidad);
-            Controls.Add(gbEmpleados);
-            Controls.Add(label1);
-            Controls.Add(imgActualizar);
-            Controls.Add(imgSalir);
-            Controls.Add(btnActualizar);
-            Controls.Add(btnSalir);
-            Controls.Add(imgAgregar);
-            Controls.Add(btnAgregar);
-            Controls.Add(txtTitle);
-            Controls.Add(groupBox1);
-            Controls.Add(gbBusqueda);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "AddVentaForm";
-            Load += AddProductos_Load;
-            gbBusqueda.ResumeLayout(false);
-            gbBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgProductos).EndInit();
-            gbEmpleados.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgProductosIngresados).EndInit();
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numCantidad).EndInit();
-            ((System.ComponentModel.ISupportInitialize)imgVolver).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(1053, 752);
+            this.Controls.Add(this.imgVolver);
+            this.Controls.Add(this.numCantidad);
+            this.Controls.Add(this.gbEmpleados);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.imgActualizar);
+            this.Controls.Add(this.imgSalir);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.imgAgregar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.gbBusqueda);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "AddVentaForm";
+            this.Load += new System.EventHandler(this.AddVentaForm_Load);
+            this.gbBusqueda.ResumeLayout(false);
+            this.gbBusqueda.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgProductos)).EndInit();
+            this.gbEmpleados.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgProductosIngresados)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVolver)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         private GroupBox groupBox1;
@@ -438,10 +459,11 @@ namespace Farmacia
         private DataGridView dgProductos;
         private NumericUpDown numCantidad;
         private TextBox txtTotal;
+        private PictureBox imgVolver;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn PrecioUnitario;
         private DataGridViewTextBoxColumn Cantidad;
         private DataGridViewTextBoxColumn Subtotal;
-        private PictureBox imgVolver;
+        private DataGridViewTextBoxColumn id_medicamento;
     }
 }

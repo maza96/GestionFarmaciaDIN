@@ -40,5 +40,21 @@ namespace CapaPresentacion
         {
             Close();
         }
+
+
+        private void btnVerInforme_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int mes = cbMeses.SelectedIndex + 1;
+                int anyo = 2025;
+                GraficoMensualForm graficoMensualForm = new GraficoMensualForm(mes, anyo);
+                graficoMensualForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error al mostrar el informe", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

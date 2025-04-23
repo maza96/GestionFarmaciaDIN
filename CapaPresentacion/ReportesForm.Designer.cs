@@ -32,121 +32,114 @@ namespace CapaPresentacion
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            lblReportesMesTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnVerInforme = new Guna.UI2.WinForms.Guna2GradientButton();
-            guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(components);
-            cbMeses = new Guna.UI2.WinForms.Guna2ComboBox();
-            imgVolver = new PictureBox();
-            picbox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            ((System.ComponentModel.ISupportInitialize)imgVolver).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)picbox1).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.lblReportesMesTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnVerInforme = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.cbMeses = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.imgVolver = new System.Windows.Forms.PictureBox();
+            this.picbox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVolver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // lblReportesMesTitle
             // 
-            lblReportesMesTitle.AutoSize = false;
-            lblReportesMesTitle.BackColor = Color.Transparent;
-            lblReportesMesTitle.Font = new Font("Century Gothic", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblReportesMesTitle.ForeColor = Color.FromArgb(62, 62, 62);
-            lblReportesMesTitle.Location = new Point(223, 85);
-            lblReportesMesTitle.Margin = new Padding(3, 2, 3, 2);
-            lblReportesMesTitle.Name = "lblReportesMesTitle";
-            lblReportesMesTitle.Size = new Size(331, 36);
-            lblReportesMesTitle.TabIndex = 1;
-            lblReportesMesTitle.Text = "Reportes Mensuales";
-            lblReportesMesTitle.TextAlignment = ContentAlignment.MiddleCenter;
+            this.lblReportesMesTitle.AutoSize = false;
+            this.lblReportesMesTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblReportesMesTitle.Font = new System.Drawing.Font("Century Gothic", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReportesMesTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
+            this.lblReportesMesTitle.Location = new System.Drawing.Point(167, 55);
+            this.lblReportesMesTitle.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.lblReportesMesTitle.Name = "lblReportesMesTitle";
+            this.lblReportesMesTitle.Size = new System.Drawing.Size(248, 23);
+            this.lblReportesMesTitle.TabIndex = 1;
+            this.lblReportesMesTitle.Text = "Reportes Mensuales";
+            this.lblReportesMesTitle.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnVerInforme
             // 
-            btnVerInforme.Animated = true;
-            btnVerInforme.AutoRoundedCorners = true;
-            btnVerInforme.BorderRadius = 23;
-            btnVerInforme.CustomizableEdges = customizableEdges1;
-            btnVerInforme.FillColor = Color.FromArgb(255, 128, 0);
-            btnVerInforme.FillColor2 = Color.FromArgb(128, 64, 0);
-            btnVerInforme.Font = new Font("Century Gothic", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnVerInforme.ForeColor = Color.White;
-            btnVerInforme.Location = new Point(256, 298);
-            btnVerInforme.Margin = new Padding(5);
-            btnVerInforme.Name = "btnVerInforme";
-            btnVerInforme.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnVerInforme.Size = new Size(267, 49);
-            btnVerInforme.TabIndex = 4;
-            btnVerInforme.Text = "Ver Informe";
+            this.btnVerInforme.Animated = true;
+            this.btnVerInforme.AutoRoundedCorners = true;
+            this.btnVerInforme.BorderRadius = 15;
+            this.btnVerInforme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnVerInforme.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnVerInforme.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerInforme.ForeColor = System.Drawing.Color.White;
+            this.btnVerInforme.Location = new System.Drawing.Point(192, 194);
+            this.btnVerInforme.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnVerInforme.Name = "btnVerInforme";
+            this.btnVerInforme.Size = new System.Drawing.Size(200, 32);
+            this.btnVerInforme.TabIndex = 4;
+            this.btnVerInforme.Text = "Ver Informe";
+            this.btnVerInforme.Click += new System.EventHandler(this.btnVerInforme_Click);
             // 
             // cbMeses
             // 
-            cbMeses.BackColor = Color.Transparent;
-            cbMeses.CustomizableEdges = customizableEdges3;
-            cbMeses.DrawMode = DrawMode.OwnerDrawFixed;
-            cbMeses.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbMeses.FocusedColor = Color.FromArgb(94, 148, 255);
-            cbMeses.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            cbMeses.Font = new Font("Segoe UI", 10F);
-            cbMeses.ForeColor = Color.FromArgb(68, 88, 112);
-            cbMeses.ItemHeight = 30;
-            cbMeses.Location = new Point(300, 191);
-            cbMeses.Margin = new Padding(3, 2, 3, 2);
-            cbMeses.Name = "cbMeses";
-            cbMeses.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cbMeses.Size = new Size(175, 36);
-            cbMeses.TabIndex = 10;
+            this.cbMeses.BackColor = System.Drawing.Color.Transparent;
+            this.cbMeses.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbMeses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMeses.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMeses.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbMeses.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbMeses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbMeses.ItemHeight = 30;
+            this.cbMeses.Location = new System.Drawing.Point(225, 124);
+            this.cbMeses.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.cbMeses.Name = "cbMeses";
+            this.cbMeses.Size = new System.Drawing.Size(132, 36);
+            this.cbMeses.TabIndex = 10;
             // 
             // imgVolver
             // 
-            imgVolver.Image = Properties.Resources.ic_volver;
-            imgVolver.Location = new Point(12, 12);
-            imgVolver.Name = "imgVolver";
-            imgVolver.Size = new Size(47, 39);
-            imgVolver.SizeMode = PictureBoxSizeMode.Zoom;
-            imgVolver.TabIndex = 14;
-            imgVolver.TabStop = false;
-            imgVolver.Click += imgVolver_Click;
+            this.imgVolver.Image = global::CapaPresentacion.Properties.Resources.ic_volver;
+            this.imgVolver.Location = new System.Drawing.Point(9, 8);
+            this.imgVolver.Margin = new System.Windows.Forms.Padding(2);
+            this.imgVolver.Name = "imgVolver";
+            this.imgVolver.Size = new System.Drawing.Size(35, 25);
+            this.imgVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgVolver.TabIndex = 14;
+            this.imgVolver.TabStop = false;
+            this.imgVolver.Click += new System.EventHandler(this.imgVolver_Click);
             // 
             // picbox1
             // 
-            picbox1.CustomizableEdges = customizableEdges5;
-            picbox1.Image = Properties.Resources.Richie_2;
-            picbox1.ImageRotate = 0F;
-            picbox1.Location = new Point(77, 12);
-            picbox1.Name = "picbox1";
-            picbox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            picbox1.Size = new Size(409, 605);
-            picbox1.SizeMode = PictureBoxSizeMode.Zoom;
-            picbox1.TabIndex = 15;
-            picbox1.TabStop = false;
+            this.picbox1.Image = global::CapaPresentacion.Properties.Resources.Richie_2;
+            this.picbox1.ImageRotate = 0F;
+            this.picbox1.Location = new System.Drawing.Point(58, 8);
+            this.picbox1.Margin = new System.Windows.Forms.Padding(2);
+            this.picbox1.Name = "picbox1";
+            this.picbox1.Size = new System.Drawing.Size(307, 393);
+            this.picbox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picbox1.TabIndex = 15;
+            this.picbox1.TabStop = false;
             // 
             // ReportesForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(583, 598);
-            Controls.Add(imgVolver);
-            Controls.Add(cbMeses);
-            Controls.Add(btnVerInforme);
-            Controls.Add(lblReportesMesTitle);
-            Controls.Add(picbox1);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 2, 3, 2);
-            MaximizeBox = false;
-            MaximumSize = new Size(601, 645);
-            MinimizeBox = false;
-            MinimumSize = new Size(601, 645);
-            Name = "ReportesForm";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Reportes Mensuales";
-            TopMost = true;
-            ((System.ComponentModel.ISupportInitialize)imgVolver).EndInit();
-            ((System.ComponentModel.ISupportInitialize)picbox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(439, 394);
+            this.Controls.Add(this.imgVolver);
+            this.Controls.Add(this.cbMeses);
+            this.Controls.Add(this.btnVerInforme);
+            this.Controls.Add(this.lblReportesMesTitle);
+            this.Controls.Add(this.picbox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(455, 433);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(455, 433);
+            this.Name = "ReportesForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Reportes Mensuales";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.ReportesForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.imgVolver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

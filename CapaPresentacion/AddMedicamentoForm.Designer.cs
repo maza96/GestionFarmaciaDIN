@@ -53,398 +53,400 @@ namespace Farmacia
 
         private void InitializeComponent()
         {
-            gbDatosNuevoMedicamento = new GroupBox();
-            lblProveedor = new Label();
-            cbProveedores = new ComboBox();
-            txtCosto = new TextBox();
-            lblCosto = new Label();
-            dtVencimiento = new DateTimePicker();
-            lblVencimiento = new Label();
-            lblControl = new Label();
-            rbControl = new RadioButton();
-            numCant = new NumericUpDown();
-            lblCant = new Label();
-            txtDesc = new TextBox();
-            lblDesc = new Label();
-            txtNombre = new TextBox();
-            lblNombre = new Label();
-            txtTitle = new TextBox();
-            btnAgregar = new Button();
-            btnNuevo = new Button();
-            btnEliminar = new Button();
-            btnActualizar = new Button();
-            imgActualizar = new Button();
-            imgEliminar = new Button();
-            imgNuevo = new Button();
-            imgAgregar = new Button();
-            gbMedicamentos = new GroupBox();
-            dgMedicamentos = new DataGridView();
-            imgVolver = new PictureBox();
-            gbDatosNuevoMedicamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numCant).BeginInit();
-            gbMedicamentos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgMedicamentos).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)imgVolver).BeginInit();
-            SuspendLayout();
+            this.gbDatosNuevoMedicamento = new System.Windows.Forms.GroupBox();
+            this.lblProveedor = new System.Windows.Forms.Label();
+            this.cbProveedores = new System.Windows.Forms.ComboBox();
+            this.txtCosto = new System.Windows.Forms.TextBox();
+            this.lblCosto = new System.Windows.Forms.Label();
+            this.dtVencimiento = new System.Windows.Forms.DateTimePicker();
+            this.lblVencimiento = new System.Windows.Forms.Label();
+            this.lblControl = new System.Windows.Forms.Label();
+            this.rbControl = new System.Windows.Forms.RadioButton();
+            this.numCant = new System.Windows.Forms.NumericUpDown();
+            this.lblCant = new System.Windows.Forms.Label();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.lblDesc = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.imgActualizar = new System.Windows.Forms.Button();
+            this.imgEliminar = new System.Windows.Forms.Button();
+            this.imgNuevo = new System.Windows.Forms.Button();
+            this.imgAgregar = new System.Windows.Forms.Button();
+            this.gbMedicamentos = new System.Windows.Forms.GroupBox();
+            this.dgMedicamentos = new System.Windows.Forms.DataGridView();
+            this.imgVolver = new System.Windows.Forms.PictureBox();
+            this.gbDatosNuevoMedicamento.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCant)).BeginInit();
+            this.gbMedicamentos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgMedicamentos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVolver)).BeginInit();
+            this.SuspendLayout();
             // 
             // gbDatosNuevoMedicamento
             // 
-            gbDatosNuevoMedicamento.Controls.Add(lblProveedor);
-            gbDatosNuevoMedicamento.Controls.Add(cbProveedores);
-            gbDatosNuevoMedicamento.Controls.Add(txtCosto);
-            gbDatosNuevoMedicamento.Controls.Add(lblCosto);
-            gbDatosNuevoMedicamento.Controls.Add(dtVencimiento);
-            gbDatosNuevoMedicamento.Controls.Add(lblVencimiento);
-            gbDatosNuevoMedicamento.Controls.Add(lblControl);
-            gbDatosNuevoMedicamento.Controls.Add(rbControl);
-            gbDatosNuevoMedicamento.Controls.Add(numCant);
-            gbDatosNuevoMedicamento.Controls.Add(lblCant);
-            gbDatosNuevoMedicamento.Controls.Add(txtDesc);
-            gbDatosNuevoMedicamento.Controls.Add(lblDesc);
-            gbDatosNuevoMedicamento.Controls.Add(txtNombre);
-            gbDatosNuevoMedicamento.Controls.Add(lblNombre);
-            gbDatosNuevoMedicamento.Location = new Point(59, 143);
-            gbDatosNuevoMedicamento.Name = "gbDatosNuevoMedicamento";
-            gbDatosNuevoMedicamento.Size = new Size(729, 366);
-            gbDatosNuevoMedicamento.TabIndex = 0;
-            gbDatosNuevoMedicamento.TabStop = false;
-            gbDatosNuevoMedicamento.Text = "Datos";
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblProveedor);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.cbProveedores);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.txtCosto);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblCosto);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.dtVencimiento);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblVencimiento);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblControl);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.rbControl);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.numCant);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblCant);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.txtDesc);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblDesc);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.txtNombre);
+            this.gbDatosNuevoMedicamento.Controls.Add(this.lblNombre);
+            this.gbDatosNuevoMedicamento.Location = new System.Drawing.Point(59, 143);
+            this.gbDatosNuevoMedicamento.Name = "gbDatosNuevoMedicamento";
+            this.gbDatosNuevoMedicamento.Size = new System.Drawing.Size(729, 366);
+            this.gbDatosNuevoMedicamento.TabIndex = 0;
+            this.gbDatosNuevoMedicamento.TabStop = false;
+            this.gbDatosNuevoMedicamento.Text = "Datos";
             // 
             // lblProveedor
             // 
-            lblProveedor.AutoSize = true;
-            lblProveedor.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblProveedor.Location = new Point(25, 321);
-            lblProveedor.Name = "lblProveedor";
-            lblProveedor.Size = new Size(90, 20);
-            lblProveedor.TabIndex = 13;
-            lblProveedor.Text = "Proveedor:";
+            this.lblProveedor.AutoSize = true;
+            this.lblProveedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProveedor.Location = new System.Drawing.Point(25, 321);
+            this.lblProveedor.Name = "lblProveedor";
+            this.lblProveedor.Size = new System.Drawing.Size(78, 17);
+            this.lblProveedor.TabIndex = 13;
+            this.lblProveedor.Text = "Proveedor:";
             // 
             // cbProveedores
             // 
-            cbProveedores.DropDownStyle = ComboBoxStyle.DropDownList;
-            cbProveedores.Location = new Point(247, 311);
-            cbProveedores.Name = "cbProveedores";
-            cbProveedores.Size = new Size(229, 28);
-            cbProveedores.TabIndex = 1;
+            this.cbProveedores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbProveedores.Location = new System.Drawing.Point(247, 311);
+            this.cbProveedores.Name = "cbProveedores";
+            this.cbProveedores.Size = new System.Drawing.Size(229, 21);
+            this.cbProveedores.TabIndex = 1;
             // 
             // txtCosto
             // 
-            txtCosto.Location = new Point(474, 247);
-            txtCosto.Name = "txtCosto";
-            txtCosto.Size = new Size(179, 27);
-            txtCosto.TabIndex = 12;
+            this.txtCosto.Location = new System.Drawing.Point(474, 247);
+            this.txtCosto.Name = "txtCosto";
+            this.txtCosto.Size = new System.Drawing.Size(179, 20);
+            this.txtCosto.TabIndex = 12;
             // 
             // lblCosto
             // 
-            lblCosto.AutoSize = true;
-            lblCosto.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCosto.Location = new Point(408, 247);
-            lblCosto.Name = "lblCosto";
-            lblCosto.Size = new Size(58, 20);
-            lblCosto.TabIndex = 11;
-            lblCosto.Text = "Costo:";
+            this.lblCosto.AutoSize = true;
+            this.lblCosto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCosto.Location = new System.Drawing.Point(408, 247);
+            this.lblCosto.Name = "lblCosto";
+            this.lblCosto.Size = new System.Drawing.Size(48, 17);
+            this.lblCosto.TabIndex = 11;
+            this.lblCosto.Text = "Costo:";
             // 
             // dtVencimiento
             // 
-            dtVencimiento.Format = DateTimePickerFormat.Short;
-            dtVencimiento.Location = new Point(247, 247);
-            dtVencimiento.MinDate = new DateTime(2025, 4, 17, 0, 0, 0, 0);
-            dtVencimiento.Name = "dtVencimiento";
-            dtVencimiento.Size = new Size(131, 27);
-            dtVencimiento.TabIndex = 10;
-            dtVencimiento.Value = new DateTime(2025, 4, 17, 11, 37, 27, 0);
+            this.dtVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtVencimiento.Location = new System.Drawing.Point(247, 247);
+            this.dtVencimiento.MinDate = new System.DateTime(2025, 4, 17, 0, 0, 0, 0);
+            this.dtVencimiento.Name = "dtVencimiento";
+            this.dtVencimiento.Size = new System.Drawing.Size(131, 20);
+            this.dtVencimiento.TabIndex = 10;
+            this.dtVencimiento.Value = new System.DateTime(2025, 4, 17, 11, 37, 27, 0);
             // 
             // lblVencimiento
             // 
-            lblVencimiento.AutoSize = true;
-            lblVencimiento.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblVencimiento.Location = new Point(25, 250);
-            lblVencimiento.Name = "lblVencimiento";
-            lblVencimiento.Size = new Size(180, 20);
-            lblVencimiento.TabIndex = 9;
-            lblVencimiento.Text = "Fecha de Vencimiento:";
+            this.lblVencimiento.AutoSize = true;
+            this.lblVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVencimiento.Location = new System.Drawing.Point(25, 250);
+            this.lblVencimiento.Name = "lblVencimiento";
+            this.lblVencimiento.Size = new System.Drawing.Size(152, 17);
+            this.lblVencimiento.TabIndex = 9;
+            this.lblVencimiento.Text = "Fecha de Vencimiento:";
             // 
             // lblControl
             // 
-            lblControl.AutoSize = true;
-            lblControl.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblControl.Location = new Point(408, 177);
-            lblControl.Name = "lblControl";
-            lblControl.Size = new Size(68, 20);
-            lblControl.TabIndex = 8;
-            lblControl.Text = "Control:";
+            this.lblControl.AutoSize = true;
+            this.lblControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblControl.Location = new System.Drawing.Point(408, 177);
+            this.lblControl.Name = "lblControl";
+            this.lblControl.Size = new System.Drawing.Size(57, 17);
+            this.lblControl.TabIndex = 8;
+            this.lblControl.Text = "Control:";
             // 
             // rbControl
             // 
-            rbControl.AutoCheck = false;
-            rbControl.AutoSize = true;
-            rbControl.Location = new Point(499, 180);
-            rbControl.Name = "rbControl";
-            rbControl.Size = new Size(17, 16);
-            rbControl.TabIndex = 7;
-            rbControl.TabStop = true;
-            rbControl.UseVisualStyleBackColor = true;
-            rbControl.Click += rbControl_Click;
+            this.rbControl.AutoCheck = false;
+            this.rbControl.AutoSize = true;
+            this.rbControl.Location = new System.Drawing.Point(499, 180);
+            this.rbControl.Name = "rbControl";
+            this.rbControl.Size = new System.Drawing.Size(14, 13);
+            this.rbControl.TabIndex = 7;
+            this.rbControl.TabStop = true;
+            this.rbControl.UseVisualStyleBackColor = true;
             // 
             // numCant
             // 
-            numCant.Location = new Point(247, 175);
-            numCant.Maximum = new decimal(new int[] { 500, 0, 0, 0 });
-            numCant.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
-            numCant.Name = "numCant";
-            numCant.Size = new Size(131, 27);
-            numCant.TabIndex = 6;
-            numCant.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            this.numCant.Location = new System.Drawing.Point(247, 175);
+            this.numCant.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numCant.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numCant.Name = "numCant";
+            this.numCant.Size = new System.Drawing.Size(131, 20);
+            this.numCant.TabIndex = 6;
+            this.numCant.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // lblCant
             // 
-            lblCant.AutoSize = true;
-            lblCant.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCant.Location = new Point(25, 175);
-            lblCant.Name = "lblCant";
-            lblCant.Size = new Size(80, 20);
-            lblCant.TabIndex = 4;
-            lblCant.Text = "Cantidad:";
+            this.lblCant.AutoSize = true;
+            this.lblCant.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCant.Location = new System.Drawing.Point(25, 175);
+            this.lblCant.Name = "lblCant";
+            this.lblCant.Size = new System.Drawing.Size(68, 17);
+            this.lblCant.TabIndex = 4;
+            this.lblCant.Text = "Cantidad:";
             // 
             // txtDesc
             // 
-            txtDesc.Location = new Point(247, 108);
-            txtDesc.Name = "txtDesc";
-            txtDesc.Size = new Size(284, 27);
-            txtDesc.TabIndex = 3;
+            this.txtDesc.Location = new System.Drawing.Point(247, 108);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(284, 20);
+            this.txtDesc.TabIndex = 3;
             // 
             // lblDesc
             // 
-            lblDesc.AutoSize = true;
-            lblDesc.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDesc.Location = new Point(25, 108);
-            lblDesc.Name = "lblDesc";
-            lblDesc.Size = new Size(104, 20);
-            lblDesc.TabIndex = 2;
-            lblDesc.Text = "Descripción:";
+            this.lblDesc.AutoSize = true;
+            this.lblDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesc.Location = new System.Drawing.Point(25, 108);
+            this.lblDesc.Name = "lblDesc";
+            this.lblDesc.Size = new System.Drawing.Size(86, 17);
+            this.lblDesc.TabIndex = 2;
+            this.lblDesc.Text = "Descripción:";
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(247, 49);
-            txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(284, 27);
-            txtNombre.TabIndex = 1;
+            this.txtNombre.Location = new System.Drawing.Point(247, 49);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(284, 20);
+            this.txtNombre.TabIndex = 1;
             // 
             // lblNombre
             // 
-            lblNombre.AutoSize = true;
-            lblNombre.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNombre.Location = new Point(25, 49);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new Size(205, 20);
-            lblNombre.TabIndex = 0;
-            lblNombre.Text = "Nombre del Medicamento:";
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Location = new System.Drawing.Point(25, 49);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(173, 17);
+            this.lblNombre.TabIndex = 0;
+            this.lblNombre.Text = "Nombre del Medicamento:";
             // 
             // txtTitle
             // 
-            txtTitle.BackColor = Color.DarkBlue;
-            txtTitle.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtTitle.ForeColor = SystemColors.Window;
-            txtTitle.Location = new Point(-3, 0);
-            txtTitle.MaximumSize = new Size(1062, 100);
-            txtTitle.MinimumSize = new Size(1062, 100);
-            txtTitle.Multiline = true;
-            txtTitle.Name = "txtTitle";
-            txtTitle.ReadOnly = true;
-            txtTitle.RightToLeft = RightToLeft.Yes;
-            txtTitle.Size = new Size(1062, 100);
-            txtTitle.TabIndex = 1;
-            txtTitle.Text = "\r\nAgregar Medicamento\r\n";
-            txtTitle.TextAlign = HorizontalAlignment.Center;
+            this.txtTitle.BackColor = System.Drawing.Color.DarkBlue;
+            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.ForeColor = System.Drawing.SystemColors.Window;
+            this.txtTitle.Location = new System.Drawing.Point(-3, 0);
+            this.txtTitle.MaximumSize = new System.Drawing.Size(1062, 100);
+            this.txtTitle.MinimumSize = new System.Drawing.Size(1062, 100);
+            this.txtTitle.Multiline = true;
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.ReadOnly = true;
+            this.txtTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtTitle.Size = new System.Drawing.Size(1062, 100);
+            this.txtTitle.TabIndex = 1;
+            this.txtTitle.Text = "\r\nAgregar Medicamento\r\n";
+            this.txtTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAgregar
             // 
-            btnAgregar.FlatStyle = FlatStyle.Flat;
-            btnAgregar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAgregar.ForeColor = SystemColors.ButtonHighlight;
-            btnAgregar.Location = new Point(820, 154);
-            btnAgregar.Name = "btnAgregar";
-            btnAgregar.Size = new Size(163, 55);
-            btnAgregar.TabIndex = 3;
-            btnAgregar.Text = "Agregar";
-            btnAgregar.TextAlign = ContentAlignment.MiddleRight;
-            btnAgregar.UseVisualStyleBackColor = true;
-            btnAgregar.Click += btnAgregar_Click;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAgregar.Location = new System.Drawing.Point(820, 154);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(163, 55);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
             // btnNuevo
             // 
-            btnNuevo.FlatStyle = FlatStyle.Flat;
-            btnNuevo.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNuevo.ForeColor = SystemColors.ButtonHighlight;
-            btnNuevo.Location = new Point(820, 251);
-            btnNuevo.Name = "btnNuevo";
-            btnNuevo.Size = new Size(163, 55);
-            btnNuevo.TabIndex = 4;
-            btnNuevo.Text = "Nuevo";
-            btnNuevo.TextAlign = ContentAlignment.MiddleRight;
-            btnNuevo.UseVisualStyleBackColor = true;
-            btnNuevo.Click += btnNuevo_Click;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNuevo.Location = new System.Drawing.Point(820, 251);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(163, 55);
+            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.Text = "Nuevo";
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevo.UseVisualStyleBackColor = true;
             // 
             // btnEliminar
             // 
-            btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEliminar.ForeColor = SystemColors.ButtonHighlight;
-            btnEliminar.Location = new Point(820, 355);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(163, 55);
-            btnEliminar.TabIndex = 5;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.TextAlign = ContentAlignment.MiddleRight;
-            btnEliminar.UseVisualStyleBackColor = true;
-            btnEliminar.Click += btnEliminar_Click;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEliminar.Location = new System.Drawing.Point(820, 355);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(163, 55);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
             // btnActualizar
             // 
-            btnActualizar.FlatStyle = FlatStyle.Flat;
-            btnActualizar.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnActualizar.ForeColor = SystemColors.ButtonHighlight;
-            btnActualizar.Location = new Point(820, 454);
-            btnActualizar.Name = "btnActualizar";
-            btnActualizar.Size = new Size(163, 55);
-            btnActualizar.TabIndex = 6;
-            btnActualizar.Text = "Actualizar";
-            btnActualizar.TextAlign = ContentAlignment.MiddleRight;
-            btnActualizar.UseVisualStyleBackColor = true;
-            btnActualizar.Click += btnActualizar_Click;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnActualizar.Location = new System.Drawing.Point(820, 454);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(163, 55);
+            this.btnActualizar.TabIndex = 6;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizar.UseVisualStyleBackColor = true;
             // 
             // imgActualizar
             // 
-            imgActualizar.BackgroundImage = CapaPresentacion.Properties.Resources.ic_actualizar;
-            imgActualizar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgActualizar.FlatStyle = FlatStyle.Flat;
-            imgActualizar.ForeColor = Color.SkyBlue;
-            imgActualizar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgActualizar.Location = new Point(837, 464);
-            imgActualizar.Name = "imgActualizar";
-            imgActualizar.Size = new Size(33, 34);
-            imgActualizar.TabIndex = 9;
-            imgActualizar.TextAlign = ContentAlignment.MiddleRight;
-            imgActualizar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgActualizar.UseVisualStyleBackColor = true;
-            imgActualizar.Click += imgActualizar_Click;
+            this.imgActualizar.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_actualizar;
+            this.imgActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgActualizar.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgActualizar.Location = new System.Drawing.Point(837, 464);
+            this.imgActualizar.Name = "imgActualizar";
+            this.imgActualizar.Size = new System.Drawing.Size(33, 34);
+            this.imgActualizar.TabIndex = 9;
+            this.imgActualizar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgActualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgActualizar.UseVisualStyleBackColor = true;
             // 
             // imgEliminar
             // 
-            imgEliminar.BackgroundImage = CapaPresentacion.Properties.Resources.ic_cancelar;
-            imgEliminar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgEliminar.FlatStyle = FlatStyle.Flat;
-            imgEliminar.ForeColor = Color.SkyBlue;
-            imgEliminar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgEliminar.Location = new Point(836, 364);
-            imgEliminar.Name = "imgEliminar";
-            imgEliminar.Size = new Size(37, 36);
-            imgEliminar.TabIndex = 8;
-            imgEliminar.TextAlign = ContentAlignment.MiddleRight;
-            imgEliminar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgEliminar.UseVisualStyleBackColor = true;
-            imgEliminar.Click += imgEliminar_Click;
+            this.imgEliminar.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_cancelar;
+            this.imgEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgEliminar.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgEliminar.Location = new System.Drawing.Point(836, 364);
+            this.imgEliminar.Name = "imgEliminar";
+            this.imgEliminar.Size = new System.Drawing.Size(37, 36);
+            this.imgEliminar.TabIndex = 8;
+            this.imgEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgEliminar.UseVisualStyleBackColor = true;
             // 
             // imgNuevo
             // 
-            imgNuevo.BackgroundImage = CapaPresentacion.Properties.Resources.ic_guardar;
-            imgNuevo.BackgroundImageLayout = ImageLayout.Zoom;
-            imgNuevo.FlatStyle = FlatStyle.Flat;
-            imgNuevo.ForeColor = Color.SkyBlue;
-            imgNuevo.ImageAlign = ContentAlignment.MiddleLeft;
-            imgNuevo.Location = new Point(833, 260);
-            imgNuevo.Name = "imgNuevo";
-            imgNuevo.Size = new Size(37, 36);
-            imgNuevo.TabIndex = 7;
-            imgNuevo.TextAlign = ContentAlignment.MiddleRight;
-            imgNuevo.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgNuevo.UseVisualStyleBackColor = true;
-            imgNuevo.Click += imgNuevo_Click;
+            this.imgNuevo.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_guardar;
+            this.imgNuevo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgNuevo.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgNuevo.Location = new System.Drawing.Point(833, 260);
+            this.imgNuevo.Name = "imgNuevo";
+            this.imgNuevo.Size = new System.Drawing.Size(37, 36);
+            this.imgNuevo.TabIndex = 7;
+            this.imgNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgNuevo.UseVisualStyleBackColor = true;
             // 
             // imgAgregar
             // 
-            imgAgregar.BackgroundImage = CapaPresentacion.Properties.Resources.ic_agregar;
-            imgAgregar.BackgroundImageLayout = ImageLayout.Zoom;
-            imgAgregar.FlatStyle = FlatStyle.Flat;
-            imgAgregar.ForeColor = Color.SkyBlue;
-            imgAgregar.ImageAlign = ContentAlignment.MiddleLeft;
-            imgAgregar.Location = new Point(836, 164);
-            imgAgregar.Name = "imgAgregar";
-            imgAgregar.Size = new Size(34, 35);
-            imgAgregar.TabIndex = 2;
-            imgAgregar.TextAlign = ContentAlignment.MiddleRight;
-            imgAgregar.TextImageRelation = TextImageRelation.ImageBeforeText;
-            imgAgregar.UseVisualStyleBackColor = true;
-            imgAgregar.Click += imgAgregar_Click;
+            this.imgAgregar.BackgroundImage = global::CapaPresentacion.Properties.Resources.ic_agregar;
+            this.imgAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.imgAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.imgAgregar.ForeColor = System.Drawing.Color.SkyBlue;
+            this.imgAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.imgAgregar.Location = new System.Drawing.Point(836, 164);
+            this.imgAgregar.Name = "imgAgregar";
+            this.imgAgregar.Size = new System.Drawing.Size(34, 35);
+            this.imgAgregar.TabIndex = 2;
+            this.imgAgregar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.imgAgregar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.imgAgregar.UseVisualStyleBackColor = true;
             // 
             // gbMedicamentos
             // 
-            gbMedicamentos.Controls.Add(dgMedicamentos);
-            gbMedicamentos.Location = new Point(59, 528);
-            gbMedicamentos.Name = "gbMedicamentos";
-            gbMedicamentos.Size = new Size(941, 288);
-            gbMedicamentos.TabIndex = 11;
-            gbMedicamentos.TabStop = false;
-            gbMedicamentos.Text = "Medicamentos";
+            this.gbMedicamentos.Controls.Add(this.dgMedicamentos);
+            this.gbMedicamentos.Location = new System.Drawing.Point(59, 528);
+            this.gbMedicamentos.Name = "gbMedicamentos";
+            this.gbMedicamentos.Size = new System.Drawing.Size(941, 288);
+            this.gbMedicamentos.TabIndex = 11;
+            this.gbMedicamentos.TabStop = false;
+            this.gbMedicamentos.Text = "Medicamentos";
             // 
             // dgMedicamentos
             // 
-            dgMedicamentos.AllowUserToAddRows = false;
-            dgMedicamentos.AllowUserToDeleteRows = false;
-            dgMedicamentos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgMedicamentos.Dock = DockStyle.Fill;
-            dgMedicamentos.Location = new Point(3, 23);
-            dgMedicamentos.Name = "dgMedicamentos";
-            dgMedicamentos.ReadOnly = true;
-            dgMedicamentos.RowHeadersVisible = false;
-            dgMedicamentos.RowHeadersWidth = 51;
-            dgMedicamentos.RowTemplate.Height = 24;
-            dgMedicamentos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgMedicamentos.Size = new Size(935, 262);
-            dgMedicamentos.TabIndex = 0;
-            dgMedicamentos.SelectionChanged += dgMedicamentos_SelectionChanged;
+            this.dgMedicamentos.AllowUserToAddRows = false;
+            this.dgMedicamentos.AllowUserToDeleteRows = false;
+            this.dgMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgMedicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgMedicamentos.Location = new System.Drawing.Point(3, 16);
+            this.dgMedicamentos.Name = "dgMedicamentos";
+            this.dgMedicamentos.ReadOnly = true;
+            this.dgMedicamentos.RowHeadersVisible = false;
+            this.dgMedicamentos.RowHeadersWidth = 51;
+            this.dgMedicamentos.RowTemplate.Height = 24;
+            this.dgMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgMedicamentos.Size = new System.Drawing.Size(935, 269);
+            this.dgMedicamentos.TabIndex = 0;
             // 
             // imgVolver
             // 
-            imgVolver.Image = CapaPresentacion.Properties.Resources.ic_volver;
-            imgVolver.Location = new Point(6, 106);
-            imgVolver.Name = "imgVolver";
-            imgVolver.Size = new Size(47, 39);
-            imgVolver.SizeMode = PictureBoxSizeMode.Zoom;
-            imgVolver.TabIndex = 13;
-            imgVolver.TabStop = false;
-            imgVolver.Click += imgVolver_Click;
+            this.imgVolver.Image = global::CapaPresentacion.Properties.Resources.ic_volver;
+            this.imgVolver.Location = new System.Drawing.Point(6, 106);
+            this.imgVolver.Name = "imgVolver";
+            this.imgVolver.Size = new System.Drawing.Size(47, 39);
+            this.imgVolver.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgVolver.TabIndex = 13;
+            this.imgVolver.TabStop = false;
+            this.imgVolver.Click += new System.EventHandler(this.imgVolver_Click);
             // 
             // AddMedicamentoForm
             // 
-            BackColor = Color.SkyBlue;
-            ClientSize = new Size(1053, 828);
-            Controls.Add(imgVolver);
-            Controls.Add(gbMedicamentos);
-            Controls.Add(imgActualizar);
-            Controls.Add(imgEliminar);
-            Controls.Add(imgNuevo);
-            Controls.Add(btnActualizar);
-            Controls.Add(btnEliminar);
-            Controls.Add(btnNuevo);
-            Controls.Add(imgAgregar);
-            Controls.Add(btnAgregar);
-            Controls.Add(txtTitle);
-            Controls.Add(gbDatosNuevoMedicamento);
-            MaximizeBox = false;
-            MaximumSize = new Size(1071, 875);
-            MinimizeBox = false;
-            Name = "AddMedicamentoForm";
-            Load += AddMedicamento_Load;
-            gbDatosNuevoMedicamento.ResumeLayout(false);
-            gbDatosNuevoMedicamento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numCant).EndInit();
-            gbMedicamentos.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgMedicamentos).EndInit();
-            ((System.ComponentModel.ISupportInitialize)imgVolver).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.ClientSize = new System.Drawing.Size(1053, 828);
+            this.Controls.Add(this.imgVolver);
+            this.Controls.Add(this.gbMedicamentos);
+            this.Controls.Add(this.imgActualizar);
+            this.Controls.Add(this.imgEliminar);
+            this.Controls.Add(this.imgNuevo);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnNuevo);
+            this.Controls.Add(this.imgAgregar);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.gbDatosNuevoMedicamento);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1071, 875);
+            this.MinimizeBox = false;
+            this.Name = "AddMedicamentoForm";
+            this.gbDatosNuevoMedicamento.ResumeLayout(false);
+            this.gbDatosNuevoMedicamento.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCant)).EndInit();
+            this.gbMedicamentos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgMedicamentos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgVolver)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         private ComboBox cbProveedores;

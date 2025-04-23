@@ -6,18 +6,36 @@ namespace CapaEntidades
     {
         private int idVenta;
         private int idMedicamento;
+        private string nombreMedicamento;
         private int cantidad;
         private float precioUnitario;
-        private float subtotal;
+        private float subtotal => Cantidad * PrecioUnitario;
 
         public DetalleVenta(int idVenta, int idMedicamento, int cantidad,
-            float precioUnitario, float subtotal)
+            float precioUnitario)
         {
             this.idVenta = idVenta;
             this.idMedicamento = idMedicamento;
             this.cantidad = cantidad;
             this.precioUnitario = precioUnitario;
-            this.subtotal = subtotal;
+        }
+        public DetalleVenta(int idVenta, int idMedicamento, string nombreMedicamento, int cantidad,
+            float precioUnitario)
+        {
+            this.idVenta = idVenta;
+            this.idMedicamento = idMedicamento;
+            this.nombreMedicamento = nombreMedicamento;
+            this.cantidad = cantidad;
+            this.precioUnitario = precioUnitario;
+        }
+
+
+        public DetalleVenta(int idMedicamento, int cantidad,
+            float precioUnitario)
+        {
+            this.idMedicamento = idMedicamento;
+            this.cantidad = cantidad;
+            this.precioUnitario = precioUnitario;
         }
 
         public int IdVenta
@@ -30,6 +48,12 @@ namespace CapaEntidades
         {
             get { return idMedicamento; }
             set { idMedicamento = value; }
+        }
+
+        public string NombreMedicamento
+        {
+            get { return nombreMedicamento; }
+            set { nombreMedicamento = value; }
         }
 
         public int Cantidad
@@ -47,7 +71,6 @@ namespace CapaEntidades
         public float Subtotal
         {
             get { return subtotal; }
-            set { subtotal = value; }
         }
     }
 }

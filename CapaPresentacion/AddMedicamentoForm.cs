@@ -14,7 +14,7 @@ namespace Farmacia
         // Inicializa el formulario y configura el combo de proveedores.
         public AddMedicamentoForm()
         {
-            InitializeComponent();
+            InitializeComponent();         
             // Agregar un item predeterminado al ComboBox para el caso de "Sin proveedor"
             // cuando se borra un proveedor con un medicamento asociado.
             proveedores.Insert(0, new Proveedor() { Id = 0, Nombre = "Sin proveedor" });

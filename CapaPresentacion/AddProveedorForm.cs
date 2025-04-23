@@ -84,7 +84,7 @@ namespace Farmacia
         {
             try
             {
-                ProveedorService.InsertarProveedor(txtNombre.Text, txtDireccion.Text, txtTelefono.Text);
+                ProveedorService.InsertarProveedor(txtNombre.Text, txtTelefono.Text, txtDireccion.Text);
 
                 MessageBox.Show("Proveedor añadido correctamente!", "Añadido", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MostrarProveedores();
