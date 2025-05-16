@@ -52,9 +52,9 @@ namespace Farmacia
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbDatosNuevoMedicamento = new System.Windows.Forms.GroupBox();
             this.lblProveedor = new System.Windows.Forms.Label();
             this.cbProveedores = new System.Windows.Forms.ComboBox();
@@ -107,7 +107,7 @@ namespace Farmacia
             this.gbDatosNuevoMedicamento.Controls.Add(this.lblNombre);
             this.gbDatosNuevoMedicamento.Location = new System.Drawing.Point(59, 143);
             this.gbDatosNuevoMedicamento.Name = "gbDatosNuevoMedicamento";
-            this.gbDatosNuevoMedicamento.Size = new System.Drawing.Size(729, 366);
+            this.gbDatosNuevoMedicamento.Size = new System.Drawing.Size(729, 355);
             this.gbDatosNuevoMedicamento.TabIndex = 0;
             this.gbDatosNuevoMedicamento.TabStop = false;
             this.gbDatosNuevoMedicamento.Text = "Datos";
@@ -291,7 +291,7 @@ namespace Farmacia
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNuevo.Location = new System.Drawing.Point(820, 251);
+            this.btnNuevo.Location = new System.Drawing.Point(820, 241);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(163, 55);
             this.btnNuevo.TabIndex = 4;
@@ -305,7 +305,7 @@ namespace Farmacia
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnEliminar.Location = new System.Drawing.Point(820, 355);
+            this.btnEliminar.Location = new System.Drawing.Point(820, 337);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(163, 55);
             this.btnEliminar.TabIndex = 5;
@@ -319,7 +319,7 @@ namespace Farmacia
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnActualizar.Location = new System.Drawing.Point(820, 454);
+            this.btnActualizar.Location = new System.Drawing.Point(820, 437);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(163, 55);
             this.btnActualizar.TabIndex = 6;
@@ -335,7 +335,7 @@ namespace Farmacia
             this.imgActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.imgActualizar.ForeColor = System.Drawing.Color.SkyBlue;
             this.imgActualizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.imgActualizar.Location = new System.Drawing.Point(837, 464);
+            this.imgActualizar.Location = new System.Drawing.Point(837, 448);
             this.imgActualizar.Name = "imgActualizar";
             this.imgActualizar.Size = new System.Drawing.Size(33, 34);
             this.imgActualizar.TabIndex = 9;
@@ -351,7 +351,7 @@ namespace Farmacia
             this.imgEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.imgEliminar.ForeColor = System.Drawing.Color.SkyBlue;
             this.imgEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.imgEliminar.Location = new System.Drawing.Point(836, 364);
+            this.imgEliminar.Location = new System.Drawing.Point(834, 347);
             this.imgEliminar.Name = "imgEliminar";
             this.imgEliminar.Size = new System.Drawing.Size(37, 36);
             this.imgEliminar.TabIndex = 8;
@@ -367,7 +367,7 @@ namespace Farmacia
             this.imgNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.imgNuevo.ForeColor = System.Drawing.Color.SkyBlue;
             this.imgNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.imgNuevo.Location = new System.Drawing.Point(833, 260);
+            this.imgNuevo.Location = new System.Drawing.Point(833, 251);
             this.imgNuevo.Name = "imgNuevo";
             this.imgNuevo.Size = new System.Drawing.Size(37, 36);
             this.imgNuevo.TabIndex = 7;
@@ -383,7 +383,7 @@ namespace Farmacia
             this.imgAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.imgAgregar.ForeColor = System.Drawing.Color.SkyBlue;
             this.imgAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.imgAgregar.Location = new System.Drawing.Point(836, 164);
+            this.imgAgregar.Location = new System.Drawing.Point(837, 165);
             this.imgAgregar.Name = "imgAgregar";
             this.imgAgregar.Size = new System.Drawing.Size(34, 35);
             this.imgAgregar.TabIndex = 2;
@@ -395,9 +395,9 @@ namespace Farmacia
             // gbMedicamentos
             // 
             this.gbMedicamentos.Controls.Add(this.dgMedicamentos);
-            this.gbMedicamentos.Location = new System.Drawing.Point(59, 528);
+            this.gbMedicamentos.Location = new System.Drawing.Point(59, 504);
             this.gbMedicamentos.Name = "gbMedicamentos";
-            this.gbMedicamentos.Size = new System.Drawing.Size(924, 288);
+            this.gbMedicamentos.Size = new System.Drawing.Size(924, 260);
             this.gbMedicamentos.TabIndex = 11;
             this.gbMedicamentos.TabStop = false;
             this.gbMedicamentos.Text = "Medicamentos";
@@ -406,26 +406,26 @@ namespace Farmacia
             // 
             this.dgMedicamentos.AllowUserToAddRows = false;
             this.dgMedicamentos.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.dgMedicamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.dgMedicamentos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgMedicamentos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgMedicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgMedicamentos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgMedicamentos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgMedicamentos.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgMedicamentos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgMedicamentos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgMedicamentos.Location = new System.Drawing.Point(3, 18);
             this.dgMedicamentos.MultiSelect = false;
@@ -435,7 +435,7 @@ namespace Farmacia
             this.dgMedicamentos.RowHeadersWidth = 51;
             this.dgMedicamentos.RowTemplate.Height = 24;
             this.dgMedicamentos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgMedicamentos.Size = new System.Drawing.Size(918, 267);
+            this.dgMedicamentos.Size = new System.Drawing.Size(918, 239);
             this.dgMedicamentos.TabIndex = 3;
             this.dgMedicamentos.SelectionChanged += new System.EventHandler(this.dgMedicamentos_SelectionChanged);
             // 
