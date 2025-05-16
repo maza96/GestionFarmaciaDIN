@@ -18,6 +18,10 @@ namespace CapaNegocio
             try
             {
                 Venta venta = new Venta(0, fechaVenta, total, detalleVentas);
+                foreach ( var medic in venta.Detalles)
+                {
+                    MedicamentoDao.modificarCantidad(medic.Cantidad, medic.IdMedicamento);
+                }
                 return VentaDao.InsertarVenta(venta);
             }
             catch (Exception ex)

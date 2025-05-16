@@ -98,5 +98,47 @@ namespace CapaDatos
                 }
             }
         }
+
+        public static void modificarCantidad(int cantidad, int idMedicamento)
+        {
+            int cantidadVieja = 100;
+            using (MySqlConnection conn = new MySqlConnection(cadenaConexion))
+            {
+                conn.Open();
+
+                using (MySqlCommand cmd = new MySqlCommand(@"
+                    SELECT cantidad FROM medicamentos
+                    WHERE id_medicamento = @id_medicamento;
+                ", conn))
+                {
+                    cmd.Parameters.AddWithValue("@id_medicamento", idMedicamento);
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result == null)
+                    {
+                        throw new Exception("No se encontró el medicamento con ese ID.");
+                    }
+
+                    cantidadVieja = Convert.ToInt32(result);
+                    // Ahora puedes usar la variable cantidad
+                }
+
+                using (MySqlCommand cmd = new MySqlCommand(@"
+                        UPDATE medicamentos SET 
+                            cantidad = @cantidad
+                        WHERE id_medicamento = @id_medicamento;
+                    ", conn))
+                {
+                    cmd.Parameters.AddWithValue("@id_medicamento", idMedicamento);
+                    cmd.Parameters.AddWithValue("@cantidad", (cantidadVieja - cantidad));
+
+                    if (cmd.ExecuteNonQuery() <= 0)
+                    {
+                        throw new Exception("No se ha podido actualizar el medicamento!");
+                    }
+                }
+            }
+        }
     }
 }

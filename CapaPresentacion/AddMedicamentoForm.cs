@@ -139,7 +139,7 @@ namespace Farmacia
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error: " + ex.Message, "Error eliminando Medicamento!");
+                    MessageBox.Show("Error: Error eliminando mediamento en la base de datos" , "Error eliminando Medicamento!");
                 }
             }
         }
